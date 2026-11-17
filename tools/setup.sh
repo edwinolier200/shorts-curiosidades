@@ -3,8 +3,10 @@
 set -e
 export HF_HUB_DISABLE_XET=1
 command -v espeak-ng >/dev/null || (apt-get update -q && apt-get install -y -q espeak-ng) >/dev/null
-pip install -q torch diffusers transformers accelerate peft faster-whisper soundfile numpy 2>&1 | grep -v WARNING || true
-[ -x .kenv/bin/python ] || (uv venv -q -p 3.12 .kenv && VIRTUAL_ENV=$PWD/.kenv uv pip install -q kokoro soundfile)
+pip install -q torch diffusers transformers accelerate peft faster-whisper soundfile numpy num2words 2>&1 | grep -v WARNING || true
+if [ ! -e .kenv ]; then
+  if [ -x /opt/kenv/bin/python ]; then ln -s /opt/kenv .kenv; else uv venv -q -p 3.12 .kenv && VIRTUAL_ENV=$PWD/.kenv uv pip install -q kokoro soundfile; fi
+fi
 [ -f package.json ] || echo '{"name":"shorts-kit","private":true}' > package.json
 # warm the model caches so the first episode does not stall
 python3 -c "from faster_whisper import WhisperModel; WhisperModel('small',device='cpu',compute_type='int8')"
