@@ -1,0 +1,713 @@
+{
+ "duration": 49.08,
+ "segments": [
+  {
+   "i": 1,
+   "start": 0.25,
+   "end": 4.77,
+   "text": "Este chico pasó once días seguidos sin dormir, y esto es lo que le pasó a su cerebro.",
+   "words": [
+    {
+     "w": "Este",
+     "t": 0.25
+    },
+    {
+     "w": "chico",
+     "t": 0.37
+    },
+    {
+     "w": "pasó",
+     "t": 0.67
+    },
+    {
+     "w": "once",
+     "t": 0.91
+    },
+    {
+     "w": "días",
+     "t": 1.23
+    },
+    {
+     "w": "seguidos",
+     "t": 1.55
+    },
+    {
+     "w": "sin",
+     "t": 2.01
+    },
+    {
+     "w": "dormir,",
+     "t": 2.19
+    },
+    {
+     "w": "y",
+     "t": 2.55
+    },
+    {
+     "w": "esto",
+     "t": 3.05
+    },
+    {
+     "w": "es",
+     "t": 3.29
+    },
+    {
+     "w": "lo",
+     "t": 3.45
+    },
+    {
+     "w": "que",
+     "t": 3.59
+    },
+    {
+     "w": "le",
+     "t": 3.67
+    },
+    {
+     "w": "pasó",
+     "t": 3.77
+    },
+    {
+     "w": "a",
+     "t": 4.01
+    },
+    {
+     "w": "su",
+     "t": 4.15
+    },
+    {
+     "w": "cerebro.",
+     "t": 4.25
+    }
+   ],
+   "heard": " Este  chico  pasó  11  días  seguido  sin  dormir  y  esto  es  lo  que  le  pasó  a  su  cerebro.",
+   "match": 0.94
+  },
+  {
+   "i": 2,
+   "start": 4.89,
+   "end": 11.469,
+   "text": "Se llamaba Randy Gardner. Con diecisiete años, en mil novecientos sesenta y cuatro, lo hizo para una feria de ciencias.",
+   "words": [
+    {
+     "w": "Se",
+     "t": 4.89
+    },
+    {
+     "w": "llamaba",
+     "t": 4.93
+    },
+    {
+     "w": "Randy",
+     "t": 5.31
+    },
+    {
+     "w": "Gardner.",
+     "t": 5.63
+    },
+    {
+     "w": "Con",
+     "t": 6.37
+    },
+    {
+     "w": "diecisiete",
+     "t": 6.61
+    },
+    {
+     "w": "años,",
+     "t": 7.05
+    },
+    {
+     "w": "en",
+     "t": 7.71
+    },
+    {
+     "w": "mil",
+     "t": 7.79
+    },
+    {
+     "w": "novecientos",
+     "t": 7.83
+    },
+    {
+     "w": "sesenta",
+     "t": 7.87
+    },
+    {
+     "w": "y",
+     "t": 7.91
+    },
+    {
+     "w": "cuatro,",
+     "t": 7.95
+    },
+    {
+     "w": "lo",
+     "t": 9.63
+    },
+    {
+     "w": "hizo",
+     "t": 9.75
+    },
+    {
+     "w": "para",
+     "t": 9.97
+    },
+    {
+     "w": "una",
+     "t": 10.21
+    },
+    {
+     "w": "feria",
+     "t": 10.35
+    },
+    {
+     "w": "de",
+     "t": 10.71
+    },
+    {
+     "w": "ciencias.",
+     "t": 10.81
+    }
+   ],
+   "heard": " Se  llamaba  Randy  Gardner.  Con  17  años,  en  1964,  lo  hizo  para  una  feria  de  ciencias.",
+   "match": 1.0
+  },
+  {
+   "i": 3,
+   "start": 11.589,
+   "end": 16.892,
+   "text": "Llega el día dos: sus ojos dejan de enfocar. Ya no reconoce los objetos solo con tocarlos.",
+   "words": [
+    {
+     "w": "Llega",
+     "t": 11.589
+    },
+    {
+     "w": "el",
+     "t": 11.789
+    },
+    {
+     "w": "día",
+     "t": 11.909
+    },
+    {
+     "w": "dos:",
+     "t": 12.069
+    },
+    {
+     "w": "sus",
+     "t": 12.549
+    },
+    {
+     "w": "ojos",
+     "t": 12.649
+    },
+    {
+     "w": "dejan",
+     "t": 12.929
+    },
+    {
+     "w": "de",
+     "t": 13.349
+    },
+    {
+     "w": "enfocar.",
+     "t": 13.469
+    },
+    {
+     "w": "Ya",
+     "t": 14.129
+    },
+    {
+     "w": "no",
+     "t": 14.409
+    },
+    {
+     "w": "reconoce",
+     "t": 14.569
+    },
+    {
+     "w": "los",
+     "t": 15.029
+    },
+    {
+     "w": "objetos",
+     "t": 15.169
+    },
+    {
+     "w": "solo",
+     "t": 15.549
+    },
+    {
+     "w": "con",
+     "t": 15.949
+    },
+    {
+     "w": "tocarlos.",
+     "t": 16.169
+    }
+   ],
+   "heard": " Llega  el  día  2,  sus  ojos  dejan  de  enfocar,  ya  no  reconoce  los  objetos  solo  con  tocarlos.",
+   "match": 1.0
+  },
+  {
+   "i": 4,
+   "start": 17.012,
+   "end": 20.625,
+   "text": "Para el día cuatro, confunde una señal de tráfico con una persona.",
+   "words": [
+    {
+     "w": "Para",
+     "t": 17.012
+    },
+    {
+     "w": "el",
+     "t": 17.112
+    },
+    {
+     "w": "día",
+     "t": 17.192
+    },
+    {
+     "w": "cuatro,",
+     "t": 17.332
+    },
+    {
+     "w": "confunde",
+     "t": 18.012
+    },
+    {
+     "w": "una",
+     "t": 18.452
+    },
+    {
+     "w": "señal",
+     "t": 18.592
+    },
+    {
+     "w": "de",
+     "t": 19.032
+    },
+    {
+     "w": "tráfico",
+     "t": 19.092
+    },
+    {
+     "w": "con",
+     "t": 19.692
+    },
+    {
+     "w": "una",
+     "t": 19.852
+    },
+    {
+     "w": "persona.",
+     "t": 19.972
+    }
+   ],
+   "heard": " Para  el  día  4,  confunde  una  señal  de  tráfico  con  una  persona.",
+   "match": 1.0
+  },
+  {
+   "i": 5,
+   "start": 20.745,
+   "end": 24.373,
+   "text": "Y empieza a creer que es un famoso jugador de fútbol americano.",
+   "words": [
+    {
+     "w": "Y",
+     "t": 20.745
+    },
+    {
+     "w": "empieza",
+     "t": 20.825
+    },
+    {
+     "w": "a",
+     "t": 21.165
+    },
+    {
+     "w": "creer",
+     "t": 21.325
+    },
+    {
+     "w": "que",
+     "t": 21.785
+    },
+    {
+     "w": "es",
+     "t": 22.005
+    },
+    {
+     "w": "un",
+     "t": 22.145
+    },
+    {
+     "w": "famoso",
+     "t": 22.265
+    },
+    {
+     "w": "jugador",
+     "t": 22.545
+    },
+    {
+     "w": "de",
+     "t": 23.125
+    },
+    {
+     "w": "fútbol",
+     "t": 23.265
+    },
+    {
+     "w": "americano.",
+     "t": 23.685
+    }
+   ],
+   "heard": " y  empieza  a  creer  que  es  un  famoso  jugador  de  fútbol  americano.",
+   "match": 1.0
+  },
+  {
+   "i": 6,
+   "start": 24.493,
+   "end": 28.2,
+   "text": "Al llegar el día siete, arrastra las palabras. Le tiemblan las manos.",
+   "words": [
+    {
+     "w": "Al",
+     "t": 24.493
+    },
+    {
+     "w": "llegar",
+     "t": 24.553
+    },
+    {
+     "w": "el",
+     "t": 24.753
+    },
+    {
+     "w": "día",
+     "t": 24.933
+    },
+    {
+     "w": "siete,",
+     "t": 25.073
+    },
+    {
+     "w": "arrastra",
+     "t": 25.613
+    },
+    {
+     "w": "las",
+     "t": 26.033
+    },
+    {
+     "w": "palabras.",
+     "t": 26.173
+    },
+    {
+     "w": "Le",
+     "t": 27.013
+    },
+    {
+     "w": "tiemblan",
+     "t": 27.093
+    },
+    {
+     "w": "las",
+     "t": 27.513
+    },
+    {
+     "w": "manos.",
+     "t": 27.673
+    }
+   ],
+   "heard": " Al  llegar  el  día  7,  arrastra  las  palabras,  le  tiemblan  las  manos.",
+   "match": 1.0
+  },
+  {
+   "i": 7,
+   "start": 28.32,
+   "end": 35.59,
+   "text": "Y en el día once, le piden restar de siete en siete desde cien, y se detiene en sesenta y cinco. Ya no recuerda qué estaba haciendo.",
+   "words": [
+    {
+     "w": "Y",
+     "t": 28.32
+    },
+    {
+     "w": "en",
+     "t": 28.36
+    },
+    {
+     "w": "el",
+     "t": 28.46
+    },
+    {
+     "w": "día",
+     "t": 28.54
+    },
+    {
+     "w": "once,",
+     "t": 28.7
+    },
+    {
+     "w": "le",
+     "t": 29.04
+    },
+    {
+     "w": "piden",
+     "t": 29.32
+    },
+    {
+     "w": "restar",
+     "t": 29.6
+    },
+    {
+     "w": "de",
+     "t": 30.06
+    },
+    {
+     "w": "siete",
+     "t": 30.14
+    },
+    {
+     "w": "en",
+     "t": 30.42
+    },
+    {
+     "w": "siete",
+     "t": 30.58
+    },
+    {
+     "w": "desde",
+     "t": 30.82
+    },
+    {
+     "w": "cien,",
+     "t": 31.0
+    },
+    {
+     "w": "y",
+     "t": 31.38
+    },
+    {
+     "w": "se",
+     "t": 31.74
+    },
+    {
+     "w": "detiene",
+     "t": 31.86
+    },
+    {
+     "w": "en",
+     "t": 32.24
+    },
+    {
+     "w": "sesenta",
+     "t": 32.38
+    },
+    {
+     "w": "y",
+     "t": 32.42
+    },
+    {
+     "w": "cinco.",
+     "t": 32.46
+    },
+    {
+     "w": "Ya",
+     "t": 33.74
+    },
+    {
+     "w": "no",
+     "t": 33.92
+    },
+    {
+     "w": "recuerda",
+     "t": 34.06
+    },
+    {
+     "w": "qué",
+     "t": 34.56
+    },
+    {
+     "w": "estaba",
+     "t": 34.68
+    },
+    {
+     "w": "haciendo.",
+     "t": 35.0
+    }
+   ],
+   "heard": " Y  en  el  día  11  le  piden  restar  de  7  en  7  desde  100  y  se  detiene  en  65,  ya  no  recuerda  qué  estaba  haciendo.",
+   "match": 1.0
+  },
+  {
+   "i": 8,
+   "start": 35.71,
+   "end": 40.14,
+   "text": "Después de doscientas sesenta y cuatro horas, por fin duerme. Catorce horas seguidas.",
+   "words": [
+    {
+     "w": "Después",
+     "t": 35.71
+    },
+    {
+     "w": "de",
+     "t": 35.89
+    },
+    {
+     "w": "doscientas",
+     "t": 36.09
+    },
+    {
+     "w": "sesenta",
+     "t": 36.13
+    },
+    {
+     "w": "y",
+     "t": 36.17
+    },
+    {
+     "w": "cuatro",
+     "t": 36.21
+    },
+    {
+     "w": "horas,",
+     "t": 37.33
+    },
+    {
+     "w": "por",
+     "t": 37.91
+    },
+    {
+     "w": "fin",
+     "t": 37.97
+    },
+    {
+     "w": "duerme.",
+     "t": 38.19
+    },
+    {
+     "w": "Catorce",
+     "t": 38.87
+    },
+    {
+     "w": "horas",
+     "t": 39.17
+    },
+    {
+     "w": "seguidas.",
+     "t": 39.49
+    }
+   ],
+   "heard": " Después  de  264  horas,  por  fin  duerme,  14  horas  seguidas.",
+   "match": 1.0
+  },
+  {
+   "i": 9,
+   "start": 40.26,
+   "end": 45.975,
+   "text": "Lo más loco: este récord está prohibido. Guinness dejó de registrarlo por ser demasiado peligroso.",
+   "words": [
+    {
+     "w": "Lo",
+     "t": 40.26
+    },
+    {
+     "w": "más",
+     "t": 40.32
+    },
+    {
+     "w": "loco:",
+     "t": 40.5
+    },
+    {
+     "w": "este",
+     "t": 40.82
+    },
+    {
+     "w": "récord",
+     "t": 41.1
+    },
+    {
+     "w": "está",
+     "t": 41.5
+    },
+    {
+     "w": "prohibido.",
+     "t": 41.84
+    },
+    {
+     "w": "Guinness",
+     "t": 42.74
+    },
+    {
+     "w": "dejó",
+     "t": 43.14
+    },
+    {
+     "w": "de",
+     "t": 43.56
+    },
+    {
+     "w": "registrarlo",
+     "t": 43.64
+    },
+    {
+     "w": "por",
+     "t": 44.34
+    },
+    {
+     "w": "ser",
+     "t": 44.52
+    },
+    {
+     "w": "demasiado",
+     "t": 44.76
+    },
+    {
+     "w": "peligroso.",
+     "t": 45.24
+    }
+   ],
+   "heard": " Lo  más  loco  este  record  está  prohibido.  Guiness  dejó  de  registrarlo  por  ser  demasiado  peligroso.",
+   "match": 0.87
+  },
+  {
+   "i": 10,
+   "start": 46.095,
+   "end": 48.26,
+   "text": "Y tú, ¿cuántas horas dormiste anoche?",
+   "words": [
+    {
+     "w": "Y",
+     "t": 46.095
+    },
+    {
+     "w": "tú,",
+     "t": 46.195
+    },
+    {
+     "w": "¿cuántas",
+     "t": 46.335
+    },
+    {
+     "w": "horas",
+     "t": 46.895
+    },
+    {
+     "w": "dormiste",
+     "t": 47.075
+    },
+    {
+     "w": "anoche?",
+     "t": 47.655
+    }
+   ],
+   "heard": " ¿Y  tú  cuántas  horas  dormiste  anoche?",
+   "match": 1.0
+  }
+ ]
+}

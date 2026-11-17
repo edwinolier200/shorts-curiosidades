@@ -1,0 +1,6 @@
+out/
+.kenv/
+node_modules/
+*.wav
+*.mp4
+package-lock.json
