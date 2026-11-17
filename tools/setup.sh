@@ -5,6 +5,8 @@ export HF_HUB_DISABLE_XET=1
 command -v espeak-ng >/dev/null || (apt-get update -q && apt-get install -y -q espeak-ng) >/dev/null
 pip install -q -U setuptools 2>&1 | grep -v WARNING || true
 pip install -q torch diffusers transformers accelerate peft faster-whisper soundfile numpy num2words 2>&1 | grep -v WARNING || true
+# the image of the container ships a broken system Pillow (cannot import _imaging)
+python3 -c 'import PIL.Image' 2>/dev/null || pip install -q --ignore-installed pillow 2>&1 | grep -v WARNING || true
 if [ ! -e .kenv ]; then
   if [ -x /opt/kenv/bin/python ]; then ln -s /opt/kenv .kenv; else uv venv -q -p 3.12 .kenv && VIRTUAL_ENV=$PWD/.kenv uv pip install -q kokoro soundfile; fi
 fi

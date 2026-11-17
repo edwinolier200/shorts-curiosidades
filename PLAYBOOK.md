@@ -12,7 +12,7 @@ Instala PyTorch, el generador de imágenes (SSD-1B + LCM), la voz Kokoro (Python
 faster-whisper y espeak-ng, y precarga los modelos. Chromium y Playwright ya vienen en el contenedor.
 
 ## 1. Elegir el tema
-- Toma el primer tema con estado `pendiente` en `CALENDARIO.md`.
+- Toma el tema cuya **Fecha** en `CALENDARIO.md` es la de hoy (hora de Colombia); si no hay, el primer `pendiente` con fecha pasada.
 - Haz 1 o 2 búsquedas web para ver si hay un ángulo de actualidad (efeméride del día, noticia
   viral, tendencia de Shorts en español). Si hay uno mejor, puedes usarlo en su lugar y añadirlo al calendario.
 - **Comprueba los datos con al menos 2 fuentes fiables** (enciclopedias, medios, papers). Si un dato
@@ -31,6 +31,7 @@ Usa la estructura viral del episodio 001 (`episodes/001-11-dias-sin-dormir/audio
 Reglas para la voz (Kokoro `em_alex`):
 - Escribe los números en letras ("mil novecientos sesenta y cuatro").
 - No uses "…" ni pausas largas: la voz debe ir de corrido.
+- Nombres extranjeros: escríbelos como se pronuncian en español ("Súlivan", "Guínes") y devuélvelos a su grafía correcta en los subtítulos con `REP`. No empieces una línea con un nombre propio: la primera palabra a veces se pierde.
 - Una línea de `lines.txt` = un bloque o escena.
 
 ## 3. Crear el episodio
@@ -55,7 +56,7 @@ Luego, dentro de `episodes/NNN-slug/`:
 ```
 python3 tools/gen_images.py episodes/NNN-slug
 ```
-Mira cada imagen. Si una sale con texto raro, manos deformes o no se entiende, cambia el prompt y
+Mira cada imagen. Evita en los prompts objetos con letras (matrículas, carteles) y pide colores naturales. Si una sale con texto raro, manos deformes o no se entiende, cambia el prompt y
 regenérala sola (`python3 tools/gen_images.py episodes/NNN-slug clave`; `SEED=7` cambia la semilla).
 
 ## 5. Audio
@@ -93,4 +94,5 @@ La transcripción debe coincidir con el guion.
 - Envía al usuario los 4 archivos (vídeo, 2 miniaturas, txt) con SendUserFile, `status: proactive`.
 - Escribe en español un resumen de 3 líneas: tema, título recomendado y cualquier dato que no se haya podido verificar.
 - Marca el tema como `hecho (AAAA-MM-DD)` en `CALENDARIO.md`, haz commit del episodio
-  (sin los .mp4 ni los .wav) y push.
+  (sin los .mp4 ni los .wav) y push. Si el push falla por permisos, no es grave: el calendario va por fechas,
+  así que el día siguiente no repite tema. Dilo en el resumen y no envíes parches al usuario.
