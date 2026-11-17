@@ -3,6 +3,7 @@
 # unmatched words interpolated between matched neighbours.
 import json, subprocess, wave, numpy as np, re, difflib, sys
 from faster_whisper import WhisperModel
+from num2words import num2words
 VOICE=sys.argv[1]; LS=sys.argv[2] if len(sys.argv)>2 else '0.95'
 lines=open('vo/lines.txt').read().splitlines()
 LEAD=0.25; GAP=float(sys.argv[3]) if len(sys.argv)>3 else 0.28
@@ -13,8 +14,8 @@ def hyp_tokens(words):
     for w in words:
         parts=re.findall(r'\d+|[^\d\s]+',w.word.strip())
         for p in parts:
-            if p.isdigit() and p in NUM:
-                for x in NUM[p].split(): out.append((x,w.start,w.end))
+            if p.isdigit():
+                for x in num2words(int(p),lang='es').split(): out.append((nrm(x),w.start,w.end))
             else:
                 n=nrm(p)
                 if n: out.append((n,w.start,w.end))

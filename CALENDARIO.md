@@ -6,7 +6,7 @@ Antes de producir cada tema hay que verificar los datos (PLAYBOOK, paso 1).
 | # | Tema (gancho) | Nicho | Estado |
 |---|---|---|---|
 | 001 | Estuvo 11 días sin dormir (Randy Gardner, 1964) | cuerpo + historia | hecho (2026-11-17) |
-| 002 | No comió durante 382 días (Angus Barbieri, 1965-66) | cuerpo + historia | pendiente |
+| 002 | No comió durante 382 días (Angus Barbieri, 1965-66) | cuerpo + historia | hecho (2026-11-17) |
 | 003 | Le cayeron 7 rayos y sobrevivió (Roy Sullivan) | cuerpo + historia | pendiente |
 | 004 | Una barra de hierro le atravesó el cerebro… y siguió vivo (Phineas Gage, 1848) | cuerpo + historia | pendiente |
 | 005 | La guerra más corta de la historia: 38 minutos (Zanzíbar, 1896) | historia | pendiente |

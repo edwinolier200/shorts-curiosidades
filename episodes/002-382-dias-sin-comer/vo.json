@@ -1,0 +1,641 @@
+{
+ "duration": 45.319,
+ "segments": [
+  {
+   "i": 1,
+   "start": 0.25,
+   "end": 5.42,
+   "text": "Este hombre pasó trescientos ochenta y dos días sin comer, y esto es lo que le pasó a su cuerpo.",
+   "words": [
+    {
+     "w": "Este",
+     "t": 0.25
+    },
+    {
+     "w": "hombre",
+     "t": 0.39
+    },
+    {
+     "w": "pasó",
+     "t": 0.63
+    },
+    {
+     "w": "trescientos",
+     "t": 0.91
+    },
+    {
+     "w": "ochenta",
+     "t": 0.95
+    },
+    {
+     "w": "y",
+     "t": 0.99
+    },
+    {
+     "w": "dos",
+     "t": 1.03
+    },
+    {
+     "w": "días",
+     "t": 2.25
+    },
+    {
+     "w": "sin",
+     "t": 2.63
+    },
+    {
+     "w": "comer,",
+     "t": 2.89
+    },
+    {
+     "w": "y",
+     "t": 3.21
+    },
+    {
+     "w": "esto",
+     "t": 3.71
+    },
+    {
+     "w": "es",
+     "t": 3.95
+    },
+    {
+     "w": "lo",
+     "t": 4.11
+    },
+    {
+     "w": "que",
+     "t": 4.23
+    },
+    {
+     "w": "le",
+     "t": 4.33
+    },
+    {
+     "w": "pasó",
+     "t": 4.41
+    },
+    {
+     "w": "a",
+     "t": 4.65
+    },
+    {
+     "w": "su",
+     "t": 4.79
+    },
+    {
+     "w": "cuerpo.",
+     "t": 4.89
+    }
+   ],
+   "heard": " Este  hombre  pasó  382  días  sin  comer  y  esto  es  lo  que  le  pasó  a  su  cuerpo.",
+   "match": 1.0
+  },
+  {
+   "i": 2,
+   "start": 5.54,
+   "end": 12.794,
+   "text": "Se llamaba Angus Barbieri. Escocia, mil novecientos sesenta y cinco. Tenía veintisiete años y pesaba más de doscientos kilos.",
+   "words": [
+    {
+     "w": "Se",
+     "t": 5.54
+    },
+    {
+     "w": "llamaba",
+     "t": 5.58
+    },
+    {
+     "w": "Angus",
+     "t": 5.96
+    },
+    {
+     "w": "Barbieri.",
+     "t": 6.3
+    },
+    {
+     "w": "Escocia,",
+     "t": 7.06
+    },
+    {
+     "w": "mil",
+     "t": 7.62
+    },
+    {
+     "w": "novecientos",
+     "t": 7.66
+    },
+    {
+     "w": "sesenta",
+     "t": 7.7
+    },
+    {
+     "w": "y",
+     "t": 7.74
+    },
+    {
+     "w": "cinco.",
+     "t": 7.78
+    },
+    {
+     "w": "Tenía",
+     "t": 9.7
+    },
+    {
+     "w": "veintisiete",
+     "t": 10.0
+    },
+    {
+     "w": "años",
+     "t": 10.56
+    },
+    {
+     "w": "y",
+     "t": 10.96
+    },
+    {
+     "w": "pesaba",
+     "t": 11.18
+    },
+    {
+     "w": "más",
+     "t": 11.54
+    },
+    {
+     "w": "de",
+     "t": 11.72
+    },
+    {
+     "w": "doscientos",
+     "t": 11.86
+    },
+    {
+     "w": "kilos.",
+     "t": 12.18
+    }
+   ],
+   "heard": " Se  llamaba  Angus  Barbieri,  Escocia  1965,  tenía  27  años  y  pesaba  más  de  200  kilos.",
+   "match": 1.0
+  },
+  {
+   "i": 3,
+   "start": 12.914,
+   "end": 17.382,
+   "text": "Los médicos pensaban que el ayuno duraría solo unos días, pero él decidió seguir.",
+   "words": [
+    {
+     "w": "Los",
+     "t": 12.914
+    },
+    {
+     "w": "médicos",
+     "t": 12.994
+    },
+    {
+     "w": "pensaban",
+     "t": 13.374
+    },
+    {
+     "w": "que",
+     "t": 13.914
+    },
+    {
+     "w": "el",
+     "t": 14.114
+    },
+    {
+     "w": "ayuno",
+     "t": 14.234
+    },
+    {
+     "w": "duraría",
+     "t": 14.554
+    },
+    {
+     "w": "solo",
+     "t": 15.014
+    },
+    {
+     "w": "unos",
+     "t": 15.314
+    },
+    {
+     "w": "días,",
+     "t": 15.554
+    },
+    {
+     "w": "pero",
+     "t": 16.294
+    },
+    {
+     "w": "él",
+     "t": 16.414
+    },
+    {
+     "w": "decidió",
+     "t": 16.554
+    },
+    {
+     "w": "seguir.",
+     "t": 16.954
+    }
+   ],
+   "heard": " Los  médicos  pensaban  que  el  ayuno  duraría  solo  unos  días,  pero  él  decidió  seguir.",
+   "match": 1.0
+  },
+  {
+   "i": 4,
+   "start": 17.502,
+   "end": 20.839,
+   "text": "Durante más de un año, solo tomó agua, té, café y vitaminas.",
+   "words": [
+    {
+     "w": "Durante",
+     "t": 17.502
+    },
+    {
+     "w": "más",
+     "t": 17.742
+    },
+    {
+     "w": "de",
+     "t": 17.922
+    },
+    {
+     "w": "un",
+     "t": 18.062
+    },
+    {
+     "w": "año,",
+     "t": 18.182
+    },
+    {
+     "w": "solo",
+     "t": 18.662
+    },
+    {
+     "w": "tomó",
+     "t": 18.802
+    },
+    {
+     "w": "agua,",
+     "t": 19.202
+    },
+    {
+     "w": "té,",
+     "t": 19.642
+    },
+    {
+     "w": "café",
+     "t": 19.822
+    },
+    {
+     "w": "y",
+     "t": 20.022
+    },
+    {
+     "w": "vitaminas.",
+     "t": 20.182
+    }
+   ],
+   "heard": " Durante  más  de  un  año,  sólo  tomó  agua,  té,  café  y  vitaminas.",
+   "match": 0.92
+  },
+  {
+   "i": 5,
+   "start": 20.959,
+   "end": 24.834,
+   "text": "Sin comida, su cuerpo empezó a usar su propia grasa como combustible.",
+   "words": [
+    {
+     "w": "Sin",
+     "t": 20.959
+    },
+    {
+     "w": "comida,",
+     "t": 21.059
+    },
+    {
+     "w": "su",
+     "t": 21.679
+    },
+    {
+     "w": "cuerpo",
+     "t": 21.759
+    },
+    {
+     "w": "empezó",
+     "t": 22.039
+    },
+    {
+     "w": "a",
+     "t": 22.519
+    },
+    {
+     "w": "usar",
+     "t": 22.579
+    },
+    {
+     "w": "su",
+     "t": 22.799
+    },
+    {
+     "w": "propia",
+     "t": 23.079
+    },
+    {
+     "w": "grasa",
+     "t": 23.359
+    },
+    {
+     "w": "como",
+     "t": 23.819
+    },
+    {
+     "w": "combustible.",
+     "t": 24.019
+    }
+   ],
+   "heard": " sin  comida,  su  cuerpo  empezó  a  usar  su  propia  grasa  como  combustible.",
+   "match": 1.0
+  },
+  {
+   "i": 6,
+   "start": 24.954,
+   "end": 27.912,
+   "text": "Iba al hospital con frecuencia para hacerse análisis.",
+   "words": [
+    {
+     "w": "Iba",
+     "t": 24.954
+    },
+    {
+     "w": "al",
+     "t": 25.114
+    },
+    {
+     "w": "hospital",
+     "t": 25.254
+    },
+    {
+     "w": "con",
+     "t": 25.614
+    },
+    {
+     "w": "frecuencia",
+     "t": 25.954
+    },
+    {
+     "w": "para",
+     "t": 26.614
+    },
+    {
+     "w": "hacerse",
+     "t": 26.854
+    },
+    {
+     "w": "análisis.",
+     "t": 27.254
+    }
+   ],
+   "heard": " y  va  al  hospital  con  frecuencia  para  hacerse  análisis.",
+   "match": 0.88
+  },
+  {
+   "i": 7,
+   "start": 28.032,
+   "end": 33.878,
+   "text": "Después de trescientos ochenta y dos días, pesaba ochenta y un kilos. Había perdido más de ciento veinte.",
+   "words": [
+    {
+     "w": "Después",
+     "t": 28.032
+    },
+    {
+     "w": "de",
+     "t": 28.212
+    },
+    {
+     "w": "trescientos",
+     "t": 28.392
+    },
+    {
+     "w": "ochenta",
+     "t": 28.432
+    },
+    {
+     "w": "y",
+     "t": 28.472
+    },
+    {
+     "w": "dos",
+     "t": 28.512
+    },
+    {
+     "w": "días,",
+     "t": 29.672
+    },
+    {
+     "w": "pesaba",
+     "t": 30.272
+    },
+    {
+     "w": "ochenta",
+     "t": 30.612
+    },
+    {
+     "w": "y",
+     "t": 30.652
+    },
+    {
+     "w": "un",
+     "t": 30.692
+    },
+    {
+     "w": "kilos.",
+     "t": 31.152
+    },
+    {
+     "w": "Había",
+     "t": 32.132
+    },
+    {
+     "w": "perdido",
+     "t": 32.412
+    },
+    {
+     "w": "más",
+     "t": 32.852
+    },
+    {
+     "w": "de",
+     "t": 33.012
+    },
+    {
+     "w": "ciento",
+     "t": 33.172
+    },
+    {
+     "w": "veinte.",
+     "t": 33.212
+    }
+   ],
+   "heard": " Después  de  382  días,  pesaba  81  kilos.  Había  perdido  más  de  120.",
+   "match": 0.94
+  },
+  {
+   "i": 8,
+   "start": 33.998,
+   "end": 38.131,
+   "text": "Lo más loco: cinco años después, seguía pesando menos de noventa kilos.",
+   "words": [
+    {
+     "w": "Lo",
+     "t": 33.998
+    },
+    {
+     "w": "más",
+     "t": 34.058
+    },
+    {
+     "w": "loco:",
+     "t": 34.238
+    },
+    {
+     "w": "cinco",
+     "t": 34.778
+    },
+    {
+     "w": "años",
+     "t": 34.998
+    },
+    {
+     "w": "después,",
+     "t": 35.278
+    },
+    {
+     "w": "seguía",
+     "t": 36.058
+    },
+    {
+     "w": "pesando",
+     "t": 36.358
+    },
+    {
+     "w": "menos",
+     "t": 36.798
+    },
+    {
+     "w": "de",
+     "t": 37.018
+    },
+    {
+     "w": "noventa",
+     "t": 37.238
+    },
+    {
+     "w": "kilos.",
+     "t": 37.598
+    }
+   ],
+   "heard": " Lo  más  loco,  5  años  después,  seguía  pesando  menos  de  90  kilos.",
+   "match": 1.0
+  },
+  {
+   "i": 9,
+   "start": 38.251,
+   "end": 42.114,
+   "text": "Pero ojo: lo hizo con supervisión médica. No lo intentes en casa.",
+   "words": [
+    {
+     "w": "Pero",
+     "t": 38.251
+    },
+    {
+     "w": "ojo:",
+     "t": 38.351
+    },
+    {
+     "w": "lo",
+     "t": 38.771
+    },
+    {
+     "w": "hizo",
+     "t": 38.851
+    },
+    {
+     "w": "con",
+     "t": 39.071
+    },
+    {
+     "w": "supervisión",
+     "t": 39.311
+    },
+    {
+     "w": "médica.",
+     "t": 40.011
+    },
+    {
+     "w": "No",
+     "t": 40.611
+    },
+    {
+     "w": "lo",
+     "t": 40.851
+    },
+    {
+     "w": "intentes",
+     "t": 40.951
+    },
+    {
+     "w": "en",
+     "t": 41.451
+    },
+    {
+     "w": "casa.",
+     "t": 41.611
+    }
+   ],
+   "heard": " Pero  ojo,  lo  hizo  con  supervisión  médica.  No  lo  intentes  en  casa.",
+   "match": 1.0
+  },
+  {
+   "i": 10,
+   "start": 42.234,
+   "end": 44.499,
+   "text": "Y tú, ¿cuántas horas aguantas sin comer?",
+   "words": [
+    {
+     "w": "Y",
+     "t": 42.234
+    },
+    {
+     "w": "tú,",
+     "t": 42.334
+    },
+    {
+     "w": "¿cuántas",
+     "t": 42.654
+    },
+    {
+     "w": "horas",
+     "t": 42.994
+    },
+    {
+     "w": "aguantas",
+     "t": 43.174
+    },
+    {
+     "w": "sin",
+     "t": 43.754
+    },
+    {
+     "w": "comer?",
+     "t": 43.994
+    }
+   ],
+   "heard": " Y  tú,  ¿cuántas  horas  aguantas  sin  comer?",
+   "match": 1.0
+  }
+ ]
+}
