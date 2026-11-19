@@ -1,8 +1,19 @@
-# Playbook: un Short diario de curiosidades (cuerpo humano + historia)
+# Playbook: un Short diario de curiosidades para Colombia y Latinoamérica
 
 Este repositorio produce un YouTube Short en español al día, listo para subir: vídeo vertical
 1080x1920, miniaturas, título, descripción, etiquetas y ajustes. Lo ejecuta una sesión programada
 que empieza desde cero cada día. Sigue estos pasos en orden y no te los saltes.
+
+
+## Reglas de temática y personas reales (desde el 2026-11-20)
+- Público: **Colombia y toda Latinoamérica**. Usa referencias, unidades y ejemplos cercanos (pesos, kilómetros, fútbol, ciudades de la región). Español neutro latinoamericano.
+- Bloques que se alternan: ⚽/⭐ famosos y deportistas, 🌎 países y lugares, 🏙️ ciudades, 🫀 partes del cuerpo.
+- **Personas reales y famosas:**
+  - **Nunca generes con IA la cara ni un cuerpo reconocible de una persona real.** Represéntala con símbolos: un objeto icónico (tarjeta roja, guayos, micrófono, bicicleta), una camiseta genérica con su número, un estadio, una silueta de espaldas o un contador. En los prompts escribe "no people" o "seen from behind, silhouette" si sale alguien.
+  - Nada de escudos de clubes, logos de marcas o federaciones, ni fragmentos de partidos o canciones: tienen derechos de autor. Usa camisetas y estadios genéricos.
+  - Solo hechos públicos y verificados, en tono neutral o de admiración. Nada de burlas, rumores, vida privada, salud no pública ni temas judiciales.
+  - Los récords cambian con el tiempo: escribe "hasta hoy" o "según [fuente]" cuando la cifra pueda variar, y cuenta en la descripción si las fuentes no coinciden.
+- **Países y ciudades:** datos de fuentes oficiales o de medios reconocidos. Evita los rankings sin fuente ("la más peligrosa", "la mejor") salvo que los cites.
 
 ## 0. Preparación (unos 10 min)
 ```
@@ -81,7 +92,12 @@ python3 tools/check_audio.py out/episodes/NNN-slug/final.mp4
 La transcripción debe coincidir con el guion.
 
 ## 8. Paquete para publicar (`episodes/NNN-slug/publicar/`)
-- `thumb.html` -> adáptalo (número o palabra gigante en rojo + 2-4 palabras + insignia) y ejecuta
+- **Miniaturas (v2):** escribe `publicar/thumb.json` y ejecuta `node tools/thumbs.cjs episodes/NNN-slug`
+  (las instrucciones de cada campo están al principio de `tools/thumbs.cjs`). Ejemplo:
+  `{"bg":"stadium","hero":"redcard","big":"46","unit":"TARJETAS ROJAS","line1":"EL JUGADOR MÁS","mark":"EXPULSADO","line2":"DE LA HISTORIA","badge":"RÉCORD MUNDIAL","emoji":"😱","flag":"🇨🇴"}`
+  Reglas: el número o la palabra gigante es el dato más impactante; como mucho 3 líneas cortas; una sola palabra en el
+  marcador amarillo; el `hero` es la imagen más reconocible (el objeto icónico), nunca una cara de persona real.
+  Revisa los dos PNG antes de enviarlos: nada cortado ni tapado.
   `node tools/thumbs.cjs episodes/NNN-slug`.
 - `titulo_y_descripcion.txt` con el mismo formato que el del 001:
   - 3 títulos de menos de 60 caracteres: número + curiosidad + emoji, sin mentir (nada de clickbait falso).
