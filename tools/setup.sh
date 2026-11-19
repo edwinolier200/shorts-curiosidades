@@ -10,10 +10,12 @@ python3 -c 'import PIL.Image' 2>/dev/null || pip install -q --ignore-installed p
 if [ ! -e .kenv ]; then
   if [ -x /opt/kenv/bin/python ]; then ln -s /opt/kenv .kenv; else uv venv -q -p 3.12 .kenv && VIRTUAL_ENV=$PWD/.kenv uv pip install -q kokoro soundfile; fi
 fi
+# Chatterbox multilingual voice (installed on top of the existing torch; its pinned versions are too old)
+python3 -c 'import chatterbox' 2>/dev/null || { pip install -q --no-deps chatterbox-tts && pip install -q resemble-perth conformer s3tokenizer librosa omegaconf pyloudnorm; } 2>&1 | grep -v WARNING || true
 [ -f package.json ] || echo '{"name":"shorts-kit","private":true}' > package.json
 # warm the model caches so the first episode does not stall
 python3 -c "from faster_whisper import WhisperModel; WhisperModel('small',device='cpu',compute_type='int8')"
-.kenv/bin/python -c "from kokoro import KPipeline; KPipeline(lang_code='e', repo_id='hexgrad/Kokoro-82M')" 2>/dev/null
+PYTHONPATH=tools/shim python3 -c "from chatterbox.mtl_tts import ChatterboxMultilingualTTS; ChatterboxMultilingualTTS.from_pretrained(device='cpu')" 2>&1 | grep -iE "error" || true
 python3 -c "
 from huggingface_hub import snapshot_download
 snapshot_download('segmind/SSD-1B', allow_patterns=['*.json','*.txt','unet/diffusion_pytorch_model.safetensors','vae/diffusion_pytorch_model.safetensors','text_encoder/model.safetensors','text_encoder_2/model.safetensors','tokenizer*/*'])

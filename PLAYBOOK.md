@@ -19,7 +19,7 @@ que empieza desde cero cada día. Sigue estos pasos en orden y no te los saltes.
 ```
 bash tools/setup.sh
 ```
-Instala PyTorch, el generador de imágenes (SSD-1B + LCM), la voz Kokoro (Python 3.12 en `.kenv`),
+Instala PyTorch, el generador de imágenes (SSD-1B + LCM), la voz Chatterbox (y Kokoro de respaldo) (Python 3.12 en `.kenv`),
 faster-whisper y espeak-ng, y precarga los modelos. Chromium y Playwright ya vienen en el contenedor.
 
 ## 1. Elegir el tema
@@ -39,7 +39,7 @@ Usa la estructura viral del episodio 001 (`episodes/001-11-dias-sin-dormir/audio
 4. **Giro (38-48 s):** "Lo más loco…": el dato que nadie espera.
 5. **Cierre en bucle:** una pregunta al espectador que enlace con el gancho.
 
-Reglas para la voz (Kokoro `em_alex`):
+Reglas para la voz (Chatterbox multilingüe, más natural; `VOICE=kokoro` vuelve a la voz anterior):
 - Escribe los números en letras ("mil novecientos sesenta y cuatro").
 - No uses "…" ni pausas largas: la voz debe ir de corrido.
 - Nombres extranjeros: escríbelos como se pronuncian en español ("Súlivan", "Guínes") y devuélvelos a su grafía correcta en los subtítulos con `REP`. No empieces una línea con un nombre propio: la primera palabra a veces se pierde.
@@ -74,6 +74,8 @@ regenérala sola (`python3 tools/gen_images.py episodes/NNN-slug clave`; `SEED=7
 ```
 bash tools/build_audio.sh episodes/NNN-slug
 ```
+La voz se genera línea a línea (unos 8 min) y cada toma se comprueba con Whisper: si sale mal pronunciada se repite sola (hasta 4 veces).
+Si existe `voices/narrador.wav` (una grabación de 10-20 s con derechos de uso), todas las líneas salen con esa voz.
 Revisa la salida: la columna `match` de cada línea debería estar en 0.9 o más. Si una palabra sale
 mal (nombres propios en inglés, siglas), reescríbela en `lines.txt` y vuelve a ejecutar.
 
