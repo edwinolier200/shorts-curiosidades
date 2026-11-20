@@ -15,6 +15,34 @@ que empieza desde cero cada día. Sigue estos pasos en orden y no te los saltes.
   - Los récords cambian con el tiempo: escribe "hasta hoy" o "según [fuente]" cuando la cifra pueda variar, y cuenta en la descripción si las fuentes no coinciden.
 - **Países y ciudades:** datos de fuentes oficiales o de medios reconocidos. Evita los rankings sin fuente ("la más peligrosa", "la mejor") salvo que los cites.
 
+
+## Estrategia de crecimiento v3 (obligatoria desde el 2026-11-21)
+Objetivo de cada Short: que el espectador **no deslice en los primeros 2 segundos**, lo vea **entero** y lo **repita**, y que **comente**.
+
+**Guion (fórmula GANCHO, BUCLE ABIERTO, ESCALADA, GIRO, PREGUNTA):**
+1. **Primera frase = el dato más brutal, sin introducción.** Mal: "Este hombre pasó…". Bien: "Cuarenta y seis tarjetas rojas. Nadie en la historia del fútbol fue expulsado tantas veces."
+   El primer fotograma ya muestra el número gigante y el texto: es lo que se ve en el feed.
+2. **Bucle abierto en los primeros 5 s:** promete algo para el final ("…y lo último que hizo es todavía más loco").
+3. **Escalada:** de 3 a 4 datos que van a más, con un cambio visual cada 2-3 s.
+4. **Giro final:** el dato que nadie espera (cumple la promesa del bucle).
+5. **Pregunta de identidad para comentar:** "¿Desde qué país lo ves?", "¿Tú lo viste jugar?", "¿En tu ciudad pasa lo mismo?". La última frase debe enlazar con la primera para que la repetición se sienta continua.
+- **Duración objetivo: 35-45 s (90-115 palabras).** El 100 % de retención vale más que la duración.
+- Lenguaje de conversación latinoamericano, frases cortas, verbos en presente. Sin relleno ("hoy te voy a contar…").
+
+**Título (≤ 55 caracteres):** `[Sujeto conocido o palabra clave]: [dato con número] [1 emoji]`.
+Ejemplos: "Gerardo Bedoya: 46 tarjetas rojas 🟥", "Ciudad de México se hunde 20 cm al año 😳". La palabra clave va primero (búsqueda) y el número debe ser real.
+
+**Descripción:** la primera línea repite la palabra clave en forma de pregunta; luego 3-4 viñetas, las fuentes, el aviso de IA y **solo 3 hashtags**: `#shorts #curiosidades #<país o tema>`.
+
+**Comentario fijado:** siempre una pregunta para opinar o elegir (por ejemplo, "¿Qué jugador quieres que contemos el próximo viernes? 👇"). Los comentarios alimentan los temas futuros.
+
+**En `titulo_y_descripcion.txt` añade también:**
+- `SERIE:` el nombre de la serie del día (para la lista de reproducción del mismo nombre).
+- `REDES:` un texto corto para TikTok, Instagram Reels y Facebook Reels, con 3-5 hashtags de esa red. Se sube **el mismo vídeo** a las cuatro plataformas: en Latinoamérica TikTok y Facebook mueven muchísimo alcance.
+- `IDEA DE ENCUESTA:` una encuesta para la pestaña Comunidad de YouTube, para que el público vote el próximo tema de la serie.
+
+**Domingos de reto:** formato de adivinanza con 3 pistas que se van revelando, una cuenta atrás de 3 s y la respuesta al final. Pide "escribe tu respuesta antes de que se revele". Es el formato que más comentarios genera.
+
 ## 0. Preparación (unos 10 min)
 ```
 bash tools/setup.sh
@@ -30,7 +58,7 @@ faster-whisper y espeak-ng, y precarga los modelos. Chromium y Playwright ya vie
   no se puede confirmar, no lo uses o suavízalo ("según los registros de la época…"). Nunca inventes
   cifras, fechas ni citas. Guarda las fuentes: van en la descripción.
 
-## 2. Guion (40-55 s, unas 110-140 palabras)
+## 2. Guion (35-45 s, unas 90-115 palabras; ver la Estrategia v3)
 Usa la estructura viral del episodio 001 (`episodes/001-11-dias-sin-dormir/audio/vo/lines.txt`):
 1. **Gancho (0-3 s):** lo más imposible o chocante, con un número grande. "Este hombre…", "¿Qué pasa si…?".
 2. **Contexto (3-10 s):** quién, cuándo, dónde, en una frase.
