@@ -52,6 +52,16 @@ Canales revisados: Chris Torres (@GEOchristorres, geografía de Latinoamérica, 
 - **Qué comenta la gente:** de dónde es ("Saludos desde Perú 🇵🇪"), rivalidades entre países, correcciones y peticiones ("haz uno de América contra Asia"). Por eso la pregunta final pide país o ciudad, y se piden ideas para el próximo vídeo.
 - **Nunca** metas errores a propósito para provocar correcciones: es engañoso y daña la confianza. Si hay un error real, corrígelo en el comentario fijado.
 
+
+### Mapas animados (`engine/maps.js`, en los episodios `lib/maps.js`)
+Para **martes (ciudades), jueves (países) y sábados (lugares)**, siempre que el tema tenga geografía, cuenta la historia **sobre un mapa** en al menos 2 escenas: es el formato con más vistas de la competencia.
+- `await MAP.load()` en `init()`; `MAP.camera(lon, lat, zoom)` (anima lon, lat y zoom con `springKeys`/`kf`; el zoom en escala logarítmica); `MAP.fit(MAP.bbox('Colombia'), 0.8)` calcula el zoom que encuadra un país.
+- `MAP.world(ctx, cam)` dibuja el océano y todos los países; `MAP.country(ctx, cam, 'Colombia', {k})` lo resalta (con `k` de 0 a 1 para que entre "creciendo"); `MAP.label(...)` pone la etiqueta en español (`MAP.ES`).
+- `MAP.trueSize(ctx, cam, 'Spain', [lon, lat])` coloca un país a su **tamaño real** en otro lugar (comparaciones del tipo "¿cuántos caben?"); `MAP.city(...)` dibuja un marcador con pulso; `MAP.route(ctx, cam, a, b, p)` traza una línea recta sobre el globo (ruta ortodrómica).
+- Los nombres de país siguen Natural Earth en inglés ('Brazil', 'Mexico', 'United States of America'). Para Francia sin la Guayana usa `{ minLon: -10, maxLon: 20 }`.
+- **Comprueba cada afirmación de tamaño con `MAP.areaKm2(name)`** antes de escribirla en el guion, y cita la superficie oficial en la descripción. Ejemplo verificado: España (506 mil km²) + Francia metropolitana (544 mil) = 1,05 M km² < Colombia (1,14 M) → "en superficie, España y Francia juntas caben en Colombia". Con Italia y Reino Unido ya no caben: nunca afirmes lo que el mapa no demuestra.
+- Ejemplo completo y probado: `examples/mapa_demo_film.js` (zoom del mundo a Colombia, España y Francia a tamaño real, ruta Bogotá-Madrid).
+
 **Domingos de reto:** formato de adivinanza con 3 pistas que se van revelando, una cuenta atrás de 3 s y la respuesta al final. Pide "escribe tu respuesta antes de que se revele". Es el formato que más comentarios genera.
 
 ## 0. Preparación (unos 10 min)
