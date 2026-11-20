@@ -30,7 +30,7 @@ Objetivo de cada Short: que el espectador **no deslice en los primeros 2 segundo
 - Lenguaje de conversación latinoamericano, frases cortas, verbos en presente. Sin relleno ("hoy te voy a contar…").
 
 **Título (≤ 55 caracteres):** `[Sujeto conocido o palabra clave]: [dato con número] [1 emoji]`.
-Ejemplos: "Gerardo Bedoya: 46 tarjetas rojas 🟥", "Ciudad de México se hunde 20 cm al año 😳". La palabra clave va primero (búsqueda) y el número debe ser real.
+Ejemplos: "Gerardo Bedoya: 46 tarjetas rojas 🟥", "¿Por qué Ciudad de México se hunde cada año? 😳", "¿Cuántos países de Europa caben en Colombia? 🇨🇴". Alterna los patrones de pregunta, "lo que nadie te contó", "no es lo que crees" y "X contra Y". La palabra clave va primero (búsqueda) y el número debe ser real.
 
 **Descripción:** la primera línea repite la palabra clave en forma de pregunta; luego 3-4 viñetas, las fuentes, el aviso de IA y **solo 3 hashtags**: `#shorts #curiosidades #<país o tema>`.
 
@@ -40,6 +40,17 @@ Ejemplos: "Gerardo Bedoya: 46 tarjetas rojas 🟥", "Ciudad de México se hunde 
 - `SERIE:` el nombre de la serie del día (para la lista de reproducción del mismo nombre).
 - `REDES:` un texto corto para TikTok, Instagram Reels y Facebook Reels, con 3-5 hashtags de esa red. Se sube **el mismo vídeo** a las cuatro plataformas: en Latinoamérica TikTok y Facebook mueven muchísimo alcance.
 - `IDEA DE ENCUESTA:` una encuesta para la pestaña Comunidad de YouTube, para que el público vote el próximo tema de la serie.
+
+
+### Lo que funciona en la competencia (análisis con TubeAlfred, 2026-11-20)
+Canales revisados: Chris Torres (@GEOchristorres, geografía de Latinoamérica, vídeos de 3 a 9,7 M de vistas), Línea Discontinua, Historia en Vena, Un Dato al Día.
+- **Identidad y orgullo latino:** los más vistos tocan "nosotros" frente al mundo ("El mexicano que humilló al ejército de EE. UU." 7,6 M; "México contra el mundo: las guerras que nadie te contó" 8,7 M; "Por qué la altitud salvó a Colombia del calor" 3 M).
+- **Mapas y comparaciones de tamaño:** "¿Sabías el tamaño real de estos países?" 9,7 M; "Si sales de Madrid en línea recta, ¿dónde acabas?" 731 K. Los temas de países y ciudades se cuentan sobre un mapa siempre que se pueda.
+- **El título apela a "tú" y a "tu":** "¿Tu ciudad está en la lista?", "¿Tu apellido viene de…?".
+- **Patrones de título que más rinden:** pregunta directa ("¿Por qué…?", "¿Cuántos…?"), "…que nadie te contó", "…no es lo que crees", "X contra Y", y un número sorprendente.
+- **Duración de los éxitos:** de 35 a 57 s. Nuestro objetivo de 35-45 s está bien; nunca pasar de 58 s.
+- **Qué comenta la gente:** de dónde es ("Saludos desde Perú 🇵🇪"), rivalidades entre países, correcciones y peticiones ("haz uno de América contra Asia"). Por eso la pregunta final pide país o ciudad, y se piden ideas para el próximo vídeo.
+- **Nunca** metas errores a propósito para provocar correcciones: es engañoso y daña la confianza. Si hay un error real, corrígelo en el comentario fijado.
 
 **Domingos de reto:** formato de adivinanza con 3 pistas que se van revelando, una cuenta atrás de 3 s y la respuesta al final. Pide "escribe tu respuesta antes de que se revele". Es el formato que más comentarios genera.
 

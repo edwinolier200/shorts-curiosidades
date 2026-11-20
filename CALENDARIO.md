@@ -50,18 +50,18 @@ Antes de producir cada tema hay que verificar los datos (PLAYBOOK, paso 1) y seg
 | 030 | 2026-12-14 | Tu cerebro gasta el 20% de tu energía | 🫀 Lunes del cuerpo |  | pendiente |
 | 031 | 2026-12-15 | Medellín: de la ciudad más peligrosa a la más innovadora | 🏙️ Martes de ciudades |  | pendiente |
 | 032 | 2026-12-16 | Juan Pablo Montoya: ganó en Mónaco y en Indianápolis | ⭐ Miércoles de famosos |  | pendiente |
-| 033 | 2026-12-17 | Perú y la papa: miles de variedades | 🌎 Jueves de países |  | pendiente |
+| 033 | 2026-12-17 | ¿Por qué en 3 países de Sudamérica no se habla español? | 🌎 Jueves de países |  | pendiente |
 | 034 | 2026-12-18 | José Luis Chilavert, el portero goleador | ⚽ Viernes de fútbol |  | pendiente |
 | 035 | 2026-12-19 | Salto Ángel, la cascada más alta del mundo | 🏞️ Sábado de lugares increíbles |  | pendiente |
-| 036 | 2026-12-20 | Adivina el país por su dato curioso (reto #5) | ❓ Domingo de reto |  | pendiente |
+| 036 | 2026-12-20 | ¿Tu ciudad está entre las más altas de Latinoamérica? (reto #5) | ❓ Domingo de reto |  | pendiente |
 | 037 | 2026-12-21 | Lo que le pasa a tu cuerpo cuando gritas un gol | 🫀 Lunes del cuerpo |  | pendiente |
 | 038 | 2026-12-22 | Cartagena: las murallas que tardaron casi dos siglos | 🏙️ Martes de ciudades |  | pendiente |
 | 039 | 2026-12-23 | Egan Bernal: el primer latinoamericano en ganar el Tour de Francia | ⭐ Miércoles de famosos |  | pendiente |
-| 040 | 2026-12-24 | Ecuador, el país que se llama como una línea imaginaria | 🌎 Jueves de países |  | pendiente |
+| 040 | 2026-12-24 | ¿Cuántos países de Europa caben dentro de Colombia? | 🌎 Jueves de países |  | pendiente |
 | 041 | 2026-12-25 | Por qué la Navidad se celebra el 25 de diciembre | 🎄 Especial |  | pendiente |
 | 042 | 2026-12-26 | Atacama, uno de los desiertos más secos del planeta | 🏞️ Sábado de lugares increíbles |  | pendiente |
 | 043 | 2026-12-27 | Adivina la parte del cuerpo por su récord (reto #6) | ❓ Domingo de reto |  | pendiente |
 | 044 | 2026-12-28 | Por qué lloras al cortar cebolla | 🫀 Lunes del cuerpo |  | pendiente |
-| 045 | 2026-12-29 | Quito, una de las capitales más altas del mundo | 🏙️ Martes de ciudades |  | pendiente |
+| 045 | 2026-12-29 | Si sales de Bogotá en línea recta, ¿dónde terminas? | 🏙️ Martes de ciudades |  | pendiente |
 | 046 | 2026-12-30 | Messi y el tratamiento de crecimiento que le cambió la vida | ⭐ Miércoles de famosos |  | pendiente |
 | 047 | 2026-12-31 | Las 12 uvas de Año Nuevo: de dónde viene la tradición | 🎆 Especial |  | pendiente |
