@@ -98,7 +98,8 @@ export function stamp(ctx, str, x, y, t, t0, { size = 90, rot = -0.14, tEnd = In
   ctx.restore();
 }
 // ---------------------------------------------------------------- channel watermark (left, mid-height: clear of the Shorts UI)
-export function watermark(ctx, handle, { y = H * 0.58 } = {}) {
+export const HANDLE = '@EdinTops';
+export function watermark(ctx, handle = HANDLE, { y = H * 0.58 } = {}) {
   if (!handle) return;
   ctx.save(); ctx.globalAlpha = 0.55; ctx.font = font(30, 800, 'UI'); ctx.textAlign = 'left';
   ctx.fillStyle = 'rgba(0,0,0,0.4)'; ctx.fillText(handle, 62, y + 2); ctx.fillStyle = '#fff'; ctx.fillText(handle, 60, y);

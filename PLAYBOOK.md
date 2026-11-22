@@ -1,5 +1,7 @@
 # Playbook: un Short diario de curiosidades para Colombia y Latinoamérica
 
+Canal: **@EdinTops**. Úsalo en la marca de agua, en la descripción ("Suscríbete a @EdinTops") y en el texto de REDES.
+
 Este repositorio produce un YouTube Short en español al día, listo para subir: vídeo vertical
 1080x1920, miniaturas, título, descripción, etiquetas y ajustes. Lo ejecuta una sesión programada
 que empieza desde cero cada día. Sigue estos pasos en orden y no te los saltes.
@@ -30,7 +32,7 @@ Inspirado en el lenguaje visual de los Shorts latinos que más crecen. Ejemplo c
   - `UI.statCard(ctx, '5.700 M $', 'lo que gana el canal en un año 🚢', t, t0)`: cada cifra clave va en una tarjeta azul oscuro con el número amarillo.
   - `UI.pill(...)` (PRECIO ↑) y `UI.stamp(...)` (EN PARO, CANCELADO) como remates visuales de los chistes.
   - `UI.stage(ctx)` dibuja el escenario de mesa de madera y fondo azul para objetos dibujados en código (podios, barras, contadores).
-  - `UI.watermark(ctx, '@canal')`: el @ del canal, pequeño, a media altura a la izquierda.
+  - `UI.watermark(ctx)`: pone **@EdinTops** (el @ del canal), pequeño, a media altura a la izquierda. Va en TODOS los vídeos.
 - Ritmo: un cambio visual cada 2-3 s (nuevo objeto, tarjeta, sello o movimiento de cámara). Cámara siempre con un acercamiento lento.
 - Lo que el usuario ve en YouTube tapa la parte de arriba (y < 260), la columna derecha (x > 930, y 1000-1700) y la parte de abajo (y > 1700): no pongas nada importante ahí.
 

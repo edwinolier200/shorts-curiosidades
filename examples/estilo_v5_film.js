@@ -41,6 +41,6 @@ M.film({
     UI.dayBadge(ctx, 'SIN COLOMBIA', 'LUNES', t, 5.0, { tEnd: 10 });
     UI.dayBadge(ctx, 'SIN COLOMBIA', 'MARTES', t, 10.0);
     UI.captionsTop(ctx, CAP, t);
-    UI.watermark(ctx, '@tucanal');
+    UI.watermark(ctx);
   },
 });
