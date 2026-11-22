@@ -16,6 +16,17 @@ que empieza desde cero cada día. Sigue estos pasos en orden y no te los saltes.
 - **Países y ciudades:** datos de fuentes oficiales o de medios reconocidos. Evita los rankings sin fuente ("la más peligrosa", "la mejor") salvo que los cites.
 
 
+
+## Formato v4: la ESCALERA (obligatorio en todos los vídeos desde el 2026-11-23)
+Inspirado en lo que mejor funciona ahora con el público colombiano ("¿Qué pasaría si Colombia desapareciera?", 178 mil vistas en 1-2 días, 5,4 % de me gusta). Se aplica a **todos** los temas, no solo a la serie de los domingos. **No copies guiones ni ideas concretas de otros canales: copia la estructura, con tus propios datos verificados.**
+1. **Gancho con pregunta o dato imposible que toque al espectador** (su país, su cuerpo, su ciudad): "¿Qué pasaría si…?", "¿Qué le pasa a tu cuerpo si…?", "46 tarjetas rojas…".
+2. **Escalera de 5 a 7 bloques** con etiqueta en pantalla (días de la semana LUNES…DOMINGO, pasos 1/7…, años, kilómetros…). Usa `lib/blocks.js`: `blockTag(ctx, 'LUNES', '☕', t, T.lunes)` y `ladder(...)` para los puntos de progreso. Cada bloque dura 6-10 s: **un dato verificado y un remate con humor** ("tu cafecito a precio de cóctel"). El humor es ligero y nunca se burla de personas, países ni grupos.
+3. **Golpe emocional cerca del final** (orgullo, nostalgia, la familia o la diáspora), y luego un **remate final con humor o rivalidad sana** entre países (arepa, café, fútbol), siempre con cariño.
+4. **Cierre:** una pregunta para comentar y una **llamada a compartir concreta**: "Envíaselo a ese amigo [colombiano/mexicano…] que [rasgo reconocible]". Ponla también en la descripción y en el texto de REDES.
+- **Duración:** 60-90 s con la escalera (pueden llegar a 110 s si cada bloque cumple). Sin escalera, 35-55 s. Si un bloque no aporta un dato nuevo o un remate, se corta.
+- **Serie de los domingos desde el 29-11: "🤯 ¿Qué pasaría si…?"**, un escenario hipotético contado día a día o paso a paso. Lo hipotético debe quedar claro ("solo es un vídeo") y cada consecuencia tiene que apoyarse en datos reales y verificados.
+- La regla de verificación no cambia: cada cifra de cada bloque, con 2 fuentes.
+
 ## Estrategia de crecimiento v3 (obligatoria desde el 2026-11-21)
 Objetivo de cada Short: que el espectador **no deslice en los primeros 2 segundos**, lo vea **entero** y lo **repita**, y que **comente**.
 
@@ -26,7 +37,7 @@ Objetivo de cada Short: que el espectador **no deslice en los primeros 2 segundo
 3. **Escalada:** de 3 a 4 datos que van a más, con un cambio visual cada 2-3 s.
 4. **Giro final:** el dato que nadie espera (cumple la promesa del bucle).
 5. **Pregunta de identidad para comentar:** "¿Desde qué país lo ves?", "¿Tú lo viste jugar?", "¿En tu ciudad pasa lo mismo?". La última frase debe enlazar con la primera para que la repetición se sienta continua.
-- **Duración objetivo: 35-45 s (90-115 palabras).** El 100 % de retención vale más que la duración.
+- **Duración:** ver el Formato v4 (60-90 s con la escalera; 35-55 s sin ella).
 - Lenguaje de conversación latinoamericano, frases cortas, verbos en presente. Sin relleno ("hoy te voy a contar…").
 
 **Título (≤ 55 caracteres):** `[Sujeto conocido o palabra clave]: [dato con número] [1 emoji]`.
@@ -79,7 +90,7 @@ faster-whisper y espeak-ng, y precarga los modelos. Chromium y Playwright ya vie
   no se puede confirmar, no lo uses o suavízalo ("según los registros de la época…"). Nunca inventes
   cifras, fechas ni citas. Guarda las fuentes: van en la descripción.
 
-## 2. Guion (35-45 s, unas 90-115 palabras; ver la Estrategia v3)
+## 2. Guion (Formato v4: 60-90 s con la escalera, unas 160-230 palabras)
 Usa la estructura viral del episodio 001 (`episodes/001-11-dias-sin-dormir/audio/vo/lines.txt`):
 1. **Gancho (0-3 s):** lo más imposible o chocante, con un número grande. "Este hombre…", "¿Qué pasa si…?".
 2. **Contexto (3-10 s):** quién, cuándo, dónde, en una frase.
