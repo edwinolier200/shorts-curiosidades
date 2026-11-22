@@ -17,6 +17,23 @@ que empieza desde cero cada día. Sigue estos pasos en orden y no te los saltes.
 
 
 
+
+## Estilo visual v5 (obligatorio desde el 2026-11-23): "maqueta 3D" + mapa en relieve
+Inspirado en el lenguaje visual de los Shorts latinos que más crecen. Ejemplo completo y probado: `examples/estilo_v5_film.js` (con `examples/estilo_v5_captions.json`).
+- **Imágenes = objetos en miniatura tipo juguete o plastilina sobre una mesa de madera con fondo azul oscuro.** Añade SIEMPRE este final a cada prompt de `prompts.json`:
+  `", 3D render, cute miniature, clay toy style, soft studio lighting, on a warm wooden table, dark navy blue background, centered, isometric view, octane render, smooth plastic materials, no text"`.
+  Un objeto protagonista por imagen (taza, barco, flores, balón, montaña…). **Nunca pidas números ni letras en la imagen** (la IA los escribe mal): los números van en `UI.statCard`, `UI.pill` y `UI.stamp`.
+- **Mapas en relieve** (`MAP.relief`, cámara con `tilt: 1`): países como bloques pastel; el protagonista se eleva con `lift`, con `MAP.mountains` y `MAP.flag` (banderas en `MAP.FLAGS`). Ejemplo en las escenas 0-5 s del demo.
+- **Interfaz (`lib/ui.js`):**
+  - `UI.captionsTop(ctx, CAP, t)`: subtítulos ARRIBA (y≈340), en blanco, ortografía normal (no todo en mayúsculas) y la palabra clave en amarillo. Sustituye a los subtítulos grandes del centro.
+  - `UI.dayBadge(ctx, 'SIN COLOMBIA', 'LUNES', t, t0, {tEnd})`: la etiqueta del bloque aparece grande y luego se queda en la esquina superior izquierda (el texto rojo es el tema del vídeo).
+  - `UI.statCard(ctx, '5.700 M $', 'lo que gana el canal en un año 🚢', t, t0)`: cada cifra clave va en una tarjeta azul oscuro con el número amarillo.
+  - `UI.pill(...)` (PRECIO ↑) y `UI.stamp(...)` (EN PARO, CANCELADO) como remates visuales de los chistes.
+  - `UI.stage(ctx)` dibuja el escenario de mesa de madera y fondo azul para objetos dibujados en código (podios, barras, contadores).
+  - `UI.watermark(ctx, '@canal')`: el @ del canal, pequeño, a media altura a la izquierda.
+- Ritmo: un cambio visual cada 2-3 s (nuevo objeto, tarjeta, sello o movimiento de cámara). Cámara siempre con un acercamiento lento.
+- Lo que el usuario ve en YouTube tapa la parte de arriba (y < 260), la columna derecha (x > 930, y 1000-1700) y la parte de abajo (y > 1700): no pongas nada importante ahí.
+
 ## Formato v4: la ESCALERA (obligatorio en todos los vídeos desde el 2026-11-23)
 Inspirado en lo que mejor funciona ahora con el público colombiano ("¿Qué pasaría si Colombia desapareciera?", 178 mil vistas en 1-2 días, 5,4 % de me gusta). Se aplica a **todos** los temas, no solo a la serie de los domingos. **No copies guiones ni ideas concretas de otros canales: copia la estructura, con tus propios datos verificados.**
 1. **Gancho con pregunta o dato imposible que toque al espectador** (su país, su cuerpo, su ciudad): "¿Qué pasaría si…?", "¿Qué le pasa a tu cuerpo si…?", "46 tarjetas rojas…".
