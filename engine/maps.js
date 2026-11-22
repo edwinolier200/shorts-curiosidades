@@ -47,9 +47,10 @@ const polys = (f) => (f.geometry.type === 'Polygon' ? [f.geometry.coordinates] :
 const D = Math.PI / 180;
 const clampLat = (lat) => Math.max(-85, Math.min(85, lat));
 export const merc = (lon, lat) => [lon / 360 + 0.5, 0.5 - Math.log(Math.tan(Math.PI / 4 + clampLat(lat) * D / 2)) / (2 * Math.PI)];
-export function camera(lon, lat, zoom, { cx = W / 2, cy = H * 0.42 } = {}) {
-  const [mx, my] = merc(lon, lat); const s = W * zoom;
-  return { mx, my, s, cx, cy, zoom, p: (lo, la) => { const [x, y] = merc(lo, la); return [cx + (x - mx) * s, cy + (y - my) * s]; } };
+// tilt 0..1 squashes the map vertically (a table-top view, used by relief()).
+export function camera(lon, lat, zoom, { cx = W / 2, cy = H * 0.42, tilt = 0 } = {}) {
+  const [mx, my] = merc(lon, lat); const s = W * zoom, ty = 1 - 0.42 * tilt;
+  return { mx, my, s, cx, cy, zoom, tilt, p: (lo, la) => { const [x, y] = merc(lo, la); return [cx + (x - mx) * s, cy + (y - my) * s * ty]; } };
 }
 // Zoom that makes a lon/lat box fill `frac` of the frame width/height.
 export function fit(bbox, frac = 0.8, { h = H * 0.6 } = {}) {
@@ -198,3 +199,83 @@ export function areaKm2(name, { minLon, maxLon } = {}) {
   });
   return total;
 }
+
+
+// ------------------------------------------------------------------ v5: 3D relief map (toy/diorama look)
+export const PASTEL = ['#F2C14E', '#E9A6C9', '#9CCB7C', '#F08A4B', '#C9B6E4', '#F5E6A8', '#8FC7D9', '#E8D4A8'];
+const shade = (hex, f) => '#' + [1, 3, 5].map((i) => Math.max(0, Math.min(255, Math.round(parseInt(hex.slice(i, i + 2), 16) * f))).toString(16).padStart(2, '0')).join('');
+const hashName = (n) => { let h = 7; for (const ch of n) h = (h * 31 + ch.charCodeAt(0)) >>> 0; return h; };
+const BB = new Map();
+function fbbox(f) {
+  if (BB.has(f)) return BB.get(f);
+  let b = [180, 90, -180, -90];
+  for (const poly of polys(f)) for (const [lo, la] of poly[0]) b = [Math.min(b[0], lo), Math.min(b[1], la), Math.max(b[2], lo), Math.max(b[3], la)];
+  BB.set(f, b); return b;
+}
+const onScreen = (cam, b) => { const [x1, y1] = cam.p(b[0], b[3]), [x2, y2] = cam.p(b[2], b[1]); return x2 > -200 && x1 < W + 200 && y2 > -200 && y1 < H + 200; };
+// colors: { 'Colombia': '#F2C14E' } overrides; lift: { 'Colombia': 0..1 } raises a country (it "pops out" of the map)
+export function relief(ctx, cam, { depth = 34, colors = {}, lift = {}, sea = '#14254A' } = {}) {
+  const g = ctx.createRadialGradient(W / 2, cam.cy, 0, W / 2, cam.cy, H); g.addColorStop(0, '#1D3366'); g.addColorStop(1, sea);
+  ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  const vis = GEO.features.filter((f) => onScreen(cam, fbbox(f)));
+  // draw north to south so nearer (southern, lower on screen) blocks overlap the ones behind them
+  vis.sort((a, b) => fbbox(b)[3] - fbbox(a)[3]);
+  const lifted = vis.filter((f) => lift[f.properties.name] > 0), flat = vis.filter((f) => !(lift[f.properties.name] > 0));
+  for (const f of [...flat, ...lifted]) {
+    const name = f.properties.name, top = colors[name] || PASTEL[hashName(name) % PASTEL.length];
+    const up = (lift[name] || 0) * depth * 2.2, d = depth;
+    // tiny islands: no walls (they turn into slivers); polygons under ~3 px are skipped
+    const size = (poly) => { let a = [1e9, 1e9, -1e9, -1e9]; for (const [lo, la] of poly[0]) { const [x, y] = cam.p(lo, la); a = [Math.min(a[0], x), Math.min(a[1], y), Math.max(a[2], x), Math.max(a[3], y)]; } return Math.max(a[2] - a[0], a[3] - a[1]); };
+    const sized = polys(f).map((poly) => [poly, size(poly)]).filter(([, z]) => z > 3);
+    const list = sized.map(([p]) => p), big = sized.filter(([, z]) => z > depth * 1.6).map(([p]) => p);
+    if (!list.length) continue;
+    ctx.save(); ctx.lineJoin = 'round';
+    // side walls: the same outline stacked downwards in a darker tone
+    if (big.length) for (let z = d; z > 0; z -= 3) {
+      ctx.save(); ctx.translate(0, z - up); pathPolys(ctx, cam, big); ctx.fillStyle = shade(top, 0.62 + 0.18 * (1 - z / d)); ctx.fill(); ctx.restore();
+    }
+    ctx.translate(0, -up); pathPolys(ctx, cam, list);
+    if (up > 0) { ctx.shadowColor = 'rgba(0,0,0,0.5)'; ctx.shadowBlur = 30; ctx.shadowOffsetY = 20; }
+    ctx.fillStyle = top; ctx.fill(); ctx.shadowColor = 'transparent';
+    ctx.strokeStyle = shade(top, 0.8); ctx.lineWidth = 2; ctx.stroke();
+    ctx.restore();
+  }
+}
+// Little snow-capped mountains standing on the map. pts: [[lon, lat], ...]
+export function mountains(ctx, cam, pts, { size = 34, k = 1, up = 0 } = {}) {
+  if (k <= 0) return;
+  for (const [lo, la] of [...pts].sort((a, b) => b[1] - a[1])) {
+    const [x, y0] = cam.p(lo, la), y = y0 - up, s = size * k;
+    ctx.save();
+    ctx.fillStyle = 'rgba(0,0,0,0.25)'; ctx.beginPath(); ctx.ellipse(x, y + 4, s * 0.9, s * 0.25, 0, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#C98A4B'; ctx.beginPath(); ctx.moveTo(x - s, y); ctx.lineTo(x, y - s * 1.3); ctx.lineTo(x + s, y); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = '#A86E36'; ctx.beginPath(); ctx.moveTo(x, y - s * 1.3); ctx.lineTo(x + s, y); ctx.lineTo(x + s * 0.2, y); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = '#FFFFFF'; ctx.beginPath(); ctx.moveTo(x - s * 0.34, y - s * 0.86); ctx.lineTo(x, y - s * 1.3); ctx.lineTo(x + s * 0.34, y - s * 0.86); ctx.lineTo(x + s * 0.1, y - s * 0.95); ctx.lineTo(x - s * 0.1, y - s * 0.82); ctx.closePath(); ctx.fill();
+    ctx.restore();
+  }
+}
+// Waving flag on a pole. stripes: [[color, weight], ...] top to bottom, e.g. Colombia [['#FCD116',2],['#003893',1],['#CE1126',1]]
+export function flag(ctx, cam, lon, lat, stripes, t, { h = 260, w = 230, up = 0, k = 1 } = {}) {
+  if (k <= 0) return;
+  const [x, y0] = cam.p(lon, lat), y = y0 - up, ph = h * k, top = y - ph;
+  ctx.save();
+  ctx.fillStyle = '#C9CDD4'; ctx.fillRect(x - 5, top, 10, ph); ctx.fillStyle = '#E8EBF0'; ctx.beginPath(); ctx.arc(x, top, 9, 0, Math.PI * 2); ctx.fill();
+  const fw = w * k, fh = fw * 0.62, tot = stripes.reduce((a, s) => a + s[1], 0);
+  const N = 24;
+  let acc = 0;
+  for (const [col, wt] of stripes) {
+    const y1 = acc / tot * fh, y2 = (acc + wt) / tot * fh; acc += wt;
+    ctx.fillStyle = col; ctx.beginPath();
+    for (let i = 0; i <= N; i++) { const u = i / N, wv = Math.sin(u * 5 - t * 6) * 10 * u; ctx.lineTo(x + 6 + u * fw, top + 4 + y1 + wv); }
+    for (let i = N; i >= 0; i--) { const u = i / N, wv = Math.sin(u * 5 - t * 6) * 10 * u; ctx.lineTo(x + 6 + u * fw, top + 4 + y2 + wv); }
+    ctx.closePath(); ctx.fill();
+  }
+  ctx.restore();
+}
+export const FLAGS = {
+  Colombia: [['#FCD116', 2], ['#003893', 1], ['#CE1126', 1]], Mexico: [['#006847', 1], ['#FFFFFF', 1], ['#CE1126', 1]],
+  Peru: [['#D91023', 1], ['#FFFFFF', 1], ['#D91023', 1]], Argentina: [['#74ACDF', 1], ['#FFFFFF', 1], ['#74ACDF', 1]],
+  Venezuela: [['#FFCC00', 1], ['#00247D', 1], ['#CF142B', 1]], Ecuador: [['#FFDD00', 2], ['#034EA2', 1], ['#ED1C24', 1]],
+  Chile: [['#FFFFFF', 1], ['#D52B1E', 1]], Bolivia: [['#D52B1E', 1], ['#F9E300', 1], ['#007934', 1]],
+  Panama: [['#FFFFFF', 1], ['#DA121A', 1]], Spain: [['#AA151B', 1], ['#F1BF00', 2], ['#AA151B', 1]],
+};

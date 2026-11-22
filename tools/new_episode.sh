@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Start a new episode from the reference one:  bash tools/new_episode.sh 002-<slug>
 set -e
-SLUG=$1; REF=episodes/001-11-dias-sin-dormir; E=episodes/$SLUG
+SLUG=$1; REF=episodes/002-382-dias-sin-comer; E=episodes/$SLUG
 [ -n "$SLUG" ] && [ ! -e "$E" ] || { echo "usage: new_episode.sh <NNN-slug> (must not exist)"; exit 1; }
 mkdir -p $E/audio/vo $E/assets/img $E/publicar
 cp $REF/{film.js,film.json,index.html} $E/

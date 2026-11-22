@@ -26,7 +26,7 @@ for s in d['segments']:
         if re.search(r'[.,:?…]$',w): ch.append(cur); cur=[]
     if cur: ch.append(cur)
     for c in ch:
-        out.append({"t":c[0][1],"seg":s['i'],"words":[{"w":w.upper(),"t":tt,"k":w in KEY} for w,tt in c]})
+        out.append({"t":c[0][1],"seg":s['i'],"words":[{"w":w.upper(),"o":w.replace("\u00a0"," "),"t":tt,"k":w in KEY} for w,tt in c]})
 for i,c in enumerate(out):
     nxt=out[i+1]["t"] if i+1<len(out) else d["duration"]
     seg_end=[s['end'] for s in d['segments'] if s['i']==c['seg']][0]
