@@ -3,19 +3,21 @@
 //   blockTag(ctx, 'LUNES', '☕', t, T.lunes)        // slams in at the block start, sits at the top of the frame
 //   ladder(ctx, ['L','M','X','J','V','S','D'], i, t) // small progress dots: which step of the ladder we are on
 import { W, spring, SPRING, font, text, rrect, clamp } from './motion.js';
-export function blockTag(ctx, label, emoji, t, t0, { y = 420, color = '#FFD60A', ink = '#111' } = {}) {
+export function blockTag(ctx, label, emoji, t, t0, { y = 450, color = '#FFD60A', ink = '#111' } = {}) {
   const k = spring(t - t0, SPRING.bouncy);
   if (k <= 0) return;
   const s = Math.min(1.12, k);
   ctx.save(); ctx.translate(W / 2, y); ctx.rotate(-0.04); ctx.scale(s, s);
-  ctx.font = font(120, 400, 'Display'); const w = ctx.measureText(label).width + (emoji ? 170 : 90);
+  ctx.font = font(120, 400, 'Display'); ctx.letterSpacing = '4px'; const tw = ctx.measureText(label).width; ctx.letterSpacing = '0px';
+  const w = tw + (emoji ? 220 : 90);
   ctx.fillStyle = 'rgba(0,0,0,0.55)'; rrect(ctx, -w / 2 + 12, -86, w, 150, 26); ctx.fill();
   ctx.fillStyle = color; rrect(ctx, -w / 2, -98, w, 150, 26); ctx.fill();
-  text(ctx, label, emoji ? -40 : 0, 20, font(120, 400, 'Display'), ink, 'center', 4);
-  if (emoji) { ctx.font = '96px sans-serif'; ctx.textAlign = 'center'; ctx.fillText(emoji, w / 2 - 80, 14); }
+  const tx = emoji ? -w / 2 + 45 + tw / 2 : 0;
+  text(ctx, label, tx, 20, font(120, 400, 'Display'), ink, 'center', 4);
+  if (emoji) { ctx.font = '96px sans-serif'; ctx.textAlign = 'center'; ctx.fillText(emoji, w / 2 - 85, 14); }
   ctx.restore();
 }
-export function ladder(ctx, steps, i, t, { y = 300, on = '#FFD60A', off = 'rgba(255,255,255,0.25)' } = {}) {
+export function ladder(ctx, steps, i, t, { y = 250, on = '#FFD60A', off = 'rgba(255,255,255,0.25)' } = {}) {
   const gap = 96, x0 = W / 2 - ((steps.length - 1) * gap) / 2;
   steps.forEach((s, j) => {
     const x = x0 + j * gap, active = j === i, done = j < i;
