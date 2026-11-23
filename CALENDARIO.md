@@ -33,7 +33,7 @@ Antes de producir cada tema hay que verificar los datos (PLAYBOOK, paso 1) y seg
 | 013 | 2026-11-27 | René Higuita y el escorpión de Wembley (1995) | ⚽ Viernes de fútbol |  | pendiente |
 | 014 | 2026-11-28 | Caño Cristales, el río de cinco colores | 🏞️ Sábado de lugares increíbles |  | pendiente |
 | 015 | 2026-11-29 | ¿Qué pasaría si el Canal de Panamá cerrara un mes? | 🤯 Domingo de ¿Qué pasaría si…? |  | pendiente |
-| 016 | 2026-11-30 | Tu lengua es única, como tu huella dactilar | 🫀 Lunes del cuerpo |  | pendiente |
+| 016 | 2026-11-30 | El órgano que vuelve a crecer aunque le quiten más de la mitad (el hígado). ENLACE: abre con "En el capítulo anterior te conté que tu corazón casi no se renueva… pero hay un órgano que hace lo contrario" (sigue a E02) | 🫀 Lunes del cuerpo |  | pendiente |
 | 017 | 2026-12-01 | La Ciclovía de Bogotá: más de 100 km sin carros cada domingo | 🏙️ Martes de ciudades |  | pendiente |
 | 018 | 2026-12-02 | Gabriel García Márquez y el Nobel que ganó un colombiano | ⭐ Miércoles de famosos |  | pendiente |
 | 019 | 2026-12-03 | Costa Rica, el país que abolió su ejército (1948) | 🌎 Jueves de países |  | pendiente |

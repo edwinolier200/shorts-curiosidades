@@ -193,3 +193,13 @@ La transcripción debe coincidir con el guion.
 - Marca el tema como `hecho (AAAA-MM-DD)` en `CALENDARIO.md`, haz commit del episodio
   (sin los .mp4 ni los .wav) y push. Si el push falla por permisos, no es grave: el calendario va por fechas,
   así que el día siguiente no repite tema. Dilo en el resumen y no envíes parches al usuario.
+
+## Estilo v6: cine 3D con historia enlazada (desde E02)
+Referencia de calidad: episodes/E02-el-secreto-de-tu-corazon (three.js vía engine/gl.js; render ~0,9 fps).
+No copiamos la referencia: tomamos su *calidad* (luz, metal, niebla, cámara que fluye) y la ponemos al servicio del tema.
+1. **Cada frase = su imagen literal.** Antes de escribir film.js, haz una tabla frase → qué se ve. Si la voz dice "bombea 7.000 litros", se ven barriles llenándose con cada latido; si dice "desde antes de que nacieras", el objeto nace diminuto y crece. Prohibido un fondo genérico que no explique la frase.
+2. **Un protagonista que no desaparece.** Un objeto 3D del tema (el corazón, el país en relieve, la camiseta, la ciudad) está presente en todo el video y cambia de tamaño/posición; las demás cosas (números, barriles, notas) aparecen a su alrededor y reaccionan a él (laten con él, se llenan con él).
+3. **Cámara continua.** Dentro de un mundo nunca se corta: la cámara se desliza entre tomas (keys() con 0,8-1 s de transición). Entre mundos (pasillo ↔ mesa) disolvencia de 0,35 s.
+4. **Estructura que retiene:** gancho (pregunta o imposible) → promesa ("guarda un secreto, te lo cuento al final") → escalera de 3-5 datos cada vez más fuertes → apagón + giro → humor → gesto físico del espectador ("pon la mano en tu pecho") → ENLACE.
+5. **Historias enlazadas.** Cada episodio termina anunciando el próximo capítulo de su serie ("Sígueme, que en el próximo capítulo te cuento…") y ese episodio abre recordando el anterior ("En el capítulo anterior te conté…"). Nunca digas "mañana" si mañana toca otra serie. Anota el enlace en CALENDARIO.md.
+6. **Calidad:** materiales PBR (oro metálico, vidrio/laca con clearcoat), bloom moderado, niebla, rayos de luz, viñeta; subtítulos grandes centrados (Heavy, blanco + palabra clave dorada, y≈1270); números siempre en 3D o UI, nunca generados por IA.

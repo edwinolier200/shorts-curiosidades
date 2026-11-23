@@ -21,6 +21,7 @@ T=dict(musculo=at(1,'músculo'), nacieras=at(1,'nacieras'), secreto=at(2,'secret
  relaja=at(9,'relaja'), dos=at(9,'dos'), descansando=at(9,'descansando'),
  trabajador=at(10,'trabajador'), tarde=at(10,'tarde'),
  mano=at(11,'mano'), trabajando=at(11,'trabajando'),
- compartele=at(12,'compártele'), corazon=at(12,'corazón'), end=round(d['duration']+0.6,2))
+ manana=at(12,'capítulo'), organo=at(12,'órgano'), crecer=at(12,'crecer'), mitad=at(12,'mitad'),
+ compartele=at(13,'compártele'), corazon=at(13,'corazón'), end=round(d['duration']+0.6,2))
 json.dump({"S":S,"T":T,"twist_scene":7},open('timing.json','w'),indent=1)
 print(S); print(T)

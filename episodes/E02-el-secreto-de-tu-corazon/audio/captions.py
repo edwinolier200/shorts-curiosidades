@@ -1,7 +1,7 @@
 import json,re
 d=json.load(open('vo.json'))
 REP=[("cien mil","100.000"),("tres mil millones","3.000 millones"),("siete mil litros","7.000 litros"),("treinta y cinco","35"),("cuatro meses...","4 meses..."),("dos tercios","2/3")]
-KEY={"músculo","nacieras.","secreto","final.","100.000","3.000","millones","7.000","litros","35","barriles.","electricidad.","solo","renueva.","piel","mes,","4","meses...","edad.","descansa.","relaja,","2/3","descansando.","trabajador","tarde.","pecho.","corazón."}
+KEY={"músculo","nacieras.","secreto","final.","100.000","3.000","millones","7.000","litros","35","barriles.","electricidad.","solo","renueva.","piel","mes,","4","meses...","edad.","descansa.","relaja,","2/3","descansando.","trabajador","tarde.","pecho.","corazón.","capítulo","órgano","crecer,","mitad."}
 out=[]
 for s in d['segments']:
     toks=[(w['w'],w['t']) for w in s['words']]

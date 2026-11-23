@@ -36,6 +36,8 @@ const hitList = () => [
   [B(T.trabajador), 'note', 'type'],
   [B(T.tarde), 'stamp', 'impact'],
   [B(S[10]), 'back to the heart', 'whoosh', { len: 0.5, from: 2400, to: 400 }],
+  [B(T.organo), 'teaser', 'pop', { pitch: 'C6' }],
+  [B(S[11]), 'teaser move', 'whoosh', { len: 0.4 }],
   [B(T.compartele), 'share', 'pop', { pitch: 'E6' }],
 ];
 
@@ -120,6 +122,7 @@ function hallSet() {
   const NB = 35, bMat = new THREE.MeshPhysicalMaterial({ map: barrelTexture(), metalness: 0.55, roughness: 0.32, clearcoat: 0.7, envMap: G.ENV, envMapIntensity: 0.9 });
   const barrels = new THREE.InstancedMesh(new THREE.CylinderGeometry(0.42, 0.42, 1.15, 32, 1), bMat, NB); scene.add(barrels);
   const BW = 7 * 1.02;
+  const blood = new THREE.InstancedMesh(new THREE.CylinderGeometry(0.36, 0.36, 0.03, 32), new THREE.MeshStandardMaterial({ color: 0x8a0010, emissive: 0xff1430, emissiveIntensity: 1.3, roughness: 0.2 }), NB); scene.add(blood);
 
   // electricity: jagged glowing tubes around the heart + an ECG trace behind it
   const zapMat = new THREE.MeshBasicMaterial({ color: 0xa8f4ff, fog: false });
@@ -173,27 +176,27 @@ function hallSet() {
         [S[4], [-2.6, 2.9, 7.2, 0, 2.6, 0]],
         [S[7], [0, 2.6, 6.2, 0, 2.6, 0]],
         [S[8], [0, 5.2, 11, 0, 1.6, 0.8]],
-        [S[10], [0, 2.5, 9.5, 0, 2.7, 0]],
+        [S[10], [0, 2.5, 9.5, 0, 2.7, 0]], [S[11], [0.4, 3.0, 10.5, 0, 3.0, 0]], [S[12], [0, 2.5, 8.5, 0, 2.7, 0]],
       ], 1.0);
       const drift = [Math.sin(t * 0.37) * 0.35, Math.sin(t * 0.29 + 1) * 0.18, Math.sin(t * 0.21) * 0.25];
       const push = t >= S[10] ? E.inOutSine(prog(t, S[10], T.end)) * 3.4 : t >= S[7] && t < S[8] ? prog(t, S[7], S[8]) * 1.2 : 0;
       G.lookFrom(cam, [P[0] + drift[0], P[1] + drift[1], P[2] - push + drift[2]], [P[3], P[4], P[5]], Math.sin(t * 0.33) * 0.012);
 
       // ---- heart: where it sits, how big, how it beats
-      const hp = keys(t, [[0, [0, 2.6, 0, 0]], [0.01, [0, 2.6, 0, 1]], [S[2], [0, 2.6, 0, 0]], [S[4], [0, 2.6, 0, 1]], [S[8], [0, 3.6, -3.2, 0.72]], [S[10], [0, 2.7, 0, 1.12]]], 0.7);
-      const grow = Math.min(1.05, spring(t - 0.05, SPRING.gentle));
+      const hp = keys(t, [[0, [0, 2.6, 0, 0.12]], [T.nacieras - 0.7, [0, 2.6, 0, 1]], [S[2], [0, 5.3, -4.5, 0.55]], [S[3], [0, 4.3, -3.4, 0.7]], [S[4], [0, 2.6, 0, 1]],
+        [S[8], [0, 3.6, -3.2, 0.72]], [S[10], [0, 2.7, 0, 1.12]], [S[11], [-1.5, 3.3, -0.8, 0.62]], [S[12], [0, 2.7, 0, 1.12]]], 0.9);
       heart.position.set(hp[0], hp[1], hp[2]);
-      heart.scale.setScalar(Math.max(0.001, hp[3] * (t < 2 ? grow : 1) * (1 + 0.075 * pl)));
+      heart.scale.setScalar(Math.max(0.001, hp[3] * (1 + 0.075 * pl)));
       heart.rotation.y = Math.sin(t * 0.55) * 0.4; heart.rotation.x = Math.sin(t * 0.4) * 0.06;
       const zap = t > T.electricidad && t < S[5] ? Math.max(0, Math.sin(t * 41) * Math.sin(t * 17)) : 0;
       heartMat.emissive.setHex(zap > 0.3 ? 0x3aa8c8 : 0x6a0012); heartMat.emissiveIntensity = 0.25 + 1.1 * pl + 1.5 * zap;
       heart.visible = heart.scale.x > 0.01;
 
       // ---- question mark + numbers
-      const kq = pop(t, T.secreto, S[2] - 0.3); qmark.scale.setScalar(Math.max(0.001, kq)); qmark.rotation.y = t * 1.8; qmark.visible = kq > 0.01;
+      const kq = Math.max(pop(t, T.secreto, S[2] - 0.3), pop(t, T.organo, S[12] - 0.25)); qmark.scale.setScalar(Math.max(0.001, kq)); qmark.rotation.y = t * 1.8; qmark.visible = kq > 0.01; qmark.position.set(t > S[11] ? 1.3 : 2.5, t > S[11] ? 3.2 : 4.3, 0.4);
       const k1 = pop(t, T.cien - 0.05, T.tres - 0.25), k2 = pop(t, T.tres - 0.05, S[3] - 0.2), k3 = pop(t, T.siete - 0.05, S[4] - 0.25);
       [[num1, k1, [0, 2.9, 0]], [num2, k2, [0, 2.9, 0]], [num3, k3, [0, 3.6, -1.8]]].forEach(([m, k, p], j) => {
-        m.visible = k > 0.01; m.scale.setScalar(Math.max(0.001, k)); m.position.set(p[0], p[1] + (1 - Math.min(1, k)) * -1.2, p[2]);
+        m.visible = k > 0.01; m.scale.setScalar(Math.max(0.001, k * (1 + 0.035 * pl))); m.position.set(p[0], p[1] + (1 - Math.min(1, k)) * -1.2, p[2]);
         m.rotation.y = Math.sin(t * 0.6 + j) * 0.14;
       });
 
@@ -204,7 +207,15 @@ function hallSet() {
         m4.compose(new THREE.Vector3(cx * 1.02, 0.58 + (1 - Math.min(1, k)) * 4, cz * 1.02), new THREE.Quaternion(), new THREE.Vector3(Math.max(0.001, k), Math.max(0.001, k), Math.max(0.001, k)));
         barrels.setMatrixAt(i, m4);
       }
-      barrels.instanceMatrix.needsUpdate = true; barrels.visible = t > T.treinta - 0.1 && t < S[4] + 0.4;
+      barrels.instanceMatrix.needsUpdate = true;
+      const fillN = HB.filter((b) => b >= T.treinta + 0.3 && b <= t).length * 6;
+      for (let i = 0; i < NB; i++) {
+        const cx = (i % 7) - 3, cz = Math.floor(i / 7) - 2, j = 34 - i;   // fill from the front row back
+        const k = j < fillN && t < S[4] - 0.2 ? 1 : 0;
+        m4.compose(new THREE.Vector3(cx * 1.02, 1.16, cz * 1.02), new THREE.Quaternion(), new THREE.Vector3(k || 0.001, 1, k || 0.001));
+        blood.setMatrixAt(i, m4);
+      }
+      blood.instanceMatrix.needsUpdate = true; blood.visible = barrels.visible; barrels.visible = t > T.treinta - 0.1 && t < S[4] + 0.4;
 
       // ---- electricity
       const zOn = t > T.electricidad - 0.05 && t < S[5];
@@ -232,7 +243,7 @@ function hallSet() {
         const lit = i < 4 ? ph * 3 * 4 > i && ph < 1 / 3 + 0.05 : ph > 1 / 3 && (ph - 1 / 3) * 1.5 * 8 > i - 4;
         b.material.emissiveIntensity = (lit ? 2.2 : 0.18) * clamp((t - T.relaja) * 2);
       });
-      labels.forEach((m, i) => { const k = pop(t, T.dos - 0.1 + (i % 2) * 0.25, S[9] - 0.2); m.visible = k > 0.01; m.scale.setScalar(Math.max(0.001, k)); });
+      labels.forEach((m, i) => { const k = pop(t, T.dos - 0.1 + (i % 2) * 0.25, S[9] - 0.2); m.visible = k > 0.01; m.scale.setScalar(Math.max(0.001, k * (1 + 0.035 * pl))); });
     } };
 }
 
@@ -346,6 +357,7 @@ M.film({
     UI.pill(ctx, 'LATIDOS EN TU VIDA', W / 2, 1100, t, T.tres + 0.1, { tEnd: S[3] - 0.1, bg: GOLD, size: 46 });
     UI.pill(ctx, 'BARRILES DE 200 LITROS', W / 2, 1100, t, T.barriles, { tEnd: S[4] - 0.1, bg: GOLD, size: 42 });
     UI.stamp(ctx, 'EMPLEADO DEL AÑO', W / 2, 700, t, T.tarde, { size: 64, tEnd: S[10] });
+    UI.pill(ctx, 'PRÓXIMO CAPÍTULO', W / 2, 1100, t, T.manana + 0.1, { tEnd: S[12] - 0.1, bg: '#E63B2E', fg: '#fff', size: 46 });
     UI.pill(ctx, 'COMPÁRTELO', W / 2, 1100, t, T.compartele + 0.2, { bg: '#E63B2E', fg: '#fff', size: 56 });
     captionsBig(ctx, t);
     UI.watermark(ctx);
