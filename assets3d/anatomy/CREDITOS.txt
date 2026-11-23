@@ -1,0 +1,3 @@
+
+Modelos anatómicos 3D: BodyParts3D, © The Database Center for Life Science (DBCLS), CC BY-SA 2.1 JP.
+Fuente: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/ · convertidos con tools/anatomy_glb.py
