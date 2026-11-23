@@ -210,3 +210,6 @@ No copiamos la referencia: tomamos su *calidad* (luz, metal, niebla, cámara que
 - Siempre poner en la descripción: "Modelos anatómicos 3D: BodyParts3D, © DBCLS, CC BY-SA 2.1 JP" (y en los últimos 3 s del video).
 - Cada video debe mejorar algo respecto al anterior (anotarlo en el commit): más realismo, mejor luz, mejor sincronía, mejor gancho.
 - Revisión obligatoria de fotogramas (contact sheet) antes del render final: nada tapado por subtítulos, nada cortado, nada lavado/sobreexpuesto.
+
+## Ciclo de mejora continua (desde 2026-11-23)
+Cada día: skill .claude/skills/mejora-continua (una mejora medible y reutilizable por video) + control de calidad tools/qa.py + registro en aprendizaje/. Cada domingo 5:23 p. m.: estudio semanal (métricas públicas con TubeAlfred + 2 Shorts de la competencia) que actualiza APRENDIZAJES.md, MEJORAS_PENDIENTES.md y, si los datos lo respaldan, este PLAYBOOK.
