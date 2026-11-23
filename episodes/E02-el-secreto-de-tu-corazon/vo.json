@@ -1,0 +1,895 @@
+{
+ "duration": 61.441,
+ "segments": [
+  {
+   "i": 1,
+   "start": 0.25,
+   "end": 5.107,
+   "text": "Hay un músculo en tu cuerpo que no ha parado ni un segundo desde antes de que nacieras.",
+   "words": [
+    {
+     "w": "Hay",
+     "t": 0.25
+    },
+    {
+     "w": "un",
+     "t": 0.39
+    },
+    {
+     "w": "músculo",
+     "t": 0.47
+    },
+    {
+     "w": "en",
+     "t": 0.85
+    },
+    {
+     "w": "tu",
+     "t": 0.95
+    },
+    {
+     "w": "cuerpo",
+     "t": 1.03
+    },
+    {
+     "w": "que",
+     "t": 1.35
+    },
+    {
+     "w": "no",
+     "t": 1.53
+    },
+    {
+     "w": "ha",
+     "t": 1.67
+    },
+    {
+     "w": "parado",
+     "t": 1.73
+    },
+    {
+     "w": "ni",
+     "t": 2.03
+    },
+    {
+     "w": "un",
+     "t": 2.13
+    },
+    {
+     "w": "segundo",
+     "t": 2.25
+    },
+    {
+     "w": "desde",
+     "t": 2.61
+    },
+    {
+     "w": "antes",
+     "t": 2.85
+    },
+    {
+     "w": "de",
+     "t": 2.99
+    },
+    {
+     "w": "que",
+     "t": 3.13
+    },
+    {
+     "w": "nacieras.",
+     "t": 3.33
+    }
+   ],
+   "heard": " Hay  un  músculo  en  tu  cuerpo  que  no  ha  parado  ni  un  segundo  desde  antes  que  nacieras.",
+   "match": 0.94
+  },
+  {
+   "i": 2,
+   "start": 5.227,
+   "end": 8.048,
+   "text": "Y guarda un secreto que casi nadie conoce. Te lo cuento al final.",
+   "words": [
+    {
+     "w": "Y",
+     "t": 5.227
+    },
+    {
+     "w": "guarda",
+     "t": 5.327
+    },
+    {
+     "w": "un",
+     "t": 5.587
+    },
+    {
+     "w": "secreto",
+     "t": 5.647
+    },
+    {
+     "w": "que",
+     "t": 6.027
+    },
+    {
+     "w": "casi",
+     "t": 6.127
+    },
+    {
+     "w": "nadie",
+     "t": 6.307
+    },
+    {
+     "w": "conoce.",
+     "t": 6.527
+    },
+    {
+     "w": "Te",
+     "t": 7.087
+    },
+    {
+     "w": "lo",
+     "t": 7.147
+    },
+    {
+     "w": "cuento",
+     "t": 7.247
+    },
+    {
+     "w": "al",
+     "t": 7.507
+    },
+    {
+     "w": "final.",
+     "t": 7.587
+    }
+   ],
+   "heard": " y  guarda  un  secreto  que  casi  nadie  conoce.  Te  lo  cuento  al  final.",
+   "match": 1.0
+  },
+  {
+   "i": 3,
+   "start": 8.168,
+   "end": 12.979,
+   "text": "Late unas cien mil veces al día. Cerca de tres mil millones en toda tu vida.",
+   "words": [
+    {
+     "w": "Late",
+     "t": 8.168
+    },
+    {
+     "w": "unas",
+     "t": 8.388
+    },
+    {
+     "w": "cien",
+     "t": 8.548
+    },
+    {
+     "w": "mil",
+     "t": 8.748
+    },
+    {
+     "w": "veces",
+     "t": 8.948
+    },
+    {
+     "w": "al",
+     "t": 9.128
+    },
+    {
+     "w": "día.",
+     "t": 9.368
+    },
+    {
+     "w": "Cerca",
+     "t": 9.788
+    },
+    {
+     "w": "de",
+     "t": 9.948
+    },
+    {
+     "w": "tres",
+     "t": 10.128
+    },
+    {
+     "w": "mil",
+     "t": 10.308
+    },
+    {
+     "w": "millones",
+     "t": 10.488
+    },
+    {
+     "w": "en",
+     "t": 10.788
+    },
+    {
+     "w": "toda",
+     "t": 11.168
+    },
+    {
+     "w": "tu",
+     "t": 11.308
+    },
+    {
+     "w": "vida.",
+     "t": 11.488
+    }
+   ],
+   "heard": " late  unas  100 .000  veces  al  día,  cerca  de  3 .000  millones  en  toda  tu  vida.",
+   "match": 0.88
+  },
+  {
+   "i": 4,
+   "start": 13.099,
+   "end": 18.964,
+   "text": "Cada día bombea unos siete mil litros de sangre. Es como llenar treinta y cinco barriles.",
+   "words": [
+    {
+     "w": "Cada",
+     "t": 13.099
+    },
+    {
+     "w": "día",
+     "t": 13.279
+    },
+    {
+     "w": "bombea",
+     "t": 13.539
+    },
+    {
+     "w": "unos",
+     "t": 14.059
+    },
+    {
+     "w": "siete",
+     "t": 14.239
+    },
+    {
+     "w": "mil",
+     "t": 14.519
+    },
+    {
+     "w": "litros",
+     "t": 14.819
+    },
+    {
+     "w": "de",
+     "t": 15.219
+    },
+    {
+     "w": "sangre.",
+     "t": 15.299
+    },
+    {
+     "w": "Es",
+     "t": 15.919
+    },
+    {
+     "w": "como",
+     "t": 15.999
+    },
+    {
+     "w": "llenar",
+     "t": 16.199
+    },
+    {
+     "w": "treinta",
+     "t": 16.579
+    },
+    {
+     "w": "y",
+     "t": 16.619
+    },
+    {
+     "w": "cinco",
+     "t": 16.659
+    },
+    {
+     "w": "barriles.",
+     "t": 17.199
+    }
+   ],
+   "heard": " cada  día  bombea  unos  7  mil  litros  de  sangre,  es  como  llenar  35  barriles.  ¿Ainda?",
+   "match": 1.0
+  },
+  {
+   "i": 5,
+   "start": 19.084,
+   "end": 24.575,
+   "text": "Tiene su propia electricidad. Si lo sacas del cuerpo, puede seguir latiendo solo por un rato.",
+   "words": [
+    {
+     "w": "Tiene",
+     "t": 19.084
+    },
+    {
+     "w": "su",
+     "t": 19.244
+    },
+    {
+     "w": "propia",
+     "t": 19.444
+    },
+    {
+     "w": "electricidad.",
+     "t": 19.684
+    },
+    {
+     "w": "Si",
+     "t": 20.664
+    },
+    {
+     "w": "lo",
+     "t": 20.724
+    },
+    {
+     "w": "sacas",
+     "t": 20.844
+    },
+    {
+     "w": "del",
+     "t": 21.124
+    },
+    {
+     "w": "cuerpo,",
+     "t": 21.224
+    },
+    {
+     "w": "puede",
+     "t": 21.964
+    },
+    {
+     "w": "seguir",
+     "t": 22.024
+    },
+    {
+     "w": "latiendo",
+     "t": 22.244
+    },
+    {
+     "w": "solo",
+     "t": 22.624
+    },
+    {
+     "w": "por",
+     "t": 22.824
+    },
+    {
+     "w": "un",
+     "t": 23.024
+    },
+    {
+     "w": "rato.",
+     "t": 23.144
+    }
+   ],
+   "heard": " tiene  su  propia  electricidad.  Si  lo  sacas  del  cuerpo,  puedes  seguir  laqueando  solo  por  un  rato.",
+   "match": 0.88
+  },
+  {
+   "i": 6,
+   "start": 24.695,
+   "end": 29.578,
+   "text": "Y casi no se renueva. Tu piel cambia cada mes, tus glóbulos rojos cada cuatro meses...",
+   "words": [
+    {
+     "w": "Y",
+     "t": 24.695
+    },
+    {
+     "w": "casi",
+     "t": 24.795
+    },
+    {
+     "w": "no",
+     "t": 24.935
+    },
+    {
+     "w": "se",
+     "t": 25.155
+    },
+    {
+     "w": "renueva.",
+     "t": 25.275
+    },
+    {
+     "w": "Tu",
+     "t": 26.155
+    },
+    {
+     "w": "piel",
+     "t": 26.315
+    },
+    {
+     "w": "cambia",
+     "t": 26.515
+    },
+    {
+     "w": "cada",
+     "t": 26.935
+    },
+    {
+     "w": "mes,",
+     "t": 27.095
+    },
+    {
+     "w": "tus",
+     "t": 27.515
+    },
+    {
+     "w": "glóbulos",
+     "t": 27.595
+    },
+    {
+     "w": "rojos",
+     "t": 28.075
+    },
+    {
+     "w": "cada",
+     "t": 28.395
+    },
+    {
+     "w": "cuatro",
+     "t": 28.655
+    },
+    {
+     "w": "meses...",
+     "t": 28.915
+    }
+   ],
+   "heard": " y  casi  no  se  renueva.  Tu  piel  cambia  cada  mes,  tus  glóbulos  rojos  cada  cuatro  meses.",
+   "match": 1.0
+  },
+  {
+   "i": 7,
+   "start": 29.698,
+   "end": 33.999,
+   "text": "pero la mayoría de las células de tu corazón tienen casi tu misma edad.",
+   "words": [
+    {
+     "w": "pero",
+     "t": 29.698
+    },
+    {
+     "w": "la",
+     "t": 29.838
+    },
+    {
+     "w": "mayoría",
+     "t": 29.938
+    },
+    {
+     "w": "de",
+     "t": 30.258
+    },
+    {
+     "w": "las",
+     "t": 30.438
+    },
+    {
+     "w": "células",
+     "t": 30.558
+    },
+    {
+     "w": "de",
+     "t": 30.778
+    },
+    {
+     "w": "tu",
+     "t": 31.038
+    },
+    {
+     "w": "corazón",
+     "t": 31.118
+    },
+    {
+     "w": "tienen",
+     "t": 31.418
+    },
+    {
+     "w": "casi",
+     "t": 31.778
+    },
+    {
+     "w": "tu",
+     "t": 31.978
+    },
+    {
+     "w": "misma",
+     "t": 32.158
+    },
+    {
+     "w": "edad.",
+     "t": 32.398
+    }
+   ],
+   "heard": " pero  la  mayoría  de  las  células  de  tu  corazón  tienen  casi  tu  misma  edad.",
+   "match": 1.0
+  },
+  {
+   "i": 8,
+   "start": 34.119,
+   "end": 38.051,
+   "text": "Y ahora, el secreto: tu corazón sí descansa.",
+   "words": [
+    {
+     "w": "Y",
+     "t": 34.119
+    },
+    {
+     "w": "ahora,",
+     "t": 34.239
+    },
+    {
+     "w": "el",
+     "t": 34.439
+    },
+    {
+     "w": "secreto:",
+     "t": 34.799
+    },
+    {
+     "w": "tu",
+     "t": 35.339
+    },
+    {
+     "w": "corazón",
+     "t": 35.479
+    },
+    {
+     "w": "sí",
+     "t": 35.879
+    },
+    {
+     "w": "descansa.",
+     "t": 36.199
+    }
+   ],
+   "heard": " Y  ahora  el  secreto  tu  corazón  si  descansa.",
+   "match": 0.88
+  },
+  {
+   "i": 9,
+   "start": 38.171,
+   "end": 43.651,
+   "text": "Después de cada latido se relaja, y en reposo pasa casi dos tercios del tiempo descansando.",
+   "words": [
+    {
+     "w": "Después",
+     "t": 38.171
+    },
+    {
+     "w": "de",
+     "t": 38.331
+    },
+    {
+     "w": "cada",
+     "t": 38.531
+    },
+    {
+     "w": "latido",
+     "t": 38.691
+    },
+    {
+     "w": "se",
+     "t": 39.031
+    },
+    {
+     "w": "relaja,",
+     "t": 39.151
+    },
+    {
+     "w": "y",
+     "t": 39.611
+    },
+    {
+     "w": "en",
+     "t": 39.951
+    },
+    {
+     "w": "reposo",
+     "t": 40.031
+    },
+    {
+     "w": "pasa",
+     "t": 40.371
+    },
+    {
+     "w": "casi",
+     "t": 40.631
+    },
+    {
+     "w": "dos",
+     "t": 40.811
+    },
+    {
+     "w": "tercios",
+     "t": 41.171
+    },
+    {
+     "w": "del",
+     "t": 41.591
+    },
+    {
+     "w": "tiempo",
+     "t": 41.751
+    },
+    {
+     "w": "descansando.",
+     "t": 41.991
+    }
+   ],
+   "heard": " Después  de  cada  latiro  se  relaja  y  en  reposo  pasa  casi  dos  tercios  del  tiempo  descansando.",
+   "match": 0.94
+  },
+  {
+   "i": 10,
+   "start": 43.771,
+   "end": 49.28,
+   "text": "Es el único trabajador que descansa después de cada tarea, y aun así nunca ha llegado tarde.",
+   "words": [
+    {
+     "w": "Es",
+     "t": 43.771
+    },
+    {
+     "w": "el",
+     "t": 43.951
+    },
+    {
+     "w": "único",
+     "t": 44.071
+    },
+    {
+     "w": "trabajador",
+     "t": 44.271
+    },
+    {
+     "w": "que",
+     "t": 44.831
+    },
+    {
+     "w": "descansa",
+     "t": 44.971
+    },
+    {
+     "w": "después",
+     "t": 45.391
+    },
+    {
+     "w": "de",
+     "t": 45.631
+    },
+    {
+     "w": "cada",
+     "t": 45.831
+    },
+    {
+     "w": "tarea,",
+     "t": 45.971
+    },
+    {
+     "w": "y",
+     "t": 46.271
+    },
+    {
+     "w": "aun",
+     "t": 46.611
+    },
+    {
+     "w": "así",
+     "t": 46.771
+    },
+    {
+     "w": "nunca",
+     "t": 47.091
+    },
+    {
+     "w": "ha",
+     "t": 47.451
+    },
+    {
+     "w": "llegado",
+     "t": 47.751
+    },
+    {
+     "w": "tarde.",
+     "t": 48.011
+    }
+   ],
+   "heard": " es  el  único  trabajador  que  descansa  después  de  cada  tarea  y  aún  así  nunca  ha  llegado  tarde.",
+   "match": 0.94
+  },
+  {
+   "i": 11,
+   "start": 49.4,
+   "end": 52.073,
+   "text": "Pon la mano en tu pecho. Ahí está, trabajando para ti.",
+   "words": [
+    {
+     "w": "Pon",
+     "t": 49.4
+    },
+    {
+     "w": "la",
+     "t": 49.5
+    },
+    {
+     "w": "mano",
+     "t": 49.58
+    },
+    {
+     "w": "en",
+     "t": 49.72
+    },
+    {
+     "w": "tu",
+     "t": 49.84
+    },
+    {
+     "w": "pecho.",
+     "t": 49.9
+    },
+    {
+     "w": "Ahí",
+     "t": 50.4
+    },
+    {
+     "w": "está,",
+     "t": 50.52
+    },
+    {
+     "w": "trabajando",
+     "t": 50.96
+    },
+    {
+     "w": "para",
+     "t": 51.22
+    },
+    {
+     "w": "ti.",
+     "t": 51.5
+    }
+   ],
+   "heard": " o  la  mano  en  tu  pecho.  Ahí  está,  trabajando  para  ti.",
+   "match": 0.91
+  },
+  {
+   "i": 12,
+   "start": 52.193,
+   "end": 57.719,
+   "text": "Sígueme, que en el próximo capítulo te cuento qué órgano puede volver a crecer, aunque le quiten más de la mitad.",
+   "words": [
+    {
+     "w": "Sígueme,",
+     "t": 52.193
+    },
+    {
+     "w": "que",
+     "t": 52.553
+    },
+    {
+     "w": "en",
+     "t": 52.753
+    },
+    {
+     "w": "el",
+     "t": 52.833
+    },
+    {
+     "w": "próximo",
+     "t": 52.933
+    },
+    {
+     "w": "capítulo",
+     "t": 53.153
+    },
+    {
+     "w": "te",
+     "t": 53.673
+    },
+    {
+     "w": "cuento",
+     "t": 53.833
+    },
+    {
+     "w": "qué",
+     "t": 54.113
+    },
+    {
+     "w": "órgano",
+     "t": 54.253
+    },
+    {
+     "w": "puede",
+     "t": 54.533
+    },
+    {
+     "w": "volver",
+     "t": 54.693
+    },
+    {
+     "w": "a",
+     "t": 55.033
+    },
+    {
+     "w": "crecer,",
+     "t": 55.093
+    },
+    {
+     "w": "aunque",
+     "t": 55.693
+    },
+    {
+     "w": "le",
+     "t": 55.813
+    },
+    {
+     "w": "quiten",
+     "t": 55.953
+    },
+    {
+     "w": "más",
+     "t": 56.153
+    },
+    {
+     "w": "de",
+     "t": 56.313
+    },
+    {
+     "w": "la",
+     "t": 56.433
+    },
+    {
+     "w": "mitad.",
+     "t": 56.493
+    }
+   ],
+   "heard": " Sígueme  que  en  el  próximo  capítulo  te  cuento  qué  órgano  fue  devolver  a  crecer,  aunque  le  quiten  más  de  la  mitad.",
+   "match": 0.9
+  },
+  {
+   "i": 13,
+   "start": 57.839,
+   "end": 60.621,
+   "text": "Compártele esto a alguien con un gran corazón.",
+   "words": [
+    {
+     "w": "Compártele",
+     "t": 57.839
+    },
+    {
+     "w": "esto",
+     "t": 58.359
+    },
+    {
+     "w": "a",
+     "t": 58.539
+    },
+    {
+     "w": "alguien",
+     "t": 58.699
+    },
+    {
+     "w": "con",
+     "t": 58.879
+    },
+    {
+     "w": "un",
+     "t": 59.079
+    },
+    {
+     "w": "gran",
+     "t": 59.179
+    },
+    {
+     "w": "corazón.",
+     "t": 59.279
+    }
+   ],
+   "heard": " compactele  esto  a  alguien  con  un  gran  corazón.",
+   "match": 0.88
+  }
+ ]
+}

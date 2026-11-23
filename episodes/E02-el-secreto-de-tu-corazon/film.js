@@ -94,7 +94,7 @@ function hallSet() {
   const key = new THREE.SpotLight(0xffd9a0, 380, 80, 0.5, 0.6, 1.6); key.position.set(9, 22, -16); key.target.position.set(0, 0, 0); scene.add(key, key.target);
   const rim = new THREE.DirectionalLight(0x5fd0e0, 1.4); rim.position.set(-6, 5, -8); scene.add(rim);
   const front = new THREE.DirectionalLight(0xfff1e0, 0.9); front.position.set(2, 4, 10); scene.add(front);
-  const solo = new THREE.SpotLight(0xffe0c0, 0, 30, 0.32, 0.5, 1.2); solo.position.set(0, 10, 3); solo.target.position.set(0, 2.6, 0); scene.add(solo, solo.target);
+  const solo = new THREE.SpotLight(0xffe0c0, 0, 30, 0.32, 0.5, 1.2); solo.position.set(2.5, 7, 7); solo.target.position.set(0, 2.6, 0); scene.add(solo, solo.target);
   const red = new THREE.PointLight(0xff2a3a, 0, 14, 2); red.position.set(0, 2.6, 2.2); scene.add(red);
 
   // floor: instanced tiles whose colour carries the heartbeat ripple
@@ -110,7 +110,7 @@ function hallSet() {
   }
 
   // the heart
-  const heartMat = new THREE.MeshPhysicalMaterial({ color: 0xcf1230, roughness: 0.28, clearcoat: 1, clearcoatRoughness: 0.06, sheen: 0.6, sheenColor: new THREE.Color(0xff7080), envMap: G.ENV, envMapIntensity: 1.2, emissive: 0x6a0012, emissiveIntensity: 0.3 });
+  const heartMat = new THREE.MeshPhysicalMaterial({ color: 0x9e0618, roughness: 0.22, clearcoat: 1, clearcoatRoughness: 0.05, sheen: 0.15, sheenColor: new THREE.Color(0xff4058), envMap: G.ENV, envMapIntensity: 0.7, emissive: 0x4a000c, emissiveIntensity: 0.2 });
   const heart = new THREE.Mesh(heartGeo(), heartMat); heart.castShadow = true; scene.add(heart);
   // gold question mark, numbers
   const G1 = gold();
@@ -139,12 +139,10 @@ function hallSet() {
   const row = [];
   for (let i = 0; i < 12; i++) {
     const r = i < 4, mat = new THREE.MeshStandardMaterial({ color: r ? 0x3a0a10 : 0x0a1a3a, emissive: r ? 0xff2436 : 0x2f8cff, emissiveIntensity: 0, roughness: 0.35, metalness: 0.2 });
-    const b = new THREE.Mesh(new THREE.BoxGeometry(0.82, 0.3, 0.82), mat); b.position.set(-4.95 + i * 0.9, 0.15, 2.2); scene.add(b); row.push(b);
+    const b = new THREE.Mesh(new THREE.BoxGeometry(1.0, 0.22, 0.55), mat); const a = Math.PI / 2 - (i + 0.5) * (Math.PI * 2 / 12); b.position.set(Math.cos(a) * 2.3, 4.2 + Math.sin(a) * 2.3, 0); b.rotation.set(Math.PI / 2, 0, a + Math.PI / 2); scene.add(b); row.push(b);
   }
-  const lbl = (str, size, color, x, y) => { const m = new THREE.Mesh(G.text3D(str, size, 0.12, 0.02, 6), new THREE.MeshStandardMaterial({ color, emissive: color, emissiveIntensity: 0.9 })); m.position.set(x, y, 2.2); m.rotation.x = -0.25; scene.add(m); return m; };
-  const L1 = lbl('1/3', 0.75, 0xff3346, -3.6, 1.35), L2 = lbl('2/3', 0.75, 0x46a0ff, 1.35, 1.35);
-  const L1b = lbl('TRABAJA', 0.3, 0xff8a94, -3.6, 0.72), L2b = lbl('DESCANSA', 0.3, 0x9cc8ff, 1.35, 0.72);
-  const labels = [L1, L2, L1b, L2b];
+  const lbl = (str, size, color, x, y) => { const m = new THREE.Mesh(G.text3D(str, size, 0.12, 0.02, 6), new THREE.MeshStandardMaterial({ color, emissive: color, emissiveIntensity: 0.9 })); m.position.set(x, y, 0.3); scene.add(m); return m; };
+  const labels = [lbl('1/3 TRABAJA', 0.55, 0xff3346, 0, 7.75), lbl('2/3 DESCANSA', 0.55, 0x46a0ff, 0, 7.0)];
 
   return { scene, camera: cam, bloom: 0.5, bloomThreshold: 0.8, bloomRadius: 0.55,
     update(t) {
@@ -152,7 +150,7 @@ function hallSet() {
       const lvl = keys(t, [[0, 1], [S[7], 0.06], [T.relaja, 0.5], [S[10], 1]], 0.5);
       hemi.intensity = 0.45 * lvl; key.intensity = 380 * lvl; rim.intensity = 1.4 * lvl; front.intensity = 0.9 * Math.max(lvl, 0.15);
       shafts.forEach((s, i) => { s.material.opacity = (0.11 + 0.05 * Math.sin(t * 0.8 + i)) * lvl; });
-      solo.intensity = keys(t, [[0, 0], [S[7] + 0.25, 260], [S[8], 0]], 0.6);
+      solo.intensity = keys(t, [[0, 0], [S[7] + 0.25, 55], [S[8], 0]], 0.6);
       const pl = pulse(t); red.intensity = 30 * pl * Math.max(0.3, lvl);
 
       // ---- floor ripple: each heartbeat sends a red ring outward from the heart
@@ -169,33 +167,33 @@ function hallSet() {
       // ---- camera: a continuous glide between shots
       const d1 = fitDist(num1.userData.w), d2 = fitDist(num2.userData.w), db = fitDist(BW, 0.9);
       const P = keys(t, [
-        [0, [0, 1.6, 13, 0, 2.6, 0]], [0.01, [0, 2.4, 8.2, 0, 2.6, 0]],
+        [0, [0, 1.6, 13, 0, 2.6, 0]], [0.01, [0, 2.4, 9.6, 0, 2.6, 0]],
         [S[1], [3.4, 3.6, 6.8, 0.7, 2.9, 0]],
         [S[2], [-0.6, 1.6, d1 + 1, 0, 2.9, 0]], [T.tres, [0.6, 2.4, d2, 0, 2.9, 0]],
         [S[3], [0, db * 0.75, db * 0.85, 0, 1.0, 0]],
-        [S[4], [-2.6, 2.9, 7.2, 0, 2.6, 0]],
-        [S[7], [0, 2.6, 6.2, 0, 2.6, 0]],
-        [S[8], [0, 5.2, 11, 0, 1.6, 0.8]],
-        [S[10], [0, 2.5, 9.5, 0, 2.7, 0]], [S[11], [0.4, 3.0, 10.5, 0, 3.0, 0]], [S[12], [0, 2.5, 8.5, 0, 2.7, 0]],
+        [S[4], [-2.6, 2.9, 9.0, 0, 2.6, 0]],
+        [S[7], [0, 2.6, 9.4, 0, 2.6, 0]],
+        [S[8], [0, 3.4, 15.5, 0, 3.0, 0]],
+        [S[10], [0, 2.5, 10.5, 0, 2.7, 0]], [S[11], [0.2, 3.0, 11, 0, 3.0, 0]], [S[12], [0, 2.5, 10.5, 0, 2.7, 0]],
       ], 1.0);
       const drift = [Math.sin(t * 0.37) * 0.35, Math.sin(t * 0.29 + 1) * 0.18, Math.sin(t * 0.21) * 0.25];
-      const push = t >= S[10] ? E.inOutSine(prog(t, S[10], T.end)) * 3.4 : t >= S[7] && t < S[8] ? prog(t, S[7], S[8]) * 1.2 : 0;
+      const push = t >= S[10] ? E.inOutSine(prog(t, S[10], T.end)) * 1.6 : t >= S[7] && t < S[8] ? prog(t, S[7], S[8]) * 1.0 : 0;
       G.lookFrom(cam, [P[0] + drift[0], P[1] + drift[1], P[2] - push + drift[2]], [P[3], P[4], P[5]], Math.sin(t * 0.33) * 0.012);
 
       // ---- heart: where it sits, how big, how it beats
-      const hp = keys(t, [[0, [0, 2.6, 0, 0.12]], [T.nacieras - 0.7, [0, 2.6, 0, 1]], [S[2], [0, 5.3, -4.5, 0.55]], [S[3], [0, 4.3, -3.4, 0.7]], [S[4], [0, 2.6, 0, 1]],
-        [S[8], [0, 3.6, -3.2, 0.72]], [S[10], [0, 2.7, 0, 1.12]], [S[11], [-1.5, 3.3, -0.8, 0.62]], [S[12], [0, 2.7, 0, 1.12]]], 0.9);
+      const hp = keys(t, [[0, [0, 2.6, 0, 0.12]], [T.nacieras - 0.7, [0, 2.6, 0, 1]], [S[2], [0, 5.3, -4.5, 0.55]], [S[3], [0, 5.4, -3.6, 0.7]], [S[4], [0, 2.6, 0, 1]],
+        [S[8], [0, 4.2, 0, 0.62]], [S[10], [0, 2.7, 0, 1.0]], [S[11], [-1.1, 3.2, -0.8, 0.55]], [S[12], [0, 2.7, 0, 1.0]]], 0.9);
       heart.position.set(hp[0], hp[1], hp[2]);
       heart.scale.setScalar(Math.max(0.001, hp[3] * (1 + 0.075 * pl)));
       heart.rotation.y = Math.sin(t * 0.55) * 0.4; heart.rotation.x = Math.sin(t * 0.4) * 0.06;
       const zap = t > T.electricidad && t < S[5] ? Math.max(0, Math.sin(t * 41) * Math.sin(t * 17)) : 0;
-      heartMat.emissive.setHex(zap > 0.3 ? 0x3aa8c8 : 0x6a0012); heartMat.emissiveIntensity = 0.25 + 1.1 * pl + 1.5 * zap;
+      heartMat.emissive.setHex(zap > 0.3 ? 0x1f6f8a : 0x4a000c); heartMat.emissiveIntensity = 0.15 + 0.6 * pl + 0.45 * zap;
       heart.visible = heart.scale.x > 0.01;
 
       // ---- question mark + numbers
-      const kq = Math.max(pop(t, T.secreto, S[2] - 0.3), pop(t, T.organo, S[12] - 0.25)); qmark.scale.setScalar(Math.max(0.001, kq)); qmark.rotation.y = t * 1.8; qmark.visible = kq > 0.01; qmark.position.set(t > S[11] ? 1.3 : 2.5, t > S[11] ? 3.2 : 4.3, 0.4);
+      const kq = Math.max(pop(t, T.secreto, S[2] - 0.3), pop(t, T.organo, S[12] - 0.25)); qmark.scale.setScalar(Math.max(0.001, kq)); qmark.rotation.y = t * 1.8; qmark.visible = kq > 0.01; qmark.position.set(t > S[11] ? 1.05 : 2.5, t > S[11] ? 3.2 : 4.3, 0.4); if (t > S[11]) qmark.scale.multiplyScalar(0.72);
       const k1 = pop(t, T.cien - 0.05, T.tres - 0.25), k2 = pop(t, T.tres - 0.05, S[3] - 0.2), k3 = pop(t, T.siete - 0.05, S[4] - 0.25);
-      [[num1, k1, [0, 2.9, 0]], [num2, k2, [0, 2.9, 0]], [num3, k3, [0, 3.6, -1.8]]].forEach(([m, k, p], j) => {
+      [[num1, k1, [0, 2.9, 0]], [num2, k2, [0, 2.9, 0]], [num3, k3, [0, 3.0, 0.6]]].forEach(([m, k, p], j) => {
         m.visible = k > 0.01; m.scale.setScalar(Math.max(0.001, k * (1 + 0.035 * pl))); m.position.set(p[0], p[1] + (1 - Math.min(1, k)) * -1.2, p[2]);
         m.rotation.y = Math.sin(t * 0.6 + j) * 0.14;
       });
@@ -243,7 +241,7 @@ function hallSet() {
         const lit = i < 4 ? ph * 3 * 4 > i && ph < 1 / 3 + 0.05 : ph > 1 / 3 && (ph - 1 / 3) * 1.5 * 8 > i - 4;
         b.material.emissiveIntensity = (lit ? 2.2 : 0.18) * clamp((t - T.relaja) * 2);
       });
-      labels.forEach((m, i) => { const k = pop(t, T.dos - 0.1 + (i % 2) * 0.25, S[9] - 0.2); m.visible = k > 0.01; m.scale.setScalar(Math.max(0.001, k * (1 + 0.035 * pl))); });
+      labels.forEach((m, i) => { const k = pop(t, T.dos - 0.1 + i * 0.3, S[9] - 0.2); m.visible = k > 0.01; m.scale.setScalar(Math.max(0.001, k * (1 + 0.035 * pl))); });
     } };
 }
 
@@ -288,16 +286,16 @@ function tableSet() {
   const ring = new THREE.Mesh(new THREE.TorusGeometry(2.1, 0.06, 8, 80), new THREE.MeshStandardMaterial({ color: 0xff2a1a, emissive: 0xff1a0a, emissiveIntensity: 1.8 }));
   ring.rotation.x = -Math.PI / 2; ring.scale.set(1, 0.48, 1); ring.position.set(-0.2, 0.06, 1.75); scene.add(ring);
   // group B: the perfect employee
-  const Bn = [[note(noteTexture('LLEGADAS TARDE', '0'), -0.7, -1.7, -0.05), () => T.trabajador - 0.05],
-    [note(noteTexture('FALTAS', '0'), 0.9, 0.0, 0.07), () => T.trabajador + 0.45],
-    [note(noteTexture('HORAS EXTRA', 'TODAS', '#b3121f'), -0.3, 1.8, -0.03), () => T.trabajador + 0.95]];
+  const Bn = [[note(noteTexture('LLEGADAS TARDE', '0'), -0.7, -3.5, -0.05), () => T.trabajador - 0.05],
+    [note(noteTexture('FALTAS', '0'), 0.9, -1.85, 0.07), () => T.trabajador + 0.45],
+    [note(noteTexture('HORAS EXTRA', 'TODAS', '#b3121f'), -0.3, -0.2, -0.03), () => T.trabajador + 0.95]];
   return { scene, camera: cam, bloom: 0.22, bloomThreshold: 0.9,
     update(t) {
       const inA = t < S[8], t0 = inA ? S[5] : S[9];
       const p = E.inOutSine(prog(t, t0, inA ? S[7] : S[10]));
       if (inA && t >= S[6]) { const q = E.inOutCubic(prog(t, S[6], S[6] + 1.2));
-        G.lookFrom(cam, [lerp(-0.2, -0.3, q), lerp(11.5, 7.6, q), lerp(6.5, 6.6, q)], [lerp(0, -0.2, q), 0, lerp(-0.2, 1.6, q)]); }
-      else G.lookFrom(cam, [lerp(0.7, -0.2, p), lerp(13.5, 11.5, p), lerp(7.8, 6.5, p)], [0, 0, -0.2]);
+        G.lookFrom(cam, [lerp(-0.2, -0.2, q), lerp(11.5, 9.4, q), lerp(6.5, 6.4, q)], [lerp(0, -0.2, q), 0, lerp(-0.2, 2.5, q)]); }
+      else G.lookFrom(cam, [lerp(0.7, -0.2, p), lerp(13.5, 11.5, p), lerp(7.8, 6.5, p) + (inA ? 0 : 1.2)], [0, 0, inA ? -0.2 : 0.5]);
       const drop = ([m, ta], show) => { const k = show ? spring(t - ta(), SPRING.snappy) : 0; m.visible = show && k > 0.01; m.position.y = 0.02 + (1 - Math.min(1, k)) * 2.2; };
       A.forEach((n) => drop(n, inA)); Bn.forEach((n) => drop(n, !inA));
       A[2][0].material[2].map = t >= T.edad ? heartA : heartQ;
@@ -353,12 +351,12 @@ M.film({
     // the secret: a white flash on "descansa"
     const fl = Math.exp(-Math.max(0, t - T.descansa) * 6) * (t >= T.descansa ? 0.55 : 0); if (fl > 0.01) { ctx.fillStyle = `rgba(255,255,255,${fl})`; ctx.fillRect(0, 0, W, H); }
     // 2-D accents
-    UI.pill(ctx, 'LATIDOS AL DÍA', W / 2, 1100, t, T.cien + 0.1, { tEnd: T.tres - 0.1, bg: GOLD, size: 46 });
-    UI.pill(ctx, 'LATIDOS EN TU VIDA', W / 2, 1100, t, T.tres + 0.1, { tEnd: S[3] - 0.1, bg: GOLD, size: 46 });
-    UI.pill(ctx, 'BARRILES DE 200 LITROS', W / 2, 1100, t, T.barriles, { tEnd: S[4] - 0.1, bg: GOLD, size: 42 });
+    UI.pill(ctx, 'LATIDOS AL DÍA', W / 2, 1150, t, T.cien + 0.1, { tEnd: T.tres - 0.1, bg: GOLD, size: 46 });
+    UI.pill(ctx, 'LATIDOS EN TU VIDA', W / 2, 1150, t, T.tres + 0.1, { tEnd: S[3] - 0.1, bg: GOLD, size: 46 });
+    UI.pill(ctx, 'BARRILES DE 200 LITROS', W / 2, 1150, t, T.barriles, { tEnd: S[4] - 0.1, bg: GOLD, size: 42 });
     UI.stamp(ctx, 'EMPLEADO DEL AÑO', W / 2, 700, t, T.tarde, { size: 64, tEnd: S[10] });
-    UI.pill(ctx, 'PRÓXIMO CAPÍTULO', W / 2, 1100, t, T.manana + 0.1, { tEnd: S[12] - 0.1, bg: '#E63B2E', fg: '#fff', size: 46 });
-    UI.pill(ctx, 'COMPÁRTELO', W / 2, 1100, t, T.compartele + 0.2, { bg: '#E63B2E', fg: '#fff', size: 56 });
+    UI.pill(ctx, 'PRÓXIMO CAPÍTULO', W / 2, 1150, t, T.manana + 0.1, { tEnd: S[12] - 0.1, bg: '#E63B2E', fg: '#fff', size: 46 });
+    UI.pill(ctx, 'COMPÁRTELO', W / 2, 1150, t, T.compartele + 0.2, { bg: '#E63B2E', fg: '#fff', size: 56 });
     captionsBig(ctx, t);
     UI.watermark(ctx);
   },
