@@ -1,0 +1,15 @@
+{
+ "slug": "E01-viaje-de-tu-sangre",
+ "date": "2026-11-23",
+ "duration": 60.1,
+ "mean_light": 39.4,
+ "worst_blown_pct": 2.7,
+ "worst_crushed_pct": 0.4,
+ "visual_changes_per_10s": 7.2,
+ "longest_still_s": 7.5,
+ "lufs": -14.1,
+ "true_peak_dbfs": -1.2,
+ "voice_match": 0.929,
+ "passed": 8,
+ "total": 9
+}
