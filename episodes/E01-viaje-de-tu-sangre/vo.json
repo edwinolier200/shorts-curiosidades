@@ -1,0 +1,859 @@
+{
+ "duration": 59.659,
+ "segments": [
+  {
+   "i": 1,
+   "start": 0.25,
+   "end": 6.59,
+   "text": "Esta gota de sangre acaba de salir de tu corazón, y en más o menos un minuto va a volver. Quédate, y mira el viaje completo.",
+   "words": [
+    {
+     "w": "Esta",
+     "t": 0.25
+    },
+    {
+     "w": "gota",
+     "t": 0.45
+    },
+    {
+     "w": "de",
+     "t": 0.73
+    },
+    {
+     "w": "sangre",
+     "t": 0.77
+    },
+    {
+     "w": "acaba",
+     "t": 1.07
+    },
+    {
+     "w": "de",
+     "t": 1.37
+    },
+    {
+     "w": "salir",
+     "t": 1.55
+    },
+    {
+     "w": "de",
+     "t": 1.73
+    },
+    {
+     "w": "tu",
+     "t": 1.93
+    },
+    {
+     "w": "corazón,",
+     "t": 2.01
+    },
+    {
+     "w": "y",
+     "t": 2.35
+    },
+    {
+     "w": "en",
+     "t": 2.87
+    },
+    {
+     "w": "más",
+     "t": 2.99
+    },
+    {
+     "w": "o",
+     "t": 3.11
+    },
+    {
+     "w": "menos",
+     "t": 3.27
+    },
+    {
+     "w": "un",
+     "t": 3.45
+    },
+    {
+     "w": "minuto",
+     "t": 3.73
+    },
+    {
+     "w": "va",
+     "t": 4.07
+    },
+    {
+     "w": "a",
+     "t": 4.21
+    },
+    {
+     "w": "volver.",
+     "t": 4.27
+    },
+    {
+     "w": "Quédate,",
+     "t": 4.87
+    },
+    {
+     "w": "y",
+     "t": 5.25
+    },
+    {
+     "w": "mira",
+     "t": 5.43
+    },
+    {
+     "w": "el",
+     "t": 5.59
+    },
+    {
+     "w": "viaje",
+     "t": 5.71
+    },
+    {
+     "w": "completo.",
+     "t": 5.87
+    }
+   ],
+   "heard": " Esta  gota  de  sangre  acaba  de  salir  de  tu  corazón  y  en  más  o  menos  un  minuto  va  a  volver.  Quédate  y  mira  el  viaje  completo.",
+   "match": 1.0
+  },
+  {
+   "i": 2,
+   "start": 6.71,
+   "end": 13.72,
+   "text": "Primera parada, los pulmones. Ahí recoge oxígeno en menos de un segundo, y sale de un rojo brillante, como recién bañada.",
+   "words": [
+    {
+     "w": "Primera",
+     "t": 6.71
+    },
+    {
+     "w": "parada,",
+     "t": 6.91
+    },
+    {
+     "w": "los",
+     "t": 7.47
+    },
+    {
+     "w": "pulmones.",
+     "t": 7.53
+    },
+    {
+     "w": "Ahí",
+     "t": 8.25
+    },
+    {
+     "w": "recoge",
+     "t": 8.37
+    },
+    {
+     "w": "oxígeno",
+     "t": 8.67
+    },
+    {
+     "w": "en",
+     "t": 9.15
+    },
+    {
+     "w": "menos",
+     "t": 9.29
+    },
+    {
+     "w": "de",
+     "t": 9.47
+    },
+    {
+     "w": "un",
+     "t": 9.65
+    },
+    {
+     "w": "segundo,",
+     "t": 9.69
+    },
+    {
+     "w": "y",
+     "t": 10.01
+    },
+    {
+     "w": "sale",
+     "t": 10.33
+    },
+    {
+     "w": "de",
+     "t": 10.51
+    },
+    {
+     "w": "un",
+     "t": 10.65
+    },
+    {
+     "w": "rojo",
+     "t": 10.73
+    },
+    {
+     "w": "brillante,",
+     "t": 10.95
+    },
+    {
+     "w": "como",
+     "t": 11.39
+    },
+    {
+     "w": "recién",
+     "t": 11.63
+    },
+    {
+     "w": "bañada.",
+     "t": 11.95
+    }
+   ],
+   "heard": " primera  parada,  los  pulmones,  ahí  le  coge  oxigeno  en  menos  de  un  segundo  y  sale  de  un  rojo  brillante  como  recién  bañada.",
+   "match": 0.9
+  },
+  {
+   "i": 3,
+   "start": 13.84,
+   "end": 20.168,
+   "text": "Vuelve al corazón, que la dispara con fuerza. Late unas cien mil veces al día, y jamás ha pedido vacaciones.",
+   "words": [
+    {
+     "w": "Vuelve",
+     "t": 13.84
+    },
+    {
+     "w": "al",
+     "t": 14.14
+    },
+    {
+     "w": "corazón,",
+     "t": 14.22
+    },
+    {
+     "w": "que",
+     "t": 14.84
+    },
+    {
+     "w": "la",
+     "t": 14.92
+    },
+    {
+     "w": "dispara",
+     "t": 15.02
+    },
+    {
+     "w": "con",
+     "t": 15.44
+    },
+    {
+     "w": "fuerza.",
+     "t": 15.52
+    },
+    {
+     "w": "Late",
+     "t": 16.22
+    },
+    {
+     "w": "unas",
+     "t": 16.54
+    },
+    {
+     "w": "cien",
+     "t": 16.62
+    },
+    {
+     "w": "mil",
+     "t": 16.82
+    },
+    {
+     "w": "veces",
+     "t": 17.02
+    },
+    {
+     "w": "al",
+     "t": 17.22
+    },
+    {
+     "w": "día,",
+     "t": 17.44
+    },
+    {
+     "w": "y",
+     "t": 17.62
+    },
+    {
+     "w": "jamás",
+     "t": 17.86
+    },
+    {
+     "w": "ha",
+     "t": 18.32
+    },
+    {
+     "w": "pedido",
+     "t": 18.44
+    },
+    {
+     "w": "vacaciones.",
+     "t": 18.78
+    }
+   ],
+   "heard": " vuelve  al  corazón,  que  la  dispara  con  fuerza.  Laté  una  100 .000  veces  al  día  y  jamás  ha  pedido  vacaciones.",
+   "match": 0.85
+  },
+  {
+   "i": 4,
+   "start": 20.288,
+   "end": 28.841,
+   "text": "Desde aquí, cada gota toma un camino distinto. Algunas suben al cerebro: pesa apenas el dos por ciento de tu cuerpo, pero se lleva el quince por ciento de tu sangre.",
+   "words": [
+    {
+     "w": "Desde",
+     "t": 20.288
+    },
+    {
+     "w": "aquí,",
+     "t": 20.508
+    },
+    {
+     "w": "cada",
+     "t": 21.108
+    },
+    {
+     "w": "gota",
+     "t": 21.328
+    },
+    {
+     "w": "toma",
+     "t": 21.688
+    },
+    {
+     "w": "un",
+     "t": 21.888
+    },
+    {
+     "w": "camino",
+     "t": 21.968
+    },
+    {
+     "w": "distinto.",
+     "t": 22.148
+    },
+    {
+     "w": "Algunas",
+     "t": 23.008
+    },
+    {
+     "w": "suben",
+     "t": 23.408
+    },
+    {
+     "w": "al",
+     "t": 23.648
+    },
+    {
+     "w": "cerebro:",
+     "t": 23.708
+    },
+    {
+     "w": "pesa",
+     "t": 24.348
+    },
+    {
+     "w": "apenas",
+     "t": 24.608
+    },
+    {
+     "w": "el",
+     "t": 24.728
+    },
+    {
+     "w": "dos",
+     "t": 24.968
+    },
+    {
+     "w": "por",
+     "t": 25.128
+    },
+    {
+     "w": "ciento",
+     "t": 25.288
+    },
+    {
+     "w": "de",
+     "t": 25.448
+    },
+    {
+     "w": "tu",
+     "t": 25.728
+    },
+    {
+     "w": "cuerpo,",
+     "t": 25.828
+    },
+    {
+     "w": "pero",
+     "t": 26.508
+    },
+    {
+     "w": "se",
+     "t": 26.548
+    },
+    {
+     "w": "lleva",
+     "t": 26.648
+    },
+    {
+     "w": "el",
+     "t": 26.788
+    },
+    {
+     "w": "quince",
+     "t": 26.908
+    },
+    {
+     "w": "por",
+     "t": 27.074
+    },
+    {
+     "w": "ciento",
+     "t": 27.241
+    },
+    {
+     "w": "de",
+     "t": 27.408
+    },
+    {
+     "w": "tu",
+     "t": 27.668
+    },
+    {
+     "w": "sangre.",
+     "t": 27.748
+    }
+   ],
+   "heard": " Desde  aquí,  cada  gota  toma  un  camino  distinto.  Algunas  suben  al  cerebro,  pesa  apenas  el  2 %  de  tu  cuerpo,  pero  se  lleva  el  15 %  de  tu  sangre.",
+   "match": 0.87
+  },
+  {
+   "i": 5,
+   "start": 28.961,
+   "end": 34.565,
+   "text": "Otras pasan por los riñones, que filtran unos ciento ochenta litros al día. Más que una bañera llena, todos los días.",
+   "words": [
+    {
+     "w": "Otras",
+     "t": 28.961
+    },
+    {
+     "w": "pasan",
+     "t": 29.161
+    },
+    {
+     "w": "por",
+     "t": 29.481
+    },
+    {
+     "w": "los",
+     "t": 29.581
+    },
+    {
+     "w": "riñones,",
+     "t": 29.681
+    },
+    {
+     "w": "que",
+     "t": 30.401
+    },
+    {
+     "w": "filtran",
+     "t": 30.621
+    },
+    {
+     "w": "unos",
+     "t": 31.041
+    },
+    {
+     "w": "ciento",
+     "t": 31.201
+    },
+    {
+     "w": "ochenta",
+     "t": 31.241
+    },
+    {
+     "w": "litros",
+     "t": 31.581
+    },
+    {
+     "w": "al",
+     "t": 32.181
+    },
+    {
+     "w": "día.",
+     "t": 32.281
+    },
+    {
+     "w": "Más",
+     "t": 32.681
+    },
+    {
+     "w": "que",
+     "t": 32.781
+    },
+    {
+     "w": "una",
+     "t": 32.921
+    },
+    {
+     "w": "bañera",
+     "t": 33.021
+    },
+    {
+     "w": "llena,",
+     "t": 33.341
+    },
+    {
+     "w": "todos",
+     "t": 33.661
+    },
+    {
+     "w": "los",
+     "t": 33.901
+    },
+    {
+     "w": "días.",
+     "t": 34.121
+    }
+   ],
+   "heard": " Otras  pasan  por  los  riñones,  que  filtran  unos  180  litros  al  día,  más  que  una  bañera  llena  todos  los  días.",
+   "match": 1.0
+  },
+  {
+   "i": 6,
+   "start": 34.685,
+   "end": 40.317,
+   "text": "Y nuestra gota toma el viaje más largo: baja hasta la punta de tus pies, y vuelve subiendo, contra la gravedad.",
+   "words": [
+    {
+     "w": "Y",
+     "t": 34.685
+    },
+    {
+     "w": "nuestra",
+     "t": 34.765
+    },
+    {
+     "w": "gota",
+     "t": 34.945
+    },
+    {
+     "w": "toma",
+     "t": 35.265
+    },
+    {
+     "w": "el",
+     "t": 35.445
+    },
+    {
+     "w": "viaje",
+     "t": 35.545
+    },
+    {
+     "w": "más",
+     "t": 35.725
+    },
+    {
+     "w": "largo:",
+     "t": 35.965
+    },
+    {
+     "w": "baja",
+     "t": 36.685
+    },
+    {
+     "w": "hasta",
+     "t": 36.945
+    },
+    {
+     "w": "la",
+     "t": 37.165
+    },
+    {
+     "w": "punta",
+     "t": 37.285
+    },
+    {
+     "w": "de",
+     "t": 37.565
+    },
+    {
+     "w": "tus",
+     "t": 37.665
+    },
+    {
+     "w": "pies,",
+     "t": 37.765
+    },
+    {
+     "w": "y",
+     "t": 37.985
+    },
+    {
+     "w": "vuelve",
+     "t": 38.325
+    },
+    {
+     "w": "subiendo,",
+     "t": 38.585
+    },
+    {
+     "w": "contra",
+     "t": 38.965
+    },
+    {
+     "w": "la",
+     "t": 39.205
+    },
+    {
+     "w": "gravedad.",
+     "t": 39.345
+    }
+   ],
+   "heard": " y  nuestra  gota  toma  el  viaje  más  largo,  baja  hasta  la  punta  de  tus  pies  y  vuelve  subiendo  contra  la  gravedad.",
+   "match": 1.0
+  },
+  {
+   "i": 7,
+   "start": 40.437,
+   "end": 48.004,
+   "text": "Todo esto pasa mientras duermes, mientras comes, mientras ves este video. Sin que se lo pidas. Desde antes de que nacieras.",
+   "words": [
+    {
+     "w": "Todo",
+     "t": 40.437
+    },
+    {
+     "w": "esto",
+     "t": 40.597
+    },
+    {
+     "w": "pasa",
+     "t": 40.857
+    },
+    {
+     "w": "mientras",
+     "t": 41.197
+    },
+    {
+     "w": "duermes,",
+     "t": 41.437
+    },
+    {
+     "w": "mientras",
+     "t": 42.177
+    },
+    {
+     "w": "comes,",
+     "t": 42.337
+    },
+    {
+     "w": "mientras",
+     "t": 43.177
+    },
+    {
+     "w": "ves",
+     "t": 43.397
+    },
+    {
+     "w": "este",
+     "t": 43.717
+    },
+    {
+     "w": "video.",
+     "t": 44.137
+    },
+    {
+     "w": "Sin",
+     "t": 44.757
+    },
+    {
+     "w": "que",
+     "t": 44.937
+    },
+    {
+     "w": "se",
+     "t": 45.057
+    },
+    {
+     "w": "lo",
+     "t": 45.177
+    },
+    {
+     "w": "pidas.",
+     "t": 45.277
+    },
+    {
+     "w": "Desde",
+     "t": 45.637
+    },
+    {
+     "w": "antes",
+     "t": 46.137
+    },
+    {
+     "w": "de",
+     "t": 46.477
+    },
+    {
+     "w": "que",
+     "t": 46.657
+    },
+    {
+     "w": "nacieras.",
+     "t": 46.737
+    }
+   ],
+   "heard": " Todo  esto  pasa  mientras  duermes,  mientras  comes,  mientras  ves  este  video,  sin  que  se  lo  pidas  desde  antes  de  que  nacieras.",
+   "match": 1.0
+  },
+  {
+   "i": 8,
+   "start": 48.124,
+   "end": 52.57,
+   "text": "Y justo a tiempo, vuelve al corazón. Una vuelta completa.",
+   "words": [
+    {
+     "w": "Y",
+     "t": 48.124
+    },
+    {
+     "w": "justo",
+     "t": 48.244
+    },
+    {
+     "w": "a",
+     "t": 48.504
+    },
+    {
+     "w": "tiempo,",
+     "t": 48.704
+    },
+    {
+     "w": "vuelve",
+     "t": 49.024
+    },
+    {
+     "w": "al",
+     "t": 49.664
+    },
+    {
+     "w": "corazón.",
+     "t": 49.744
+    },
+    {
+     "w": "Una",
+     "t": 50.184
+    },
+    {
+     "w": "vuelta",
+     "t": 50.724
+    },
+    {
+     "w": "completa.",
+     "t": 50.984
+    }
+   ],
+   "heard": " y  justo  a  tiempo  vuelve  al  corazón  una  vuelta  completa.",
+   "match": 1.0
+  },
+  {
+   "i": 9,
+   "start": 52.69,
+   "end": 58.839,
+   "text": "Mientras veías esto, tu corazón ya latió unas setenta veces. Envíaselo a ese amigo que dice que no tiene corazón.",
+   "words": [
+    {
+     "w": "Mientras",
+     "t": 52.69
+    },
+    {
+     "w": "veías",
+     "t": 52.91
+    },
+    {
+     "w": "esto,",
+     "t": 53.29
+    },
+    {
+     "w": "tu",
+     "t": 53.69
+    },
+    {
+     "w": "corazón",
+     "t": 53.73
+    },
+    {
+     "w": "ya",
+     "t": 54.05
+    },
+    {
+     "w": "latió",
+     "t": 54.41
+    },
+    {
+     "w": "unas",
+     "t": 54.71
+    },
+    {
+     "w": "setenta",
+     "t": 54.81
+    },
+    {
+     "w": "veces.",
+     "t": 55.11
+    },
+    {
+     "w": "Envíaselo",
+     "t": 55.87
+    },
+    {
+     "w": "a",
+     "t": 56.41
+    },
+    {
+     "w": "ese",
+     "t": 56.55
+    },
+    {
+     "w": "amigo",
+     "t": 56.69
+    },
+    {
+     "w": "que",
+     "t": 56.97
+    },
+    {
+     "w": "dice",
+     "t": 57.15
+    },
+    {
+     "w": "que",
+     "t": 57.33
+    },
+    {
+     "w": "no",
+     "t": 57.47
+    },
+    {
+     "w": "tiene",
+     "t": 57.59
+    },
+    {
+     "w": "corazón.",
+     "t": 57.75
+    }
+   ],
+   "heard": " Mientras  veías  esto,  tu  corazón  ya  la  pió  unas  70  veces,  envíaselo  a  ese  amigo  que  dice  que  no  tiene  corazón.",
+   "match": 0.95
+  }
+ ]
+}

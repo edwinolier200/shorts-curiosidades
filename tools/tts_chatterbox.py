@@ -26,16 +26,20 @@ def score(audio, sr, text):
     a, b = words(text), words(' '.join(s.text for s in seg))
     return difflib.SequenceMatcher(None, a, b).ratio()
 lines = open('vo/lines.txt').read().splitlines()
+# ONLY=3,9 regenerates just those lines; SEED=n changes the takes
+ONLY = {int(x) for x in os.environ.get('ONLY', '').split(',') if x.strip()}
+SEED = int(os.environ.get('SEED', 0))
 for i, line in enumerate(lines, 1):
+    if ONLY and i not in ONLY: continue
     best = (-1, None)
     for k in range(4):
-        torch.manual_seed(1000 * i + k)
+        torch.manual_seed(1000 * i + k + 97 * SEED)
         kw = dict(language_id='es', exaggeration=EXAG, cfg_weight=CFG)
         if os.path.exists(REF): kw['audio_prompt_path'] = REF
         w = m.generate(line, **kw).squeeze(0).numpy()
         s = score(w, m.sr, line)
         if s > best[0]: best = (s, w)
-        if s >= 0.85: break
+        if s >= float(os.environ.get('MIN_MATCH', 0.85)): break
     a = best[1] / max(1e-6, np.max(np.abs(best[1]))) * 0.9
     sf.write(f'vo/l{i}.wav', (a * 32767).astype(np.int16), m.sr, subtype='PCM_16')
     print(i, round(len(a) / m.sr, 2), 's  match', round(best[0], 2), flush=True)

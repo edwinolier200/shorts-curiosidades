@@ -1,0 +1,42 @@
+{
+ "S": [
+  0.0,
+  6.71,
+  13.84,
+  20.288,
+  28.961,
+  34.685,
+  40.437,
+  48.124,
+  52.69
+ ],
+ "T": {
+  "gota": 0.45,
+  "minuto": 3.73,
+  "pulmones": 7.53,
+  "oxigeno": 8.67,
+  "segundo": 9.69,
+  "rojo": 10.73,
+  "corazon2": 14.22,
+  "cienmil": 16.62,
+  "vacaciones": 18.78,
+  "camino": 21.968,
+  "cerebro": 23.708,
+  "dos": 24.968,
+  "quince": 26.908,
+  "rinones": 29.681,
+  "ciento": 31.201,
+  "banera": 33.021,
+  "largo": 35.965,
+  "pies": 37.765,
+  "gravedad": 39.345,
+  "duermes": 41.437,
+  "nacieras": 46.737,
+  "vuelve": 49.024,
+  "completa": 50.984,
+  "setenta": 54.81,
+  "amigo": 56.69,
+  "end": 60.06
+ },
+ "twist_scene": 6
+}

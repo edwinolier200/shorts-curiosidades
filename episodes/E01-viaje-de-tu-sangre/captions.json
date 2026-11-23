@@ -1,0 +1,1743 @@
+{
+"segments": [
+{
+"i": 1,
+"start": 0.25,
+"end": 6.59
+},
+{
+"i": 2,
+"start": 6.71,
+"end": 13.72
+},
+{
+"i": 3,
+"start": 13.84,
+"end": 20.168
+},
+{
+"i": 4,
+"start": 20.288,
+"end": 28.841
+},
+{
+"i": 5,
+"start": 28.961,
+"end": 34.565
+},
+{
+"i": 6,
+"start": 34.685,
+"end": 40.317
+},
+{
+"i": 7,
+"start": 40.437,
+"end": 48.004
+},
+{
+"i": 8,
+"start": 48.124,
+"end": 52.57
+},
+{
+"i": 9,
+"start": 52.69,
+"end": 58.839
+}
+],
+"captions": [
+{
+"t": 0.25,
+"seg": 1,
+"words": [
+{
+"w": "ESTA",
+"o": "Esta",
+"t": 0.25,
+"k": false
+},
+{
+"w": "GOTA",
+"o": "gota",
+"t": 0.45,
+"k": true
+},
+{
+"w": "DE",
+"o": "de",
+"t": 0.73,
+"k": false
+}
+],
+"end": 0.77
+},
+{
+"t": 0.77,
+"seg": 1,
+"words": [
+{
+"w": "SANGRE",
+"o": "sangre",
+"t": 0.77,
+"k": true
+},
+{
+"w": "ACABA",
+"o": "acaba",
+"t": 1.07,
+"k": false
+},
+{
+"w": "DE",
+"o": "de",
+"t": 1.37,
+"k": false
+}
+],
+"end": 1.55
+},
+{
+"t": 1.55,
+"seg": 1,
+"words": [
+{
+"w": "SALIR",
+"o": "salir",
+"t": 1.55,
+"k": false
+},
+{
+"w": "DE",
+"o": "de",
+"t": 1.73,
+"k": false
+},
+{
+"w": "TU",
+"o": "tu",
+"t": 1.93,
+"k": false
+}
+],
+"end": 2.01
+},
+{
+"t": 2.01,
+"seg": 1,
+"words": [
+{
+"w": "CORAZÓN,",
+"o": "corazón,",
+"t": 2.01,
+"k": true
+}
+],
+"end": 2.35
+},
+{
+"t": 2.35,
+"seg": 1,
+"words": [
+{
+"w": "Y",
+"o": "y",
+"t": 2.35,
+"k": false
+},
+{
+"w": "EN",
+"o": "en",
+"t": 2.87,
+"k": false
+},
+{
+"w": "MÁS",
+"o": "más",
+"t": 2.99,
+"k": false
+}
+],
+"end": 3.11
+},
+{
+"t": 3.11,
+"seg": 1,
+"words": [
+{
+"w": "O",
+"o": "o",
+"t": 3.11,
+"k": false
+},
+{
+"w": "MENOS",
+"o": "menos",
+"t": 3.27,
+"k": false
+},
+{
+"w": "UN",
+"o": "un",
+"t": 3.45,
+"k": false
+}
+],
+"end": 3.73
+},
+{
+"t": 3.73,
+"seg": 1,
+"words": [
+{
+"w": "MINUTO",
+"o": "minuto",
+"t": 3.73,
+"k": true
+},
+{
+"w": "VA",
+"o": "va",
+"t": 4.07,
+"k": false
+},
+{
+"w": "A",
+"o": "a",
+"t": 4.21,
+"k": false
+}
+],
+"end": 4.27
+},
+{
+"t": 4.27,
+"seg": 1,
+"words": [
+{
+"w": "VOLVER.",
+"o": "volver.",
+"t": 4.27,
+"k": false
+}
+],
+"end": 4.87
+},
+{
+"t": 4.87,
+"seg": 1,
+"words": [
+{
+"w": "QUÉDATE,",
+"o": "Quédate,",
+"t": 4.87,
+"k": false
+}
+],
+"end": 5.25
+},
+{
+"t": 5.25,
+"seg": 1,
+"words": [
+{
+"w": "Y",
+"o": "y",
+"t": 5.25,
+"k": false
+},
+{
+"w": "MIRA",
+"o": "mira",
+"t": 5.43,
+"k": false
+},
+{
+"w": "EL",
+"o": "el",
+"t": 5.59,
+"k": false
+}
+],
+"end": 5.71
+},
+{
+"t": 5.71,
+"seg": 1,
+"words": [
+{
+"w": "VIAJE",
+"o": "viaje",
+"t": 5.71,
+"k": false
+},
+{
+"w": "COMPLETO.",
+"o": "completo.",
+"t": 5.87,
+"k": false
+}
+],
+"end": 6.71
+},
+{
+"t": 6.71,
+"seg": 2,
+"words": [
+{
+"w": "PRIMERA",
+"o": "Primera",
+"t": 6.71,
+"k": false
+},
+{
+"w": "PARADA,",
+"o": "parada,",
+"t": 6.91,
+"k": false
+}
+],
+"end": 7.47
+},
+{
+"t": 7.47,
+"seg": 2,
+"words": [
+{
+"w": "LOS",
+"o": "los",
+"t": 7.47,
+"k": false
+},
+{
+"w": "PULMONES.",
+"o": "pulmones.",
+"t": 7.53,
+"k": true
+}
+],
+"end": 8.25
+},
+{
+"t": 8.25,
+"seg": 2,
+"words": [
+{
+"w": "AHÍ",
+"o": "Ahí",
+"t": 8.25,
+"k": false
+},
+{
+"w": "RECOGE",
+"o": "recoge",
+"t": 8.37,
+"k": false
+}
+],
+"end": 8.67
+},
+{
+"t": 8.67,
+"seg": 2,
+"words": [
+{
+"w": "OXÍGENO",
+"o": "oxígeno",
+"t": 8.67,
+"k": true
+},
+{
+"w": "EN",
+"o": "en",
+"t": 9.15,
+"k": false
+},
+{
+"w": "MENOS",
+"o": "menos",
+"t": 9.29,
+"k": false
+}
+],
+"end": 9.47
+},
+{
+"t": 9.47,
+"seg": 2,
+"words": [
+{
+"w": "DE",
+"o": "de",
+"t": 9.47,
+"k": false
+},
+{
+"w": "UN",
+"o": "un",
+"t": 9.65,
+"k": false
+},
+{
+"w": "SEGUNDO,",
+"o": "segundo,",
+"t": 9.69,
+"k": true
+}
+],
+"end": 10.01
+},
+{
+"t": 10.01,
+"seg": 2,
+"words": [
+{
+"w": "Y",
+"o": "y",
+"t": 10.01,
+"k": false
+},
+{
+"w": "SALE",
+"o": "sale",
+"t": 10.33,
+"k": false
+},
+{
+"w": "DE",
+"o": "de",
+"t": 10.51,
+"k": false
+}
+],
+"end": 10.65
+},
+{
+"t": 10.65,
+"seg": 2,
+"words": [
+{
+"w": "UN",
+"o": "un",
+"t": 10.65,
+"k": false
+},
+{
+"w": "ROJO",
+"o": "rojo",
+"t": 10.73,
+"k": true
+}
+],
+"end": 10.95
+},
+{
+"t": 10.95,
+"seg": 2,
+"words": [
+{
+"w": "BRILLANTE,",
+"o": "brillante,",
+"t": 10.95,
+"k": false
+}
+],
+"end": 11.39
+},
+{
+"t": 11.39,
+"seg": 2,
+"words": [
+{
+"w": "COMO",
+"o": "como",
+"t": 11.39,
+"k": false
+},
+{
+"w": "RECIÉN",
+"o": "recién",
+"t": 11.63,
+"k": false
+}
+],
+"end": 11.95
+},
+{
+"t": 11.95,
+"seg": 2,
+"words": [
+{
+"w": "BAÑADA.",
+"o": "bañada.",
+"t": 11.95,
+"k": false
+}
+],
+"end": 13.84
+},
+{
+"t": 13.84,
+"seg": 3,
+"words": [
+{
+"w": "VUELVE",
+"o": "Vuelve",
+"t": 13.84,
+"k": false
+},
+{
+"w": "AL",
+"o": "al",
+"t": 14.14,
+"k": false
+}
+],
+"end": 14.22
+},
+{
+"t": 14.22,
+"seg": 3,
+"words": [
+{
+"w": "CORAZÓN,",
+"o": "corazón,",
+"t": 14.22,
+"k": true
+}
+],
+"end": 14.84
+},
+{
+"t": 14.84,
+"seg": 3,
+"words": [
+{
+"w": "QUE",
+"o": "que",
+"t": 14.84,
+"k": false
+},
+{
+"w": "LA",
+"o": "la",
+"t": 14.92,
+"k": false
+},
+{
+"w": "DISPARA",
+"o": "dispara",
+"t": 15.02,
+"k": false
+}
+],
+"end": 15.44
+},
+{
+"t": 15.44,
+"seg": 3,
+"words": [
+{
+"w": "CON",
+"o": "con",
+"t": 15.44,
+"k": false
+},
+{
+"w": "FUERZA.",
+"o": "fuerza.",
+"t": 15.52,
+"k": false
+}
+],
+"end": 16.22
+},
+{
+"t": 16.22,
+"seg": 3,
+"words": [
+{
+"w": "LATE",
+"o": "Late",
+"t": 16.22,
+"k": false
+},
+{
+"w": "UNAS",
+"o": "unas",
+"t": 16.54,
+"k": false
+},
+{
+"w": "100.000",
+"o": "100.000",
+"t": 16.62,
+"k": true
+}
+],
+"end": 17.02
+},
+{
+"t": 17.02,
+"seg": 3,
+"words": [
+{
+"w": "VECES",
+"o": "veces",
+"t": 17.02,
+"k": false
+},
+{
+"w": "AL",
+"o": "al",
+"t": 17.22,
+"k": false
+},
+{
+"w": "DÍA,",
+"o": "día,",
+"t": 17.44,
+"k": false
+}
+],
+"end": 17.62
+},
+{
+"t": 17.62,
+"seg": 3,
+"words": [
+{
+"w": "Y",
+"o": "y",
+"t": 17.62,
+"k": false
+},
+{
+"w": "JAMÁS",
+"o": "jamás",
+"t": 17.86,
+"k": false
+},
+{
+"w": "HA",
+"o": "ha",
+"t": 18.32,
+"k": false
+}
+],
+"end": 18.44
+},
+{
+"t": 18.44,
+"seg": 3,
+"words": [
+{
+"w": "PEDIDO",
+"o": "pedido",
+"t": 18.44,
+"k": false
+}
+],
+"end": 18.78
+},
+{
+"t": 18.78,
+"seg": 3,
+"words": [
+{
+"w": "VACACIONES.",
+"o": "vacaciones.",
+"t": 18.78,
+"k": true
+}
+],
+"end": 20.288
+},
+{
+"t": 20.288,
+"seg": 4,
+"words": [
+{
+"w": "DESDE",
+"o": "Desde",
+"t": 20.288,
+"k": false
+},
+{
+"w": "AQUÍ,",
+"o": "aquí,",
+"t": 20.508,
+"k": false
+}
+],
+"end": 21.108
+},
+{
+"t": 21.108,
+"seg": 4,
+"words": [
+{
+"w": "CADA",
+"o": "cada",
+"t": 21.108,
+"k": false
+},
+{
+"w": "GOTA",
+"o": "gota",
+"t": 21.328,
+"k": true
+},
+{
+"w": "TOMA",
+"o": "toma",
+"t": 21.688,
+"k": false
+}
+],
+"end": 21.888
+},
+{
+"t": 21.888,
+"seg": 4,
+"words": [
+{
+"w": "UN",
+"o": "un",
+"t": 21.888,
+"k": false
+},
+{
+"w": "CAMINO",
+"o": "camino",
+"t": 21.968,
+"k": false
+}
+],
+"end": 22.148
+},
+{
+"t": 22.148,
+"seg": 4,
+"words": [
+{
+"w": "DISTINTO.",
+"o": "distinto.",
+"t": 22.148,
+"k": false
+}
+],
+"end": 23.008
+},
+{
+"t": 23.008,
+"seg": 4,
+"words": [
+{
+"w": "ALGUNAS",
+"o": "Algunas",
+"t": 23.008,
+"k": false
+},
+{
+"w": "SUBEN",
+"o": "suben",
+"t": 23.408,
+"k": false
+},
+{
+"w": "AL",
+"o": "al",
+"t": 23.648,
+"k": false
+}
+],
+"end": 23.708
+},
+{
+"t": 23.708,
+"seg": 4,
+"words": [
+{
+"w": "CEREBRO:",
+"o": "cerebro:",
+"t": 23.708,
+"k": true
+}
+],
+"end": 24.348
+},
+{
+"t": 24.348,
+"seg": 4,
+"words": [
+{
+"w": "PESA",
+"o": "pesa",
+"t": 24.348,
+"k": false
+},
+{
+"w": "APENAS",
+"o": "apenas",
+"t": 24.608,
+"k": false
+},
+{
+"w": "EL",
+"o": "el",
+"t": 24.728,
+"k": false
+}
+],
+"end": 24.968
+},
+{
+"t": 24.968,
+"seg": 4,
+"words": [
+{
+"w": "2 %",
+"o": "2 %",
+"t": 24.968,
+"k": true
+},
+{
+"w": "DE",
+"o": "de",
+"t": 25.448,
+"k": false
+},
+{
+"w": "TU",
+"o": "tu",
+"t": 25.728,
+"k": false
+}
+],
+"end": 25.828
+},
+{
+"t": 25.828,
+"seg": 4,
+"words": [
+{
+"w": "CUERPO,",
+"o": "cuerpo,",
+"t": 25.828,
+"k": false
+}
+],
+"end": 26.508
+},
+{
+"t": 26.508,
+"seg": 4,
+"words": [
+{
+"w": "PERO",
+"o": "pero",
+"t": 26.508,
+"k": false
+},
+{
+"w": "SE",
+"o": "se",
+"t": 26.548,
+"k": false
+},
+{
+"w": "LLEVA",
+"o": "lleva",
+"t": 26.648,
+"k": false
+}
+],
+"end": 26.788
+},
+{
+"t": 26.788,
+"seg": 4,
+"words": [
+{
+"w": "EL",
+"o": "el",
+"t": 26.788,
+"k": false
+},
+{
+"w": "15 %",
+"o": "15 %",
+"t": 26.908,
+"k": true
+},
+{
+"w": "DE",
+"o": "de",
+"t": 27.408,
+"k": false
+}
+],
+"end": 27.668
+},
+{
+"t": 27.668,
+"seg": 4,
+"words": [
+{
+"w": "TU",
+"o": "tu",
+"t": 27.668,
+"k": false
+},
+{
+"w": "SANGRE.",
+"o": "sangre.",
+"t": 27.748,
+"k": false
+}
+],
+"end": 28.961
+},
+{
+"t": 28.961,
+"seg": 5,
+"words": [
+{
+"w": "OTRAS",
+"o": "Otras",
+"t": 28.961,
+"k": false
+},
+{
+"w": "PASAN",
+"o": "pasan",
+"t": 29.161,
+"k": false
+},
+{
+"w": "POR",
+"o": "por",
+"t": 29.481,
+"k": false
+}
+],
+"end": 29.581
+},
+{
+"t": 29.581,
+"seg": 5,
+"words": [
+{
+"w": "LOS",
+"o": "los",
+"t": 29.581,
+"k": false
+},
+{
+"w": "RIÑONES,",
+"o": "riñones,",
+"t": 29.681,
+"k": true
+}
+],
+"end": 30.401
+},
+{
+"t": 30.401,
+"seg": 5,
+"words": [
+{
+"w": "QUE",
+"o": "que",
+"t": 30.401,
+"k": false
+},
+{
+"w": "FILTRAN",
+"o": "filtran",
+"t": 30.621,
+"k": false
+},
+{
+"w": "UNOS",
+"o": "unos",
+"t": 31.041,
+"k": false
+}
+],
+"end": 31.201
+},
+{
+"t": 31.201,
+"seg": 5,
+"words": [
+{
+"w": "180 LITROS",
+"o": "180 litros",
+"t": 31.201,
+"k": true
+},
+{
+"w": "AL",
+"o": "al",
+"t": 32.181,
+"k": false
+}
+],
+"end": 32.281
+},
+{
+"t": 32.281,
+"seg": 5,
+"words": [
+{
+"w": "DÍA.",
+"o": "día.",
+"t": 32.281,
+"k": false
+}
+],
+"end": 32.681
+},
+{
+"t": 32.681,
+"seg": 5,
+"words": [
+{
+"w": "MÁS",
+"o": "Más",
+"t": 32.681,
+"k": false
+},
+{
+"w": "QUE",
+"o": "que",
+"t": 32.781,
+"k": false
+},
+{
+"w": "UNA",
+"o": "una",
+"t": 32.921,
+"k": false
+}
+],
+"end": 33.021
+},
+{
+"t": 33.021,
+"seg": 5,
+"words": [
+{
+"w": "BAÑERA",
+"o": "bañera",
+"t": 33.021,
+"k": true
+},
+{
+"w": "LLENA,",
+"o": "llena,",
+"t": 33.341,
+"k": false
+}
+],
+"end": 33.661
+},
+{
+"t": 33.661,
+"seg": 5,
+"words": [
+{
+"w": "TODOS",
+"o": "todos",
+"t": 33.661,
+"k": false
+},
+{
+"w": "LOS",
+"o": "los",
+"t": 33.901,
+"k": false
+},
+{
+"w": "DÍAS.",
+"o": "días.",
+"t": 34.121,
+"k": false
+}
+],
+"end": 34.685
+},
+{
+"t": 34.685,
+"seg": 6,
+"words": [
+{
+"w": "Y",
+"o": "Y",
+"t": 34.685,
+"k": false
+},
+{
+"w": "NUESTRA",
+"o": "nuestra",
+"t": 34.765,
+"k": false
+},
+{
+"w": "GOTA",
+"o": "gota",
+"t": 34.945,
+"k": true
+}
+],
+"end": 35.265
+},
+{
+"t": 35.265,
+"seg": 6,
+"words": [
+{
+"w": "TOMA",
+"o": "toma",
+"t": 35.265,
+"k": false
+},
+{
+"w": "EL",
+"o": "el",
+"t": 35.445,
+"k": false
+},
+{
+"w": "VIAJE",
+"o": "viaje",
+"t": 35.545,
+"k": false
+}
+],
+"end": 35.725
+},
+{
+"t": 35.725,
+"seg": 6,
+"words": [
+{
+"w": "MÁS",
+"o": "más",
+"t": 35.725,
+"k": false
+},
+{
+"w": "LARGO:",
+"o": "largo:",
+"t": 35.965,
+"k": true
+}
+],
+"end": 36.685
+},
+{
+"t": 36.685,
+"seg": 6,
+"words": [
+{
+"w": "BAJA",
+"o": "baja",
+"t": 36.685,
+"k": false
+},
+{
+"w": "HASTA",
+"o": "hasta",
+"t": 36.945,
+"k": false
+},
+{
+"w": "LA",
+"o": "la",
+"t": 37.165,
+"k": false
+}
+],
+"end": 37.285
+},
+{
+"t": 37.285,
+"seg": 6,
+"words": [
+{
+"w": "PUNTA",
+"o": "punta",
+"t": 37.285,
+"k": false
+},
+{
+"w": "DE",
+"o": "de",
+"t": 37.565,
+"k": false
+},
+{
+"w": "TUS",
+"o": "tus",
+"t": 37.665,
+"k": false
+}
+],
+"end": 37.765
+},
+{
+"t": 37.765,
+"seg": 6,
+"words": [
+{
+"w": "PIES,",
+"o": "pies,",
+"t": 37.765,
+"k": true
+}
+],
+"end": 37.985
+},
+{
+"t": 37.985,
+"seg": 6,
+"words": [
+{
+"w": "Y",
+"o": "y",
+"t": 37.985,
+"k": false
+},
+{
+"w": "VUELVE",
+"o": "vuelve",
+"t": 38.325,
+"k": false
+}
+],
+"end": 38.585
+},
+{
+"t": 38.585,
+"seg": 6,
+"words": [
+{
+"w": "SUBIENDO,",
+"o": "subiendo,",
+"t": 38.585,
+"k": false
+}
+],
+"end": 38.965
+},
+{
+"t": 38.965,
+"seg": 6,
+"words": [
+{
+"w": "CONTRA",
+"o": "contra",
+"t": 38.965,
+"k": false
+},
+{
+"w": "LA",
+"o": "la",
+"t": 39.205,
+"k": false
+}
+],
+"end": 39.345
+},
+{
+"t": 39.345,
+"seg": 6,
+"words": [
+{
+"w": "GRAVEDAD.",
+"o": "gravedad.",
+"t": 39.345,
+"k": true
+}
+],
+"end": 40.437
+},
+{
+"t": 40.437,
+"seg": 7,
+"words": [
+{
+"w": "TODO",
+"o": "Todo",
+"t": 40.437,
+"k": false
+},
+{
+"w": "ESTO",
+"o": "esto",
+"t": 40.597,
+"k": false
+},
+{
+"w": "PASA",
+"o": "pasa",
+"t": 40.857,
+"k": false
+}
+],
+"end": 41.197
+},
+{
+"t": 41.197,
+"seg": 7,
+"words": [
+{
+"w": "MIENTRAS",
+"o": "mientras",
+"t": 41.197,
+"k": false
+},
+{
+"w": "DUERMES,",
+"o": "duermes,",
+"t": 41.437,
+"k": false
+}
+],
+"end": 42.177
+},
+{
+"t": 42.177,
+"seg": 7,
+"words": [
+{
+"w": "MIENTRAS",
+"o": "mientras",
+"t": 42.177,
+"k": false
+},
+{
+"w": "COMES,",
+"o": "comes,",
+"t": 42.337,
+"k": false
+}
+],
+"end": 43.177
+},
+{
+"t": 43.177,
+"seg": 7,
+"words": [
+{
+"w": "MIENTRAS",
+"o": "mientras",
+"t": 43.177,
+"k": false
+},
+{
+"w": "VES",
+"o": "ves",
+"t": 43.397,
+"k": false
+},
+{
+"w": "ESTE",
+"o": "este",
+"t": 43.717,
+"k": false
+}
+],
+"end": 44.137
+},
+{
+"t": 44.137,
+"seg": 7,
+"words": [
+{
+"w": "VIDEO.",
+"o": "video.",
+"t": 44.137,
+"k": false
+}
+],
+"end": 44.757
+},
+{
+"t": 44.757,
+"seg": 7,
+"words": [
+{
+"w": "SIN",
+"o": "Sin",
+"t": 44.757,
+"k": false
+},
+{
+"w": "QUE",
+"o": "que",
+"t": 44.937,
+"k": false
+},
+{
+"w": "SE",
+"o": "se",
+"t": 45.057,
+"k": false
+}
+],
+"end": 45.177
+},
+{
+"t": 45.177,
+"seg": 7,
+"words": [
+{
+"w": "LO",
+"o": "lo",
+"t": 45.177,
+"k": false
+},
+{
+"w": "PIDAS.",
+"o": "pidas.",
+"t": 45.277,
+"k": false
+}
+],
+"end": 45.637
+},
+{
+"t": 45.637,
+"seg": 7,
+"words": [
+{
+"w": "DESDE",
+"o": "Desde",
+"t": 45.637,
+"k": false
+},
+{
+"w": "ANTES",
+"o": "antes",
+"t": 46.137,
+"k": false
+},
+{
+"w": "DE",
+"o": "de",
+"t": 46.477,
+"k": false
+}
+],
+"end": 46.657
+},
+{
+"t": 46.657,
+"seg": 7,
+"words": [
+{
+"w": "QUE",
+"o": "que",
+"t": 46.657,
+"k": false
+},
+{
+"w": "NACIERAS.",
+"o": "nacieras.",
+"t": 46.737,
+"k": true
+}
+],
+"end": 48.124
+},
+{
+"t": 48.124,
+"seg": 8,
+"words": [
+{
+"w": "Y",
+"o": "Y",
+"t": 48.124,
+"k": false
+},
+{
+"w": "JUSTO",
+"o": "justo",
+"t": 48.244,
+"k": false
+},
+{
+"w": "A",
+"o": "a",
+"t": 48.504,
+"k": false
+}
+],
+"end": 48.704
+},
+{
+"t": 48.704,
+"seg": 8,
+"words": [
+{
+"w": "TIEMPO,",
+"o": "tiempo,",
+"t": 48.704,
+"k": false
+}
+],
+"end": 49.024
+},
+{
+"t": 49.024,
+"seg": 8,
+"words": [
+{
+"w": "VUELVE",
+"o": "vuelve",
+"t": 49.024,
+"k": false
+},
+{
+"w": "AL",
+"o": "al",
+"t": 49.664,
+"k": false
+}
+],
+"end": 49.744
+},
+{
+"t": 49.744,
+"seg": 8,
+"words": [
+{
+"w": "CORAZÓN.",
+"o": "corazón.",
+"t": 49.744,
+"k": true
+}
+],
+"end": 50.184
+},
+{
+"t": 50.184,
+"seg": 8,
+"words": [
+{
+"w": "UNA",
+"o": "Una",
+"t": 50.184,
+"k": false
+},
+{
+"w": "VUELTA",
+"o": "vuelta",
+"t": 50.724,
+"k": false
+}
+],
+"end": 50.984
+},
+{
+"t": 50.984,
+"seg": 8,
+"words": [
+{
+"w": "COMPLETA.",
+"o": "completa.",
+"t": 50.984,
+"k": true
+}
+],
+"end": 52.69
+},
+{
+"t": 52.69,
+"seg": 9,
+"words": [
+{
+"w": "MIENTRAS",
+"o": "Mientras",
+"t": 52.69,
+"k": false
+},
+{
+"w": "VEÍAS",
+"o": "veías",
+"t": 52.91,
+"k": false
+}
+],
+"end": 53.29
+},
+{
+"t": 53.29,
+"seg": 9,
+"words": [
+{
+"w": "ESTO,",
+"o": "esto,",
+"t": 53.29,
+"k": false
+}
+],
+"end": 53.69
+},
+{
+"t": 53.69,
+"seg": 9,
+"words": [
+{
+"w": "TU",
+"o": "tu",
+"t": 53.69,
+"k": false
+},
+{
+"w": "CORAZÓN",
+"o": "corazón",
+"t": 53.73,
+"k": false
+},
+{
+"w": "YA",
+"o": "ya",
+"t": 54.05,
+"k": false
+}
+],
+"end": 54.41
+},
+{
+"t": 54.41,
+"seg": 9,
+"words": [
+{
+"w": "LATIÓ",
+"o": "latió",
+"t": 54.41,
+"k": false
+},
+{
+"w": "UNAS",
+"o": "unas",
+"t": 54.71,
+"k": false
+},
+{
+"w": "70",
+"o": "70",
+"t": 54.81,
+"k": true
+}
+],
+"end": 55.11
+},
+{
+"t": 55.11,
+"seg": 9,
+"words": [
+{
+"w": "VECES.",
+"o": "veces.",
+"t": 55.11,
+"k": false
+}
+],
+"end": 55.87
+},
+{
+"t": 55.87,
+"seg": 9,
+"words": [
+{
+"w": "ENVÍASELO",
+"o": "Envíaselo",
+"t": 55.87,
+"k": false
+},
+{
+"w": "A",
+"o": "a",
+"t": 56.41,
+"k": false
+},
+{
+"w": "ESE",
+"o": "ese",
+"t": 56.55,
+"k": false
+}
+],
+"end": 56.69
+},
+{
+"t": 56.69,
+"seg": 9,
+"words": [
+{
+"w": "AMIGO",
+"o": "amigo",
+"t": 56.69,
+"k": false
+},
+{
+"w": "QUE",
+"o": "que",
+"t": 56.97,
+"k": false
+},
+{
+"w": "DICE",
+"o": "dice",
+"t": 57.15,
+"k": false
+}
+],
+"end": 57.33
+},
+{
+"t": 57.33,
+"seg": 9,
+"words": [
+{
+"w": "QUE",
+"o": "que",
+"t": 57.33,
+"k": false
+},
+{
+"w": "NO",
+"o": "no",
+"t": 57.47,
+"k": false
+},
+{
+"w": "TIENE",
+"o": "tiene",
+"t": 57.59,
+"k": false
+}
+],
+"end": 57.75
+},
+{
+"t": 57.75,
+"seg": 9,
+"words": [
+{
+"w": "CORAZÓN.",
+"o": "corazón.",
+"t": 57.75,
+"k": true
+}
+],
+"end": 59.089
+}
+]
+}

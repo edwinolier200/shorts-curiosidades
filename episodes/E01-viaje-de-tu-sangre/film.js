@@ -5,6 +5,7 @@ import * as UI from './lib/ui.js';
 
 const { W, H, E, prog, lerp, clamp, spring, SPRING, font, text, rrect, hash01, noise1, springKeys, bump } = M;
 const S = [], T = {};
+const T0 = { minuto: 3 };
 let CAP = { captions: [] };
 const B = (s) => s / 0.5;
 const HITS = [];
@@ -205,9 +206,9 @@ M.film({
   draw(ctx, u, t) {
     const d = dropAt(t);
     // camera keys: [time, [x, y, zoom]]
-    const keys = [[0, [500, 900, 0.62]], [0.6, [515, 520, 1.6]], [S[1] - 0.3, [520, 560, 1.15]], [S[1], [530, 455, 2.1]],
-      [S[2], [515, 500, 3.1]], [S[3], [500, 260, 2.3]], [S[4], [500, 720, 2.4]], [S[5], [500, 700, 1.25]],
-      [S[6], [500, 900, 0.62]], [T.vuelve - 0.6, [515, 520, 2.4]], [S[8], [500, 900, 0.62]]];
+    const keys = [[0, [515, 505, 2.6]], [T.minuto, [515, 560, 1.5]], [S[1] - 0.3, [520, 600, 1.2]], [S[1], [530, 470, 2.1]],
+      [S[2], [515, 500, 3.0]], [S[3], [500, 190, 2.6]], [S[4], [500, 735, 2.5]], [S[5], [500, 700, 1.3]],
+      [S[6], [500, 930, 0.82]], [T.vuelve - 0.6, [515, 520, 2.4]], [S[8], [500, 930, 0.82]]];
     let [cx, cy, z] = springKeys(t, keys, { stiffness: 40, damping: 13 });
     // during the long trip the camera follows the drop down the leg and back up
     if (t > S[5] + 0.6 && t < S[6]) { const f = E.inOutSine(prog(t, S[5] + 0.6, S[5] + 2)); cx = lerp(cx, d.p[0], f); cy = lerp(cy, d.p[1], f); }
@@ -235,7 +236,9 @@ M.film({
       ctx.beginPath(); ctx.arc(d.p[0], d.p[1], r + 14 + 4 * Math.sin(t * 5), 0, Math.PI * 2); ctx.stroke(); ctx.restore();
     });
 
-    // ---- interface
+    // ---- interface: soft dark band so captions and the stopwatch read over any scene
+    const sc = ctx.createLinearGradient(0, 0, 0, 560); sc.addColorStop(0, 'rgba(5,10,25,0.85)'); sc.addColorStop(0.75, 'rgba(5,10,25,0.35)'); sc.addColorStop(1, 'rgba(5,10,25,0)');
+    ctx.fillStyle = sc; ctx.fillRect(0, 0, W, 560);
     const tag = (lbl, i0, i1) => UI.dayBadge(ctx, 'TU SANGRE', lbl, t, S[i0], { tEnd: S[i1] });
     tag('PULMONES', 1, 2); tag('CORAZÓN', 2, 3); tag('CEREBRO', 3, 4); tag('RIÑONES', 4, 5); tag('A LOS PIES', 5, 6);
     UI.statCard(ctx, '0,75 s', 'lo que tarda en cargar oxígeno 🫁', t, T.segundo, { tEnd: S[2] });
