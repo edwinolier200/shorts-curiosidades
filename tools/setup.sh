@@ -21,3 +21,5 @@ from huggingface_hub import snapshot_download
 snapshot_download('segmind/SSD-1B', allow_patterns=['*.json','*.txt','unet/diffusion_pytorch_model.safetensors','vae/diffusion_pytorch_model.safetensors','text_encoder/model.safetensors','text_encoder_2/model.safetensors','tokenizer*/*'])
 snapshot_download('latent-consistency/lcm-lora-ssd-1b')"
 echo "setup ok"
+# 3-D cinematic style (three.js via engine/gl.js; served from /node_modules by render.mjs)
+[ -d node_modules/three ] || npm i --no-audit --no-fund three@0.170.0 opentype.js@1.3.4
