@@ -17,13 +17,13 @@ float vn(vec3 x){ vec3 i=floor(x), f=fract(x); f=f*f*(3.0-2.0*f);
              mix(mix(h3(i+vec3(0,0,1)),h3(i+vec3(1,0,1)),f.x),mix(h3(i+vec3(0,1,1)),h3(i+vec3(1,1,1)),f.x),f.y),f.z); }
 float fbm(vec3 p){ float a=.5, s=0.; for(int k=0;k<5;k++){ s+=a*vn(p); p*=2.03; a*=.5; } return s; }`;
 function tissue({ color, color2, fat = null, fatAmt = 0, scale = 30, fibre = 0, bump = 0.25, rough = 0.42, clear = 0.9, sheen = 0.4, sheenColor = 0xffb0a0, opacity = 1 }) {
-  const m = new THREE.MeshPhysicalMaterial({ color, roughness: rough, clearcoat: clear, clearcoatRoughness: 0.18, sheen, sheenColor: new THREE.Color(sheenColor), sheenRoughness: 0.5, envMapIntensity: 0.85, transparent: opacity < 1, opacity, depthWrite: opacity >= 1 });
-  const u = { uC2: { value: new THREE.Color(color2 ?? color) }, uFat: { value: new THREE.Color(fat ?? color) }, uFatAmt: { value: fatAmt }, uScale: { value: scale }, uFibre: { value: fibre }, uBump: { value: bump } };
+  const m = new THREE.MeshPhysicalMaterial({ color, roughness: rough, clearcoat: clear, clearcoatRoughness: 0.18, sheen, sheenColor: new THREE.Color(sheenColor), sheenRoughness: 0.5, envMapIntensity: 0.85, transparent: opacity < 1, opacity, depthWrite: opacity >= 1, side: THREE.DoubleSide });
+  const u = { uWave: { value: new THREE.Vector4(0, 0, 0, -1) }, uWaveCol: { value: new THREE.Color(0x30c8ff) }, uGlow: { value: 0 }, uGlowCol: { value: new THREE.Color(0xff3020) }, uC2: { value: new THREE.Color(color2 ?? color) }, uFat: { value: new THREE.Color(fat ?? color) }, uFatAmt: { value: fatAmt }, uScale: { value: scale }, uFibre: { value: fibre }, uBump: { value: bump } };
   m.onBeforeCompile = (sh) => {
     Object.assign(sh.uniforms, u);
     sh.vertexShader = sh.vertexShader.replace('#include <common>', '#include <common>\nvarying vec3 vWP;').replace('#include <worldpos_vertex>', '#include <worldpos_vertex>\nvWP = (modelMatrix * vec4(transformed,1.0)).xyz;');
     sh.fragmentShader = sh.fragmentShader
-      .replace('#include <common>', `#include <common>\nvarying vec3 vWP; uniform vec3 uC2, uFat; uniform float uFatAmt, uScale, uFibre, uBump;\n${NOISE}`)
+      .replace('#include <common>', `#include <common>\nvarying vec3 vWP; uniform vec3 uC2, uFat, uWaveCol, uGlowCol; uniform vec4 uWave; uniform float uFatAmt, uScale, uFibre, uBump, uGlow;\n${NOISE}`)
       .replace('#include <color_fragment>', `#include <color_fragment>
         vec3 P = vWP * uScale;
         float n = fbm(P), fb = sin((P.y*1.7 + P.x*0.6 + fbm(P*0.5)*6.0) * 6.0)*0.5+0.5;
@@ -31,11 +31,15 @@ function tissue({ color, color2, fat = null, fatAmt = 0, scale = 30, fibre = 0, 
         diffuseColor.rgb *= 1.0 - uFibre * 0.18 * fb;
         float fat = smoothstep(0.55, 0.85, fbm(P*0.12 + 7.0)) * uFatAmt * 2.0;
         diffuseColor.rgb = mix(diffuseColor.rgb, uFat, fat);`)
+      .replace('#include <emissivemap_fragment>', `#include <emissivemap_fragment>
+        if (uWave.w > 0.0) { float dw = length(vWP - uWave.xyz) - uWave.w; totalEmissiveRadiance += uWaveCol * exp(-dw*dw*30.0) * 1.3; }
+        totalEmissiveRadiance += uGlowCol * uGlow;`)
       .replace('#include <normal_fragment_maps>', `#include <normal_fragment_maps>
         { vec3 Q = vWP * uScale * 2.0; float e = 0.05;
           vec3 g = vec3(fbm(Q+vec3(e,0,0))-fbm(Q-vec3(e,0,0)), fbm(Q+vec3(0,e,0))-fbm(Q-vec3(0,e,0)), fbm(Q+vec3(0,0,e))-fbm(Q-vec3(0,0,e)));
           normal = normalize(normal - uBump * (mat3(viewMatrix) * g)); }`);
   };
+  m.userData.u = u;
   m.customProgramCacheKey = () => `tissue${fibre}${fatAmt}${bump}`;
   return m;
 }
@@ -53,7 +57,8 @@ export const MAT = {
   diaphragm: () => tissue({ color: 0x8a2a28, color2: 0xa84a40, fibre: 1, bump: 0.3 }),
 };
 // heart centre in body space (mm) -> after load() it is in the group's local frame
-export const HEART_MM = [21, -122, 1185];
+export const HEART_MM = [21, -122, 1237];
+export const SA_NODE_MM = [-12, -112, 1282];        // sinoatrial node: top of the right atrium, at the superior vena cava
 export const K = 0.03;                                       // 1 mm -> 0.03 scene units (heart ≈ 3.5 units tall)
 export const toScene = ([x, y, z]) => new THREE.Vector3(x * K, z * K, -y * K);
 export const HEART_CENTER = toScene(HEART_MM);
@@ -70,7 +75,7 @@ export async function load(parts, { base = 'a3d/anatomy' } = {}) {
   return group;
 }
 // squeeze the heart wall around its long axis (systole); amount 0..1. Vertex positions are body-space mm.
-export function beat(mesh, amount, { center = HEART_MM, apexDir = [0.45, -0.35, -0.82], k = 0.07 } = {}) {
+export function beat(mesh, amount, { center = HEART_MM, apexDir = [0.5, -0.45, -0.74], k = 0.07 } = {}) {
   const pos = mesh.geometry.attributes.position, b = mesh.userData.base, a = pos.array;
   const d = new THREE.Vector3(...apexDir).normalize();
   for (let i = 0; i < a.length; i += 3) {

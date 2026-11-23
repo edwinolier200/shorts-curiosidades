@@ -16,7 +16,7 @@ G = {
  'diaphragm': (['FMA13295'], 25000),
  'liver': (['FMA7197'], 40000),
 }
-CLIP = {'pulmonary_artery': ([-45, -200, 1220], [85, -60, 1400]), 'heart_wall': ([-99, -999, 1166], [999, 999, 9999]),
+CLIP = {'pulmonary_artery': ([-22, -200, 1232], [70, -70, 1330]), 'heart_wall': ([-99, -999, 1166], [999, 999, 9999]),
         'aorta': ([-99, -999, 1195], [999, 999, 9999]), 'vena_cava': ([-99, -999, 1195], [999, 999, 9999])}
 NO_NEEDLE = {'aorta', 'vena_cava', 'pulmonary_artery', 'coronary_arteries', 'cardiac_veins', 'ribs', 'sternum'}
 def needles(m):
