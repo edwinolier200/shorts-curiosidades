@@ -43,6 +43,36 @@ function tissue({ color, color2, fat = null, fatAmt = 0, scale = 30, fibre = 0, 
   m.customProgramCacheKey = () => `tissue${fibre}${fatAmt}${bump}`;
   return m;
 }
+// ---- cartoon style: flat toon bands + black outline (inverted hull), same real shapes
+const TOON = { heart_wall: 0xe8473f, coronary_arteries: 0xffd23f, cardiac_veins: 0x5b6cff, aorta: 0xff7a6b, vena_cava: 0x4a63e0, pulmonary_artery: 0x7f8cff,
+  lungs: 0xff9fb0, ribs: 0xfff1d6, sternum: 0xfff1d6, diaphragm: 0xd9544d, liver: 0xb8503f };
+const OUTLINE = { heart_wall: 1.5, lungs: 1.4, liver: 1.5, ribs: 0.9, sternum: 0.9, aorta: 0.9, vena_cava: 0.9, pulmonary_artery: 0.9, coronary_arteries: 0.45, cardiac_veins: 0.45 };
+let GRAD = null;
+function toon(color) {
+  if (!GRAD) { GRAD = new THREE.DataTexture(new Uint8Array([70, 150, 255]), 3, 1, THREE.RedFormat); GRAD.minFilter = GRAD.magFilter = THREE.NearestFilter; GRAD.needsUpdate = true; }
+  const m = new THREE.MeshToonMaterial({ color, gradientMap: GRAD });
+  const u = { uWave: { value: new THREE.Vector4(0, 0, 0, -1) }, uWaveCol: { value: new THREE.Color(0x7ff0ff) }, uGlow: { value: 0 }, uGlowCol: { value: new THREE.Color(0xff3020) } };
+  m.onBeforeCompile = (sh) => {
+    Object.assign(sh.uniforms, u);
+    sh.vertexShader = sh.vertexShader.replace('#include <common>', '#include <common>\nvarying vec3 vWP;').replace('#include <worldpos_vertex>', '#include <worldpos_vertex>\nvWP = (modelMatrix * vec4(transformed,1.0)).xyz;');
+    sh.fragmentShader = sh.fragmentShader.replace('#include <common>', '#include <common>\nvarying vec3 vWP; uniform vec3 uWaveCol, uGlowCol; uniform vec4 uWave; uniform float uGlow;')
+      .replace('#include <emissivemap_fragment>', `#include <emissivemap_fragment>
+        if (uWave.w > 0.0) { float dw = length(vWP - uWave.xyz) - uWave.w; totalEmissiveRadiance += uWaveCol * step(abs(dw), 0.18) * 1.2; }
+        totalEmissiveRadiance += uGlowCol * uGlow;`);
+  };
+  m.userData.u = u; m.customProgramCacheKey = () => 'toon-anat';
+  return m;
+}
+function outline(w) {
+  const m = new THREE.MeshBasicMaterial({ color: 0x1a0a12, side: THREE.BackSide });
+  m.onBeforeCompile = (sh) => { sh.vertexShader = sh.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\ntransformed += normalize(normal) * ${w.toFixed(2)};`); };
+  m.customProgramCacheKey = () => 'outline' + w; return m;
+}
+// fade a part (and its outline) in/out
+export function setOpacity(mesh, a) {
+  [mesh.material, mesh.userData.outline?.material].forEach((m) => { if (!m) return; m.transparent = a < 0.99; m.opacity = a; m.depthWrite = a > 0.6; });
+  mesh.visible = a > 0.02;
+}
 export const MAT = {
   heart_wall: () => tissue({ color: 0x6e1012, color2: 0x9a2a24, fat: 0xcfa560, fatAmt: 0.22, fibre: 1, bump: 0.3, rough: 0.38, clear: 1 }),
   coronary_arteries: () => tissue({ color: 0x9c1c1c, color2: 0xc0392b, bump: 0.1, rough: 0.3, clear: 1, sheen: 0.2 }),
@@ -63,13 +93,15 @@ export const K = 0.03;                                       // 1 mm -> 0.03 sce
 export const toScene = ([x, y, z]) => new THREE.Vector3(x * K, z * K, -y * K);
 export const HEART_CENTER = toScene(HEART_MM);
 
-export async function load(parts, { base = 'a3d/anatomy' } = {}) {
+export async function load(parts, { base = 'a3d/anatomy', style = 'real' } = {}) {
   const L = new GLTFLoader(), group = new THREE.Group(); group.parts = {};
   // body space (x right, y back, z up, mm) -> scene (x, y up, z toward viewer)
   const holder = new THREE.Group(); holder.rotation.x = -Math.PI / 2; holder.scale.set(K, K, K); group.add(holder);
   for (const p of parts) {
     const g = await L.loadAsync(`${base}/${p}.glb`);
-    g.scene.traverse((o) => { if (o.isMesh) { o.geometry.computeVertexNormals(); o.material = (MAT[p] || MAT.heart_wall)(); o.castShadow = o.receiveShadow = true; group.parts[p] = o; o.userData.base = o.geometry.attributes.position.array.slice(); } });
+    g.scene.traverse((o) => { if (o.isMesh && !o.userData.isOutline) { o.geometry.computeVertexNormals(); o.userData.base = o.geometry.attributes.position.array.slice(); group.parts[p] = o;
+      if (style === 'toon') { o.material = toon(TOON[p] ?? 0xe8473f); const ol = new THREE.Mesh(o.geometry, outline(OUTLINE[p] ?? 1)); ol.userData.isOutline = true; o.add(ol); o.userData.outline = ol; }
+      else { o.material = (MAT[p] || MAT.heart_wall)(); o.castShadow = o.receiveShadow = true; } } });
     holder.add(g.scene);
   }
   return group;

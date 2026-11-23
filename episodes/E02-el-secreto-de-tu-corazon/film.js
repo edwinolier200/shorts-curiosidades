@@ -1,4 +1,4 @@
-// E02 · El secreto de tu corazón — v2: a REAL human heart (BodyParts3D anatomy) inside a real chest.
+// E02 · El secreto de tu corazón — v3 (cartoon on real anatomy; user: "menos real"): a REAL human heart shape (BodyParts3D anatomy) inside a real chest.
 // One world, the inside of the chest: rib cage, lungs that breathe, the heart that beats on the score's heartbeat,
 // the aorta that throws out blood, the electrical wave from the sinoatrial node, the liver for the next chapter.
 // Every overlay is drawn in code and explains the sentence being spoken.
@@ -54,7 +54,7 @@ const PARTS = ['heart_wall', 'coronary_arteries', 'cardiac_veins', 'aorta', 'ven
 let C, SA, LIVER;
 function chestSet(body) {
   const scene = new THREE.Scene(), cam = G.camera(30, 0.1, 300);
-  scene.background = new THREE.Color(0x0c0405); scene.fog = new THREE.FogExp2(0x0d0304, 0.012);
+  scene.background = new THREE.Color(0x1b1030); scene.fog = new THREE.FogExp2(0x1b1030, 0.01);
   scene.add(body);
   const hemi = new THREE.HemisphereLight(0xffd9cf, 0x1a0505, 0.35); scene.add(hemi);
   const key = new THREE.SpotLight(0xfff0e6, 520, 120, 0.42, 0.7, 1.5); key.position.set(C.x - 9, C.y + 14, C.z + 18); key.target.position.copy(C); key.castShadow = true; key.shadow.mapSize.set(1024, 1024); scene.add(key, key.target);
@@ -62,18 +62,17 @@ function chestSet(body) {
   const warm = new THREE.PointLight(0xff5a3c, 0, 18, 2); warm.position.set(C.x, C.y - 1, C.z + 4); scene.add(warm);
   const liverLight = new THREE.PointLight(0xffc070, 0, 14, 2); liverLight.position.copy(LIVER).add(new THREE.Vector3(0, 1, 4)); scene.add(liverLight);
   const P = body.parts;
-  const ribMats = [P.ribs.material, P.sternum.material];
 
   // floating red blood cells around the heart (depth + scale) and the stream the aorta throws out
   const cellGeo = new THREE.LatheGeometry([[0, 0.05], [0.25, 0.07], [0.42, 0.11], [0.5, 0.0], [0.42, -0.11], [0.25, -0.07], [0, -0.05]].map(([x, y]) => new THREE.Vector2(x, y)), 20);
-  const cellMat = new THREE.MeshPhysicalMaterial({ color: 0xb3121c, roughness: 0.35, clearcoat: 0.8, sheen: 0.6, sheenColor: new THREE.Color(0xff7766) });
+  const cellMat = new THREE.MeshToonMaterial({ color: 0xff4a4a });
   const NF = 90, floaters = new THREE.InstancedMesh(cellGeo, cellMat, NF); scene.add(floaters);
   const NS = 260, stream = new THREE.InstancedMesh(cellGeo, cellMat, NS); scene.add(stream);
   const ARCH = A.toScene([25, -95, 1372]);
   const m4 = new THREE.Matrix4(), q = new THREE.Quaternion(), e3 = new THREE.Euler(), v3 = new THREE.Vector3(), s3 = new THREE.Vector3();
   const flow = (t) => 0.18 * t + HB.filter((b) => b <= t).reduce((a, b) => a + 0.5 * clamp((t - b) / 0.25), 0);
 
-  return { scene, camera: cam, bloom: 0.3, bloomThreshold: 0.9, bloomRadius: 0.6,
+  return { scene, camera: cam, bloom: 0.2, bloomThreshold: 0.95, bloomRadius: 0.5,
     update(t) {
       const pl = pulse(t);
       // ---- heartbeat: squeeze the real ventricles (wall + the vessels lying on it)
@@ -86,10 +85,9 @@ function chestSet(body) {
       warm.intensity = (40 + 160 * pl) * Math.max(lvl, 0.5);
       // ---- rib cage: seen from outside at the start and at "pon la mano en tu pecho", dissolved when we are inside
       const ribA = keys(t, [[0, 1], [1.2, 0], [S[10], 1], [S[11], 0]], 1.0);
-      ribMats.forEach((m) => { m.transparent = ribA < 0.99; m.opacity = ribA; m.depthWrite = ribA > 0.5; });
-      P.ribs.visible = P.sternum.visible = ribA > 0.02;
+      A.setOpacity(P.ribs, ribA); A.setOpacity(P.sternum, ribA);
       const luA = keys(t, [[0, 1], [1.6, 0], [S[10], 1], [S[11] + 0.6, 0]], 1.2);
-      P.lungs.material.transparent = luA < 0.99; P.lungs.material.opacity = luA; P.lungs.material.depthWrite = luA > 0.6; P.lungs.visible = luA > 0.02;
+      A.setOpacity(P.lungs, luA);
       // ---- the liver only for the teaser
       const lv = keys(t, [[0, 0], [S[11], 1], [S[12] + 0.3, 0]], 0.8);
       P.liver.visible = lv > 0.35;
@@ -276,7 +274,7 @@ M.film({
     HITS.push(...hitList());
     await G.initGL({ exposure: 1.0 });
     C = A.HEART_CENTER.clone(); SA = A.toScene(A.SA_NODE_MM); LIVER = A.toScene([-30, -130, 1120]);
-    const body = await A.load(PARTS);
+    const body = await A.load(PARTS, { style: 'toon' });
     SETS.chest = chestSet(body);
   },
   draw(ctx, u, t) {
