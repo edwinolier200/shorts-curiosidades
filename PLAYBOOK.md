@@ -203,3 +203,10 @@ No copiamos la referencia: tomamos su *calidad* (luz, metal, niebla, cámara que
 4. **Estructura que retiene:** gancho (pregunta o imposible) → promesa ("guarda un secreto, te lo cuento al final") → escalera de 3-5 datos cada vez más fuertes → apagón + giro → humor → gesto físico del espectador ("pon la mano en tu pecho") → ENLACE.
 5. **Historias enlazadas.** Cada episodio termina anunciando el próximo capítulo de su serie ("Sígueme, que en el próximo capítulo te cuento…") y ese episodio abre recordando el anterior ("En el capítulo anterior te conté…"). Nunca digas "mañana" si mañana toca otra serie. Anota el enlace en CALENDARIO.md.
 6. **Calidad:** materiales PBR (oro metálico, vidrio/laca con clearcoat), bloom moderado, niebla, rayos de luz, viñeta; subtítulos grandes centrados (Heavy, blanco + palabra clave dorada, y≈1270); números siempre en 3D o UI, nunca generados por IA.
+
+### v6.1 · Escenario adaptado a cada tema (sin estilo fijo)
+- No hay un "estilo de la casa": cada video construye el escenario REAL de su tema. Cuerpo humano → dentro del cuerpo, con órganos anatómicos reales (engine/anatomy.js + assets3d/anatomy, BodyParts3D). País/ciudad → relieve y mapa real (engine/maps.js). Fútbol → estadio/cancha. Nunca un objeto genérico tipo emoji (el corazón ♥ de E02 v1 fue rechazado: "se ve muy genérico").
+- Órganos disponibles: heart_wall, coronary_arteries, cardiac_veins, aorta, vena_cava, pulmonary_artery, lungs, ribs, sternum, diaphragm, liver. Para otro órgano: buscar su FMA en BodyParts3D (parts_list_e.txt / composite_parts.txt), añadirlo a tools/anatomy_glb.py y un material en anatomy.js.
+- Siempre poner en la descripción: "Modelos anatómicos 3D: BodyParts3D, © DBCLS, CC BY-SA 2.1 JP" (y en los últimos 3 s del video).
+- Cada video debe mejorar algo respecto al anterior (anotarlo en el commit): más realismo, mejor luz, mejor sincronía, mejor gancho.
+- Revisión obligatoria de fotogramas (contact sheet) antes del render final: nada tapado por subtítulos, nada cortado, nada lavado/sobreexpuesto.

@@ -20,6 +20,7 @@ Hay un músculo que no ha parado ni un segundo desde antes de que nacieras… y 
 
 Fuentes: fisiología cardiaca (≈100.000 latidos/día a 70 lpm; gasto cardiaco ≈5 L/min ≈ 7.000 L/día; nodo sinusal como marcapasos propio; en reposo la diástole ocupa ≈2/3 del ciclo cardiaco). Renovación de cardiomiocitos: Bergmann et al., "Evidence for cardiomyocyte renewal in humans", Science, 2009 (≈1 % al año a los 25 años, menos de la mitad se renuevan en toda la vida). Glóbulos rojos: vida media ≈120 días.
 Animación hecha por ordenador con fines ilustrativos; la voz está generada con IA.
+Modelos anatómicos 3D: BodyParts3D, © The Database Center for Life Science (DBCLS), licencia CC BY-SA 2.1 JP.
 
 #shorts #curiosidades #cuerpohumano
 
