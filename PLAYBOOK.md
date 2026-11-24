@@ -222,3 +222,12 @@ Cada día: skill .claude/skills/mejora-continua (una mejora medible y reutilizab
 ### Miniaturas v3 (desde 2026-11-24): dibujadas en el mismo estilo del video
 - Ya no se usa el recorte borroso dentro de un círculo. Se dibuja la miniatura con código (ejemplo: examples/miniatura_infografia_film.js): protagonista GRANDE (60-70 % del alto), fondo azul noche con rayos y estrellas, máximo 2 líneas grandes arriba (una blanca + una en marcador dorado) y un rótulo pequeño abajo, un icono que cuente la idea (Zzz, "?", reloj). Nada importante por debajo de y=1700 en vertical.
 - Generar 3 variantes (A afirmación, B pregunta, C cifra) en 9x16 y 16x9; A por defecto; anotar en APRENDIZAJES.md cuál elige el usuario o cuál rinde mejor.
+
+## Formato "PRUEBA EN CASA" (salud práctica) — desde 2026-11-24
+Inspirado en el tipo de Short de salud práctica que más se comparte (ver aprendizaje/APRENDIZAJES.md). No copiamos personajes, siglas ni guiones.
+- Narrador propio y recurrente: **Don Tito** (abuelo médico dibujado: calvo con pelo blanco a los lados, gafas redondas, bigote gris, bata y corbatín rojo), engine/props2d.js → K.tito(). Habla en primera persona o se cita ("Don Tito siempre dice…"); su boca se mueve con la voz (mouth 0..1).
+- Kit de objetos: K.meter (glucómetro/termómetro/oxímetro con número que cambia en su pantalla, estado ok/warn), K.clock (reloj con barrido), K.chart (curva verde vs roja), K.check (palomita), K.texturedBg (fondo azul con textura). Más los órganos de organs2d.js cuando haga falta.
+- Guion (35-50 s): 1) pregunta personal ("¿cuál de estos te hace daño A TI?") 2) Don Tito y una regla fácil de recordar 3) "cada cuerpo es distinto" 4) la PRUEBA EN CASA paso a paso con números concretos 5) cómo interpretar (verde = bien / rojo = cuidado) 6) consecuencia o beneficio 7) llamada a compartir ("mándaselo a tu mamá / a tu tío que…").
+- Subtítulos arriba tipo karaoke (frase tenue, palabra actual blanca y gruesa, palabra clave resaltada en caja).
+- Seguridad: cada número de salud con 2 fuentes médicas (OMS, ADA, AHA, MedlinePlus, estudios revisados), siempre rangos oficiales, nunca diagnósticos ni tratamientos; en la descripción y al final: "Esto no reemplaza la consulta con tu médico".
+- Temas candidatos (verificar antes): caminar 10 min después de comer baja el pico de azúcar; la prueba de pararse en un pie 10 s después de los 50; tómate el pulso en reposo (60-100 lpm); la prueba de sentarse y levantarse del piso; el color de tu orina y la hidratación; cuánta sal escondida tiene el pan.
