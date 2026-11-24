@@ -218,3 +218,7 @@ Cada día: skill .claude/skills/mejora-continua (una mejora medible y reutilizab
 - Órganos DIBUJADOS en estilo infografía con engine/organs2d.js (heart style 'flat', liver, torso, hand, bloodCell): anatomía simplificada y reconocible, nunca el símbolo ❤ ni la malla médica exacta. Fondo azul noche con estrellas y glóbulos flotando. Ejemplo completo: episodes/E02-el-secreto-de-tu-corazon/film.js.
 - Si falta un órgano, dibújalo en organs2d.js con el mismo lenguaje (silueta redondeada, degradado claro→oscuro, una sombra, un brillo, detalles en color de acento) y muéstralo en una hoja de contacto antes de usarlo.
 - El kit 3D (engine/anatomy.js) queda solo como opción si el usuario lo pide.
+
+### Miniaturas v3 (desde 2026-11-24): dibujadas en el mismo estilo del video
+- Ya no se usa el recorte borroso dentro de un círculo. Se dibuja la miniatura con código (ejemplo: examples/miniatura_infografia_film.js): protagonista GRANDE (60-70 % del alto), fondo azul noche con rayos y estrellas, máximo 2 líneas grandes arriba (una blanca + una en marcador dorado) y un rótulo pequeño abajo, un icono que cuente la idea (Zzz, "?", reloj). Nada importante por debajo de y=1700 en vertical.
+- Generar 3 variantes (A afirmación, B pregunta, C cifra) en 9x16 y 16x9; A por defecto; anotar en APRENDIZAJES.md cuál elige el usuario o cuál rinde mejor.
