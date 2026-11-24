@@ -4,3 +4,4 @@
 - Cada video debe enlazar con el siguiente capítulo de su serie ("en el próximo capítulo…"), nunca "mañana" si mañana toca otra serie. (2026-11-23)
 - Retención: gancho con pregunta/imposible en < 2 s, promesa ("te lo cuento al final"), escalera de datos, giro, gesto físico del espectador, enlace. (PLAYBOOK v4/v6)
 - Competencia LatAm (TubeAlfred, nov-2026): identidad/orgullo, mapas, títulos con "tú", 35-57 s los que más pegan.
+- Estilo elegido por el usuario para la serie del cuerpo: INFOGRAFÍA plana (organs2d.js, opción A). Ni realista ni el símbolo ❤: anatomía simplificada, colores vivos, fondo azul noche. (2026-11-24)

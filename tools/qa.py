@@ -18,8 +18,9 @@ dur = float(run('ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-
 raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', mp4, '-vf', 'fps=2,scale=135:240,format=gray', '-f', 'rawvideo', '-'], capture_output=True).stdout
 F = np.frombuffer(raw, np.uint8).reshape(-1, 240, 135).astype(np.float32)
 mean = F.mean(axis=(1, 2)); blown = (F > 250).mean(axis=(1, 2)) * 100; crushed = (F < 6).mean(axis=(1, 2)) * 100
-diff = np.abs(np.diff(F, axis=0)).mean(axis=(1, 2))
-changes = np.where(diff > 6)[0]                                  # frame pairs with a clear visual change
+# a visual change = at least 1.5 % of the picture changes clearly (new card, cut, big move); a slow drift does not count
+diff = (np.abs(np.diff(F, axis=0)) > 20).mean(axis=(1, 2))
+changes = np.where(diff > 0.015)[0]
 gaps = np.diff(np.concatenate([[0], changes, [len(F) - 1]])) / 2.0
 longest_still = float(gaps.max()) if len(gaps) else dur
 

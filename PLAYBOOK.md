@@ -213,3 +213,8 @@ No copiamos la referencia: tomamos su *calidad* (luz, metal, niebla, cámara que
 
 ## Ciclo de mejora continua (desde 2026-11-23)
 Cada día: skill .claude/skills/mejora-continua (una mejora medible y reutilizable por video) + control de calidad tools/qa.py + registro en aprendizaje/. Cada domingo 5:23 p. m.: estudio semanal (métricas públicas con TubeAlfred + 2 Shorts de la competencia) que actualiza APRENDIZAJES.md, MEJORAS_PENDIENTES.md y, si los datos lo respaldan, este PLAYBOOK.
+
+### v6.2 · Estilo de la serie del CUERPO: infografía (elegido por el usuario el 2026-11-24)
+- Órganos DIBUJADOS en estilo infografía con engine/organs2d.js (heart style 'flat', liver, torso, hand, bloodCell): anatomía simplificada y reconocible, nunca el símbolo ❤ ni la malla médica exacta. Fondo azul noche con estrellas y glóbulos flotando. Ejemplo completo: episodes/E02-el-secreto-de-tu-corazon/film.js.
+- Si falta un órgano, dibújalo en organs2d.js con el mismo lenguaje (silueta redondeada, degradado claro→oscuro, una sombra, un brillo, detalles en color de acento) y muéstralo en una hoja de contacto antes de usarlo.
+- El kit 3D (engine/anatomy.js) queda solo como opción si el usuario lo pide.

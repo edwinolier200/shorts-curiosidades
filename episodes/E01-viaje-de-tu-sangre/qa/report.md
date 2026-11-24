@@ -1,4 +1,4 @@
-# QA · E01-viaje-de-tu-sangre · 2026-11-23
+# QA · E01-viaje-de-tu-sangre · 2026-11-24
 
 Resultado: **8/9**
 
@@ -15,13 +15,13 @@ Resultado: **8/9**
 ```
 {
  "slug": "E01-viaje-de-tu-sangre",
- "date": "2026-11-23",
+ "date": "2026-11-24",
  "duration": 60.1,
  "mean_light": 39.4,
  "worst_blown_pct": 2.7,
  "worst_crushed_pct": 0.4,
- "visual_changes_per_10s": 7.2,
- "longest_still_s": 7.5,
+ "visual_changes_per_10s": 17.1,
+ "longest_still_s": 5.0,
  "lufs": -14.1,
  "true_peak_dbfs": -1.2,
  "voice_match": 0.929,

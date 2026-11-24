@@ -1,0 +1,15 @@
+{
+ "slug": "E02-el-secreto-de-tu-corazon",
+ "date": "2026-11-24",
+ "duration": 62.0,
+ "mean_light": 43.3,
+ "worst_blown_pct": 1.5,
+ "worst_crushed_pct": 24.3,
+ "visual_changes_per_10s": 16.8,
+ "longest_still_s": 1.5,
+ "lufs": -14.1,
+ "true_peak_dbfs": -1.1,
+ "voice_match": 0.916,
+ "passed": 9,
+ "total": 9
+}
