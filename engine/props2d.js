@@ -89,3 +89,72 @@ export function check(ctx, x, y, r, k = 1) {
   if (k <= 0) return; ctx.save(); ctx.translate(x, y); ctx.scale(k, k); ctx.fillStyle = '#2EC866'; ctx.beginPath(); ctx.arc(0, 0, r, 0, 6.283); ctx.fill();
   ctx.strokeStyle = '#fff'; ctx.lineWidth = r * 0.22; ctx.lineCap = 'round'; ctx.lineJoin = 'round'; ctx.beginPath(); ctx.moveTo(-r * 0.45, 0); ctx.lineTo(-r * 0.1, r * 0.35); ctx.lineTo(r * 0.5, -r * 0.35); ctx.stroke(); ctx.restore();
 }
+
+// ---- more objects for the "prueba en casa" format (same flat language: rounded, gradient, one shadow, one highlight)
+export function plate(ctx, x, y, size) {                       // a typical lunch: rice, beans, meat, salad, plantain
+  const s = size / 400; ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
+  ctx.shadowColor = 'rgba(0,0,0,0.45)'; ctx.shadowBlur = 40; ctx.shadowOffsetY = 20; ctx.fillStyle = '#F4F6F8'; ctx.beginPath(); ctx.ellipse(0, 0, 200, 120, 0, 0, 6.283); ctx.fill(); ctx.shadowColor = 'transparent';
+  ctx.strokeStyle = '#C9D3DD'; ctx.lineWidth = 6; ctx.beginPath(); ctx.ellipse(0, 0, 160, 94, 0, 0, 6.283); ctx.stroke();
+  ctx.fillStyle = '#FFFDF5'; ctx.beginPath(); ctx.ellipse(-60, -20, 78, 48, 0, 0, 6.283); ctx.fill();                                   // rice
+  ctx.fillStyle = 'rgba(0,0,0,0.06)'; for (let i = 0; i < 30; i++) { ctx.beginPath(); ctx.ellipse(-60 + (hash01(i, 1) - 0.5) * 120, -20 + (hash01(i, 2) - 0.5) * 70, 6, 3, hash01(i, 3) * 3, 0, 6.283); ctx.fill(); }
+  ctx.fillStyle = '#6B2E1E'; ctx.beginPath(); ctx.ellipse(55, -35, 62, 36, 0.2, 0, 6.283); ctx.fill();                                   // beans
+  ctx.fillStyle = 'rgba(255,255,255,0.18)'; ctx.beginPath(); ctx.ellipse(40, -48, 20, 8, 0.2, 0, 6.283); ctx.fill();
+  ctx.fillStyle = '#A8552E'; ctx.beginPath(); ctx.roundRect(10, 10, 110, 60, 24); ctx.fill();                                            // meat
+  ctx.fillStyle = '#E9B84A'; ctx.beginPath(); ctx.ellipse(-60, 45, 50, 22, -0.2, 0, 6.283); ctx.fill();                                 // fried plantain
+  ctx.fillStyle = '#4CAF50'; [[-140, 10], [-125, 35], [140, 30]].forEach(([a, b]) => { ctx.beginPath(); ctx.ellipse(a, b, 22, 12, 0.6, 0, 6.283); ctx.fill(); });
+  ctx.restore();
+}
+export function sugarCube(ctx, x, y, size, rot = 0) {
+  ctx.save(); ctx.translate(x, y); ctx.rotate(rot); const h = size / 2;
+  ctx.fillStyle = '#FFFFFF'; ctx.beginPath(); ctx.roundRect(-h, -h, size, size, size * 0.18); ctx.fill();
+  ctx.fillStyle = 'rgba(120,150,200,0.25)'; ctx.beginPath(); ctx.roundRect(-h, h * 0.2, size, h * 0.8, size * 0.18); ctx.fill();
+  ctx.fillStyle = 'rgba(0,0,0,0.08)'; for (let i = 0; i < 6; i++) { ctx.fillRect(-h + hash01(i, 4) * size * 0.8, -h + hash01(i, 5) * size * 0.8, 4, 4); }
+  ctx.restore();
+}
+export function chair(ctx, x, y, size) {
+  const s = size / 300; ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
+  ctx.fillStyle = '#8A5A3B'; ctx.strokeStyle = '#4A2E1E'; ctx.lineWidth = 6;
+  [[-100, -260, 30, 260], [70, -260, 30, 260], [-100, 0, 30, 140], [70, 0, 30, 140]].forEach(([a, b, w, h]) => { ctx.beginPath(); ctx.roundRect(a, b, w, h, 10); ctx.fill(); ctx.stroke(); });
+  ctx.fillStyle = '#B87A4E'; ctx.beginPath(); ctx.roundRect(-120, -20, 240, 40, 14); ctx.fill(); ctx.stroke();
+  ctx.beginPath(); ctx.roundRect(-100, -250, 200, 60, 14); ctx.fill(); ctx.stroke(); ctx.restore();
+}
+// a flat walking person (generic, faceless) — phase drives the stride
+export function walker(ctx, x, y, size, phase = 0, { shirt = '#3BA7F5', pants = '#5C78C8', glow = 0 } = {}) {
+  const s = size / 600; ctx.save(); ctx.translate(x, y); ctx.scale(s, s); ctx.lineCap = 'round';
+  const sw = Math.sin(phase * Math.PI * 2), bob = Math.abs(Math.cos(phase * Math.PI * 2)) * 10;
+  ctx.translate(0, -bob);
+  const leg = (a, col) => { ctx.save(); ctx.translate(0, 40); ctx.rotate(a); ctx.strokeStyle = col; ctx.lineWidth = 56; ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, 120); ctx.stroke();
+    ctx.translate(0, 120); ctx.rotate(Math.max(0, -a) * 0.9); ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, 120); ctx.stroke(); ctx.fillStyle = '#F5F5F5'; ctx.beginPath(); ctx.ellipse(16, 128, 44, 22, 0, 0, 6.283); ctx.fill(); ctx.restore(); };
+  ctx.fillStyle = 'rgba(0,0,0,0.25)'; ctx.beginPath(); ctx.ellipse(0, 290, 170, 26, 0, 0, 6.283); ctx.fill();
+  leg(-sw * 0.45, '#46609F'); if (glow > 0) { ctx.save(); ctx.shadowColor = `rgba(255,220,90,${glow})`; ctx.shadowBlur = 60; leg(sw * 0.45, pants); ctx.restore(); } else leg(sw * 0.45, pants);
+  const arm = (a, col) => { ctx.save(); ctx.translate(0, -150); ctx.rotate(a); ctx.strokeStyle = col; ctx.lineWidth = 40; ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, 180); ctx.stroke(); ctx.restore(); };
+  arm(sw * 0.5, '#2F8FD8');
+  ctx.fillStyle = shirt; ctx.beginPath(); ctx.roundRect(-70, -190, 140, 250, 60); ctx.fill();
+  arm(-sw * 0.5, shirt);
+  ctx.fillStyle = '#E9A77E'; ctx.beginPath(); ctx.arc(0, -260, 62, 0, 6.283); ctx.fill();
+  ctx.fillStyle = '#3A2A20'; ctx.beginPath(); ctx.arc(0, -275, 62, Math.PI * 1.05, Math.PI * 1.95); ctx.fill();
+  ctx.restore();
+}
+// horizontal comparison bars (label, value 0..1, colour) with the value text
+export function bars(ctx, x, y, w, rows, k = 1, labelFont = '800 38px UI', valueFont = '900 58px Heavy') {
+  ctx.save(); ctx.translate(x, y);
+  rows.forEach(([label, v, col, txt], i) => { const yy = i * 170;
+    ctx.fillStyle = '#fff'; ctx.font = labelFont; ctx.textAlign = 'left'; ctx.fillText(label, 0, yy);
+    ctx.fillStyle = 'rgba(255,255,255,0.1)'; ctx.beginPath(); ctx.roundRect(0, yy + 22, w, 70, 35); ctx.fill();
+    ctx.fillStyle = col; ctx.beginPath(); ctx.roundRect(0, yy + 22, Math.max(70, w * v * k), 70, 35); ctx.fill();
+    if (txt) { ctx.fillStyle = '#fff'; ctx.font = valueFont; ctx.textAlign = 'right'; ctx.fillText(txt, w - 10, yy - 2); } });
+  ctx.restore();
+}
+// a city block seen from above with a dot walking around it (p = 0..1 of the lap)
+export function block(ctx, x, y, size, p = 0) {
+  const s = size / 500; ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
+  ctx.fillStyle = '#2B3A55'; ctx.beginPath(); ctx.roundRect(-250, -250, 500, 500, 40); ctx.fill();
+  ctx.fillStyle = '#3E8E5A'; ctx.beginPath(); ctx.roundRect(-180, -180, 360, 360, 26); ctx.fill();
+  [[-130, -130], [20, -130], [-130, 20], [20, 20]].forEach(([a, b], i) => { ctx.fillStyle = ['#E8A24A', '#D9534F', '#5BA4E6', '#F2D16B'][i]; ctx.beginPath(); ctx.roundRect(a, b, 110, 110, 14); ctx.fill(); ctx.fillStyle = 'rgba(255,255,255,0.5)'; ctx.fillRect(a + 20, b + 20, 24, 24); ctx.fillRect(a + 64, b + 20, 24, 24); });
+  ctx.strokeStyle = 'rgba(255,255,255,0.5)'; ctx.setLineDash([22, 18]); ctx.lineWidth = 6; ctx.beginPath(); ctx.roundRect(-215, -215, 430, 430, 30); ctx.stroke(); ctx.setLineDash([]);
+  const per = 4 * 430, d = (p % 1) * per; let px, py;
+  if (d < 430) { px = -215 + d; py = -215; } else if (d < 860) { px = 215; py = -215 + d - 430; } else if (d < 1290) { px = 215 - (d - 860); py = 215; } else { px = -215; py = 215 - (d - 1290); }
+  ctx.strokeStyle = '#FFC94A'; ctx.lineWidth = 12; ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(-215, -215);
+  for (let q = 0; q <= d; q += 10) { let qx, qy; if (q < 430) { qx = -215 + q; qy = -215; } else if (q < 860) { qx = 215; qy = -215 + q - 430; } else if (q < 1290) { qx = 215 - (q - 860); qy = 215; } else { qx = -215; qy = 215 - (q - 1290); } ctx.lineTo(qx, qy); }
+  ctx.stroke(); ctx.fillStyle = '#fff'; ctx.shadowColor = '#FFC94A'; ctx.shadowBlur = 30; ctx.beginPath(); ctx.arc(px, py, 22, 0, 6.283); ctx.fill(); ctx.restore();
+}

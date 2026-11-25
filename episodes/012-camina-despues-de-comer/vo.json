@@ -1,0 +1,707 @@
+{
+ "duration": 49.18,
+ "segments": [
+  {
+   "i": 1,
+   "start": 0.25,
+   "end": 4.618,
+   "text": "¿Qué haces después de almorzar? ¿Te sientas? Mira lo que le pasa a tu azúcar.",
+   "words": [
+    {
+     "w": "¿Qué",
+     "t": 0.25
+    },
+    {
+     "w": "haces",
+     "t": 0.31
+    },
+    {
+     "w": "después",
+     "t": 0.59
+    },
+    {
+     "w": "de",
+     "t": 0.91
+    },
+    {
+     "w": "almorzar?",
+     "t": 1.07
+    },
+    {
+     "w": "¿Te",
+     "t": 1.77
+    },
+    {
+     "w": "sientas?",
+     "t": 1.87
+    },
+    {
+     "w": "Mira",
+     "t": 2.55
+    },
+    {
+     "w": "lo",
+     "t": 2.75
+    },
+    {
+     "w": "que",
+     "t": 2.93
+    },
+    {
+     "w": "le",
+     "t": 3.01
+    },
+    {
+     "w": "pasa",
+     "t": 3.09
+    },
+    {
+     "w": "a",
+     "t": 3.27
+    },
+    {
+     "w": "tu",
+     "t": 3.43
+    },
+    {
+     "w": "azúcar.",
+     "t": 3.49
+    }
+   ],
+   "heard": " ¿Qué  haces  después  de  almoxar?  ¿Te  sientas?  Mira  lo  que  le  pasa  a  tu  azúcar.",
+   "match": 0.93
+  },
+  {
+   "i": 2,
+   "start": 4.738,
+   "end": 8.701,
+   "text": "Don Tito siempre dice: barriga llena, pies en movimiento.",
+   "words": [
+    {
+     "w": "Don",
+     "t": 4.738
+    },
+    {
+     "w": "Tito",
+     "t": 4.778
+    },
+    {
+     "w": "siempre",
+     "t": 5.038
+    },
+    {
+     "w": "dice:",
+     "t": 5.258
+    },
+    {
+     "w": "barriga",
+     "t": 5.538
+    },
+    {
+     "w": "llena,",
+     "t": 5.998
+    },
+    {
+     "w": "pies",
+     "t": 6.358
+    },
+    {
+     "w": "en",
+     "t": 6.458
+    },
+    {
+     "w": "movimiento.",
+     "t": 6.578
+    }
+   ],
+   "heard": " Dondito  siempre  dice  barriga  llena,  pies  en  movimiento.",
+   "match": 0.78
+  },
+  {
+   "i": 3,
+   "start": 8.821,
+   "end": 12.453,
+   "text": "Cuando comes, el azúcar en tu sangre sube. Eso es normal.",
+   "words": [
+    {
+     "w": "Cuando",
+     "t": 8.821
+    },
+    {
+     "w": "comes,",
+     "t": 9.001
+    },
+    {
+     "w": "el",
+     "t": 9.281
+    },
+    {
+     "w": "azúcar",
+     "t": 9.561
+    },
+    {
+     "w": "en",
+     "t": 9.901
+    },
+    {
+     "w": "tu",
+     "t": 10.021
+    },
+    {
+     "w": "sangre",
+     "t": 10.101
+    },
+    {
+     "w": "sube.",
+     "t": 10.361
+    },
+    {
+     "w": "Eso",
+     "t": 11.001
+    },
+    {
+     "w": "es",
+     "t": 11.141
+    },
+    {
+     "w": "normal.",
+     "t": 11.241
+    }
+   ],
+   "heard": " cuando  comes  el  azúcar  en  tu  sangre  sube,  eso  es  normal.",
+   "match": 1.0
+  },
+  {
+   "i": 4,
+   "start": 12.573,
+   "end": 16.235,
+   "text": "Pero si te quedas sentado, sube más y tarda en bajar.",
+   "words": [
+    {
+     "w": "Pero",
+     "t": 12.573
+    },
+    {
+     "w": "si",
+     "t": 12.753
+    },
+    {
+     "w": "te",
+     "t": 13.033
+    },
+    {
+     "w": "quedas",
+     "t": 13.133
+    },
+    {
+     "w": "sentado,",
+     "t": 13.373
+    },
+    {
+     "w": "sube",
+     "t": 14.013
+    },
+    {
+     "w": "más",
+     "t": 14.193
+    },
+    {
+     "w": "y",
+     "t": 14.413
+    },
+    {
+     "w": "tarda",
+     "t": 14.693
+    },
+    {
+     "w": "en",
+     "t": 14.913
+    },
+    {
+     "w": "bajar.",
+     "t": 15.013
+    }
+   ],
+   "heard": " Pero  si  te  quedas  sentado,  sube  más  y  tarda  en  bajar.",
+   "match": 1.0
+  },
+  {
+   "i": 5,
+   "start": 16.355,
+   "end": 20.932,
+   "text": "En cambio, al caminar, tus músculos usan ese azúcar como gasolina.",
+   "words": [
+    {
+     "w": "En",
+     "t": 16.355
+    },
+    {
+     "w": "cambio,",
+     "t": 16.475
+    },
+    {
+     "w": "al",
+     "t": 16.995
+    },
+    {
+     "w": "caminar,",
+     "t": 17.035
+    },
+    {
+     "w": "tus",
+     "t": 17.575
+    },
+    {
+     "w": "músculos",
+     "t": 17.655
+    },
+    {
+     "w": "usan",
+     "t": 18.035
+    },
+    {
+     "w": "ese",
+     "t": 18.375
+    },
+    {
+     "w": "azúcar",
+     "t": 18.495
+    },
+    {
+     "w": "como",
+     "t": 18.815
+    },
+    {
+     "w": "gasolina.",
+     "t": 19.035
+    }
+   ],
+   "heard": " En  cambio,  al  caminar,  tus  músculos  usan  ese  azúcar  como  gasolina.",
+   "match": 1.0
+  },
+  {
+   "i": 6,
+   "start": 21.052,
+   "end": 27.445,
+   "text": "En un estudio con personas con diabetes, caminar diez minutos después de cada comida bajó el azúcar un doce por ciento más que caminar una sola vez al día.",
+   "words": [
+    {
+     "w": "En",
+     "t": 21.052
+    },
+    {
+     "w": "un",
+     "t": 21.132
+    },
+    {
+     "w": "estudio",
+     "t": 21.232
+    },
+    {
+     "w": "con",
+     "t": 21.432
+    },
+    {
+     "w": "personas",
+     "t": 21.692
+    },
+    {
+     "w": "con",
+     "t": 21.972
+    },
+    {
+     "w": "diabetes,",
+     "t": 22.192
+    },
+    {
+     "w": "caminar",
+     "t": 22.792
+    },
+    {
+     "w": "diez",
+     "t": 23.092
+    },
+    {
+     "w": "minutos",
+     "t": 23.292
+    },
+    {
+     "w": "después",
+     "t": 23.632
+    },
+    {
+     "w": "de",
+     "t": 23.872
+    },
+    {
+     "w": "cada",
+     "t": 24.052
+    },
+    {
+     "w": "comida",
+     "t": 24.192
+    },
+    {
+     "w": "bajó",
+     "t": 24.532
+    },
+    {
+     "w": "el",
+     "t": 24.732
+    },
+    {
+     "w": "azúcar",
+     "t": 24.892
+    },
+    {
+     "w": "un",
+     "t": 25.152
+    },
+    {
+     "w": "doce",
+     "t": 25.292
+    },
+    {
+     "w": "por",
+     "t": 25.445
+    },
+    {
+     "w": "ciento",
+     "t": 25.598
+    },
+    {
+     "w": "más",
+     "t": 25.752
+    },
+    {
+     "w": "que",
+     "t": 26.052
+    },
+    {
+     "w": "caminar",
+     "t": 26.172
+    },
+    {
+     "w": "una",
+     "t": 26.532
+    },
+    {
+     "w": "sola",
+     "t": 26.652
+    },
+    {
+     "w": "vez",
+     "t": 26.832
+    },
+    {
+     "w": "al",
+     "t": 26.972
+    },
+    {
+     "w": "día.",
+     "t": 27.132
+    }
+   ],
+   "heard": " En  un  estudio  con  personas  con  diabetes,  caminar  10  minutos  después  de  cada  comida  bajo  el  azúcar  un  12 %  más  que  caminar  una  sola  vez  al  día.",
+   "match": 0.9
+  },
+  {
+   "i": 7,
+   "start": 27.565,
+   "end": 31.351,
+   "text": "Y después de la cena, la diferencia fue aún mayor: veintidós por ciento.",
+   "words": [
+    {
+     "w": "Y",
+     "t": 27.565
+    },
+    {
+     "w": "después",
+     "t": 27.645
+    },
+    {
+     "w": "de",
+     "t": 27.885
+    },
+    {
+     "w": "la",
+     "t": 28.045
+    },
+    {
+     "w": "cena,",
+     "t": 28.145
+    },
+    {
+     "w": "la",
+     "t": 28.605
+    },
+    {
+     "w": "diferencia",
+     "t": 28.645
+    },
+    {
+     "w": "fue",
+     "t": 29.025
+    },
+    {
+     "w": "aún",
+     "t": 29.325
+    },
+    {
+     "w": "mayor:",
+     "t": 29.485
+    },
+    {
+     "w": "veintidós",
+     "t": 30.085
+    },
+    {
+     "w": "por",
+     "t": 30.507
+    },
+    {
+     "w": "ciento.",
+     "t": 30.929
+    }
+   ],
+   "heard": " Y  después  de  la  cena,  la  diferencia  fue  aún  mayor,  22%.",
+   "match": 0.85
+  },
+  {
+   "i": 8,
+   "start": 31.471,
+   "end": 36.597,
+   "text": "Si tienes glucómetro, compruébalo: mídete dos horas después de comer, un día sentado y otro día caminando.",
+   "words": [
+    {
+     "w": "Si",
+     "t": 31.471
+    },
+    {
+     "w": "tienes",
+     "t": 31.551
+    },
+    {
+     "w": "glucómetro,",
+     "t": 31.711
+    },
+    {
+     "w": "compruébalo:",
+     "t": 32.311
+    },
+    {
+     "w": "mídete",
+     "t": 32.971
+    },
+    {
+     "w": "dos",
+     "t": 33.231
+    },
+    {
+     "w": "horas",
+     "t": 33.391
+    },
+    {
+     "w": "después",
+     "t": 33.531
+    },
+    {
+     "w": "de",
+     "t": 33.771
+    },
+    {
+     "w": "comer,",
+     "t": 33.911
+    },
+    {
+     "w": "un",
+     "t": 34.311
+    },
+    {
+     "w": "día",
+     "t": 34.391
+    },
+    {
+     "w": "sentado",
+     "t": 34.511
+    },
+    {
+     "w": "y",
+     "t": 34.931
+    },
+    {
+     "w": "otro",
+     "t": 35.031
+    },
+    {
+     "w": "día",
+     "t": 35.151
+    },
+    {
+     "w": "caminando.",
+     "t": 35.311
+    }
+   ],
+   "heard": " si  tienes  glucómetro,  comprévalo.  Mirete  2  horas  después  de  comer,  un  día  sentado  y  otro  día  caminando.",
+   "match": 0.88
+  },
+  {
+   "i": 9,
+   "start": 36.717,
+   "end": 40.44,
+   "text": "Diez minutos. Sin gimnasio. Solo una vuelta a la cuadra.",
+   "words": [
+    {
+     "w": "Diez",
+     "t": 36.717
+    },
+    {
+     "w": "minutos.",
+     "t": 36.917
+    },
+    {
+     "w": "Sin",
+     "t": 37.537
+    },
+    {
+     "w": "gimnasio.",
+     "t": 37.757
+    },
+    {
+     "w": "Solo",
+     "t": 38.477
+    },
+    {
+     "w": "una",
+     "t": 38.677
+    },
+    {
+     "w": "vuelta",
+     "t": 38.857
+    },
+    {
+     "w": "a",
+     "t": 39.077
+    },
+    {
+     "w": "la",
+     "t": 39.217
+    },
+    {
+     "w": "cuadra.",
+     "t": 39.257
+    }
+   ],
+   "heard": " 10  minutos,  sin  gimnasio,  solo  una  vuelta  a  la  cuadra.",
+   "match": 1.0
+  },
+  {
+   "i": 10,
+   "start": 40.56,
+   "end": 44.123,
+   "text": "Si tienes alguna enfermedad del corazón, pregúntale primero a tu médico.",
+   "words": [
+    {
+     "w": "Si",
+     "t": 40.56
+    },
+    {
+     "w": "tienes",
+     "t": 40.64
+    },
+    {
+     "w": "alguna",
+     "t": 40.9
+    },
+    {
+     "w": "enfermedad",
+     "t": 41.22
+    },
+    {
+     "w": "del",
+     "t": 41.74
+    },
+    {
+     "w": "corazón,",
+     "t": 41.84
+    },
+    {
+     "w": "pregúntale",
+     "t": 42.64
+    },
+    {
+     "w": "primero",
+     "t": 43.06
+    },
+    {
+     "w": "a",
+     "t": 43.34
+    },
+    {
+     "w": "tu",
+     "t": 43.56
+    },
+    {
+     "w": "médico.",
+     "t": 43.62
+    }
+   ],
+   "heard": " Si  tienes  alguna  enfermedad  del  corazón,  pregúntale  primero  a  tu  médico.",
+   "match": 1.0
+  },
+  {
+   "i": 11,
+   "start": 44.243,
+   "end": 48.36,
+   "text": "Mándaselo a ese tío que se queda dormido después del almuerzo.",
+   "words": [
+    {
+     "w": "Mándaselo",
+     "t": 44.243
+    },
+    {
+     "w": "a",
+     "t": 44.663
+    },
+    {
+     "w": "ese",
+     "t": 44.803
+    },
+    {
+     "w": "tío",
+     "t": 44.903
+    },
+    {
+     "w": "que",
+     "t": 45.183
+    },
+    {
+     "w": "se",
+     "t": 45.303
+    },
+    {
+     "w": "queda",
+     "t": 45.423
+    },
+    {
+     "w": "dormido",
+     "t": 45.623
+    },
+    {
+     "w": "después",
+     "t": 46.043
+    },
+    {
+     "w": "del",
+     "t": 46.323
+    },
+    {
+     "w": "almuerzo.",
+     "t": 46.563
+    }
+   ],
+   "heard": " Mándaselo  a  ese  tío  que  se  queda  dormido  después  del  almuerzo.",
+   "match": 1.0
+  }
+ ]
+}
