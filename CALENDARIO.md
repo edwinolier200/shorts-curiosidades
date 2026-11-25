@@ -11,6 +11,9 @@
 | Viernes | ⚽ Viernes de fútbol |
 | Sábado | 🏞️ Sábado de lugares increíbles |
 | Domingo | 🤯 ¿Qué pasaría si…? (desde el 29-11; antes, reto de adivinanza) |
+| 2 días por semana (rotan) | 🧪 Prueba en casa con Don Tito: salud práctica que el espectador puede probar (desde el 26-11) |
+
+**Prueba en casa (desde el 2026-11-26):** dos videos por semana reemplazan la serie de ese día, rotando entre martes y sábado (nunca lunes ni domingo, que llevan capítulos enlazados, ni los especiales). Formato y reglas de seguridad en PLAYBOOK → "Formato PRUEBA EN CASA". Los temas desplazados están en el banco de abajo para enero.
 
 Antes de producir cada tema hay que verificar los datos (PLAYBOOK, paso 1) y seguir las reglas para personas reales y la estrategia v3 del PLAYBOOK.
 
@@ -29,39 +32,53 @@ Antes de producir cada tema hay que verificar los datos (PLAYBOOK, paso 1) y seg
 | 009 | 2026-11-23 | Lo que le pasa a tu corazón durante una tanda de penales | 🫀 Lunes del cuerpo |  | pendiente |
 | 010 | 2026-11-24 | Ciudad de México se hunde cada año | 🏙️ Martes de ciudades |  | pendiente |
 | 011 | 2026-11-25 | Shakira antes de ser famosa: la niña que escribió su primera canción | ⭐ Miércoles de famosos |  | pendiente |
-| 012 | 2026-11-26 | Brasil, el único país que ha jugado todos los Mundiales | 🌎 Jueves de países |  | pendiente |
+| 012 | 2026-11-26 | Camina 10 minutos después de comer: lo que le pasa a tu azúcar en la sangre | 🧪 Prueba en casa (Don Tito) |  | pendiente |
 | 013 | 2026-11-27 | René Higuita y el escorpión de Wembley (1995) | ⚽ Viernes de fútbol |  | pendiente |
-| 014 | 2026-11-28 | Caño Cristales, el río de cinco colores | 🏞️ Sábado de lugares increíbles |  | pendiente |
+| 014 | 2026-11-28 | ¿Aguantas 10 segundos parado en un pie? La prueba de equilibrio que dice mucho de tu salud | 🧪 Prueba en casa (Don Tito) |  | pendiente |
 | 015 | 2026-11-29 | ¿Qué pasaría si el Canal de Panamá cerrara un mes? | 🤯 Domingo de ¿Qué pasaría si…? |  | pendiente |
 | 016 | 2026-11-30 | El órgano que vuelve a crecer aunque le quiten más de la mitad (el hígado). ENLACE: abre con "En el capítulo anterior te conté que tu corazón casi no se renueva… pero hay un órgano que hace lo contrario" (sigue a E02) | 🫀 Lunes del cuerpo |  | pendiente |
-| 017 | 2026-12-01 | La Ciclovía de Bogotá: más de 100 km sin carros cada domingo | 🏙️ Martes de ciudades |  | pendiente |
+| 017 | 2026-12-01 | Tómate el pulso en reposo: qué número es bueno (ENLACE con "El secreto de tu corazón") | 🧪 Prueba en casa (Don Tito) |  | pendiente |
 | 018 | 2026-12-02 | Gabriel García Márquez y el Nobel que ganó un colombiano | ⭐ Miércoles de famosos |  | pendiente |
 | 019 | 2026-12-03 | Costa Rica, el país que abolió su ejército (1948) | 🌎 Jueves de países |  | pendiente |
-| 020 | 2026-12-04 | Colombia 5-0 Argentina: la noche del Monumental (1993) | ⚽ Viernes de fútbol |  | pendiente |
+| 020 | 2026-12-04 | La prueba de sentarte y levantarte del piso sin usar las manos | 🧪 Prueba en casa (Don Tito) |  | pendiente |
 | 021 | 2026-12-05 | Salar de Uyuni, el espejo natural más grande del mundo | 🏞️ Sábado de lugares increíbles |  | pendiente |
 | 022 | 2026-12-06 | ¿Qué pasaría si el Amazonas se secara? | 🤯 Domingo de ¿Qué pasaría si…? |  | pendiente |
 | 023 | 2026-12-07 | Por qué se te duerme el pie | 🫀 Lunes del cuerpo |  | pendiente |
 | 024 | 2026-12-08 | La Paz: por qué a los visitantes les cuesta respirar en su estadio | 🏙️ Martes de ciudades |  | pendiente |
-| 025 | 2026-12-09 | Botero: por qué pintaba figuras tan voluminosas | ⭐ Miércoles de famosos |  | pendiente |
+| 025 | 2026-12-09 | El color de tu orina: cuánta agua te falta | 🧪 Prueba en casa (Don Tito) |  | pendiente |
 | 026 | 2026-12-10 | Chile, el país más largo y angosto del mundo | 🌎 Jueves de países |  | pendiente |
 | 027 | 2026-12-11 | El Maracanazo: el día que 200.000 personas se quedaron en silencio (1950) | ⚽ Viernes de fútbol |  | pendiente |
-| 028 | 2026-12-12 | Machu Picchu: construido sin cemento y sigue en pie | 🏞️ Sábado de lugares increíbles |  | pendiente |
+| 028 | 2026-12-12 | La sal escondida: cuánta trae tu pan, tu salchichón y tu caldo de cubito | 🧪 Prueba en casa (Don Tito) |  | pendiente |
 | 029 | 2026-12-13 | ¿Qué pasaría si Colombia tuviera cuatro estaciones? | 🤯 Domingo de ¿Qué pasaría si…? |  | pendiente |
 | 030 | 2026-12-14 | Tu cerebro gasta el 20% de tu energía | 🫀 Lunes del cuerpo |  | pendiente |
-| 031 | 2026-12-15 | Medellín: de la ciudad más peligrosa a la más innovadora | 🏙️ Martes de ciudades |  | pendiente |
+| 031 | 2026-12-15 | La prueba de las escaleras: sube 4 pisos y mira cuánto tardas | 🧪 Prueba en casa (Don Tito) |  | pendiente |
 | 032 | 2026-12-16 | Juan Pablo Montoya: ganó en Mónaco y en Indianápolis | ⭐ Miércoles de famosos |  | pendiente |
-| 033 | 2026-12-17 | ¿Por qué en 3 países de Sudamérica no se habla español? | 🌎 Jueves de países |  | pendiente |
+| 033 | 2026-12-17 | ¿Roncas? 8 preguntas para saber si deberías consultar por apnea del sueño | 🧪 Prueba en casa (Don Tito) |  | pendiente |
 | 034 | 2026-12-18 | José Luis Chilavert, el portero goleador | ⚽ Viernes de fútbol |  | pendiente |
 | 035 | 2026-12-19 | Salto Ángel, la cascada más alta del mundo | 🏞️ Sábado de lugares increíbles |  | pendiente |
 | 036 | 2026-12-20 | ¿Qué pasaría si el café desapareciera del mundo? | 🤯 Domingo de ¿Qué pasaría si…? |  | pendiente |
 | 037 | 2026-12-21 | Lo que le pasa a tu cuerpo cuando gritas un gol | 🫀 Lunes del cuerpo |  | pendiente |
 | 038 | 2026-12-22 | Cartagena: las murallas que tardaron casi dos siglos | 🏙️ Martes de ciudades |  | pendiente |
-| 039 | 2026-12-23 | Egan Bernal: el primer latinoamericano en ganar el Tour de Francia | ⭐ Miércoles de famosos |  | pendiente |
+| 039 | 2026-12-23 | Regla 20-20-20: el truco para tus ojos frente a la pantalla | 🧪 Prueba en casa (Don Tito) |  | pendiente |
 | 040 | 2026-12-24 | ¿Cuántos países de Europa caben dentro de Colombia? | 🌎 Jueves de países |  | pendiente |
 | 041 | 2026-12-25 | Por qué la Navidad se celebra el 25 de diciembre | 🎄 Especial |  | pendiente |
-| 042 | 2026-12-26 | Atacama, uno de los desiertos más secos del planeta | 🏞️ Sábado de lugares increíbles |  | pendiente |
+| 042 | 2026-12-26 | Mide tu cintura con una cuerda: la regla de la mitad de tu estatura | 🧪 Prueba en casa (Don Tito) |  | pendiente |
 | 043 | 2026-12-27 | ¿Qué le pasa a tu cuerpo si no duermes en 7 días? (lunes a domingo) | 🤯 Domingo de ¿Qué pasaría si…? |  | pendiente |
 | 044 | 2026-12-28 | Por qué lloras al cortar cebolla | 🫀 Lunes del cuerpo |  | pendiente |
-| 045 | 2026-12-29 | Si sales de Bogotá en línea recta, ¿dónde terminas? | 🏙️ Martes de ciudades |  | pendiente |
-| 046 | 2026-12-30 | Messi y el tratamiento de crecimiento que le cambió la vida | ⭐ Miércoles de famosos |  | pendiente |
+| 045 | 2026-12-29 | ¿Cuántos pasos al día necesitas de verdad? | 🧪 Prueba en casa (Don Tito) |  | pendiente |
+| 046 | 2026-12-30 | La prueba del pellizco y otros mitos: qué sí sirve para saber si estás hidratado | 🧪 Prueba en casa (Don Tito) |  | pendiente |
 | 047 | 2026-12-31 | Las 12 uvas de Año Nuevo: de dónde viene la tradición | 🎆 Especial |  | pendiente |
+
+## Banco de temas desplazados por "Prueba en casa" (usar en enero 2027, misma serie)
+- Brasil, el único país que ha jugado todos los Mundiales (🌎 Jueves de países; estaba el 2026-11-26)
+- Caño Cristales, el río de cinco colores (🏞️ Sábado de lugares increíbles; estaba el 2026-11-28)
+- La Ciclovía de Bogotá: más de 100 km sin carros cada domingo (🏙️ Martes de ciudades; estaba el 2026-12-01)
+- Colombia 5-0 Argentina: la noche del Monumental (1993) (⚽ Viernes de fútbol; estaba el 2026-12-04)
+- Botero: por qué pintaba figuras tan voluminosas (⭐ Miércoles de famosos; estaba el 2026-12-09)
+- Machu Picchu: construido sin cemento y sigue en pie (🏞️ Sábado de lugares increíbles; estaba el 2026-12-12)
+- Medellín: de la ciudad más peligrosa a la más innovadora (🏙️ Martes de ciudades; estaba el 2026-12-15)
+- ¿Por qué en 3 países de Sudamérica no se habla español? (🌎 Jueves de países; estaba el 2026-12-17)
+- Egan Bernal: el primer latinoamericano en ganar el Tour de Francia (⭐ Miércoles de famosos; estaba el 2026-12-23)
+- Atacama, uno de los desiertos más secos del planeta (🏞️ Sábado de lugares increíbles; estaba el 2026-12-26)
+- Si sales de Bogotá en línea recta, ¿dónde terminas? (🏙️ Martes de ciudades; estaba el 2026-12-29)
+- Messi y el tratamiento de crecimiento que le cambió la vida (⭐ Miércoles de famosos; estaba el 2026-12-30)
