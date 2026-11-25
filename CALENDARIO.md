@@ -32,7 +32,7 @@ Antes de producir cada tema hay que verificar los datos (PLAYBOOK, paso 1) y seg
 | 009 | 2026-11-23 | Lo que le pasa a tu corazón durante una tanda de penales | 🫀 Lunes del cuerpo |  | pendiente |
 | 010 | 2026-11-24 | Ciudad de México se hunde cada año | 🏙️ Martes de ciudades |  | pendiente |
 | 011 | 2026-11-25 | Shakira antes de ser famosa: la niña que escribió su primera canción | ⭐ Miércoles de famosos |  | pendiente |
-| 012 | 2026-11-26 | Camina 10 minutos después de comer: lo que le pasa a tu azúcar en la sangre | 🧪 Prueba en casa (Don Tito) |  | pendiente |
+| 012 | 2026-11-26 | Camina 10 minutos después de comer: lo que le pasa a tu azúcar en la sangre | 🧪 Prueba en casa (Don Tito) |  | hecho (2026-11-25, adelantado) |
 | 013 | 2026-11-27 | René Higuita y el escorpión de Wembley (1995) | ⚽ Viernes de fútbol |  | pendiente |
 | 014 | 2026-11-28 | ¿Aguantas 10 segundos parado en un pie? La prueba de equilibrio que dice mucho de tu salud | 🧪 Prueba en casa (Don Tito) |  | pendiente |
 | 015 | 2026-11-29 | ¿Qué pasaría si el Canal de Panamá cerrara un mes? | 🤯 Domingo de ¿Qué pasaría si…? |  | pendiente |

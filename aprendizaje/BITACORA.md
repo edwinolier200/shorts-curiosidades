@@ -15,3 +15,9 @@
 - Mejora de hoy: estilo infografía 2D + biblioteca organs2d.js (corazón, hígado, torso, mano, glóbulo). Render 5 min (antes 45 min en 3D). QA 9/9 (E01: 8/9).
 - Mejora del QA: "imagen quieta" ahora mide qué parte de la pantalla cambia de verdad (antes daba falsos quietos).
 - A mejorar: dibujar más órganos en este estilo (cerebro, pulmones, estómago, riñones, ojo); transiciones entre escenas más vistosas.
+
+## 2026-11-25 · 012-camina-despues-de-comer · 🧪 Prueba en casa (1)
+- Mejora de hoy: nuevo formato "Prueba en casa" con narrador propio Don Tito (boca sincronizada con la voz: tools/mouth.py), subtítulos karaoke arriba y kit props2d ampliado (plato, silla, persona caminando, cubos de azúcar, barras, cuadra). QA 9/9. Render ~10 min (2D, 2 muestras de desenfoque).
+- Lo que salió bien: una imagen literal por frase; el estudio se muestra con su contexto (diabetes tipo 2, comparado con 1 caminata al día); aviso médico en video y descripción.
+- Cuidado aprendido: la miniatura C decía "−22 % con 10 minutos" sin contexto → cambiada por la regla de Don Tito. Las miniaturas tampoco pueden exagerar una cifra.
+- A mejorar: la persona que camina es muy simple (añadir cara y ropa con más detalle); transiciones entre escenas (hoy solo aparece/desaparece).
