@@ -21,3 +21,9 @@
 - Lo que salió bien: una imagen literal por frase; el estudio se muestra con su contexto (diabetes tipo 2, comparado con 1 caminata al día); aviso médico en video y descripción.
 - Cuidado aprendido: la miniatura C decía "−22 % con 10 minutos" sin contexto → cambiada por la regla de Don Tito. Las miniaturas tampoco pueden exagerar una cifra.
 - A mejorar: la persona que camina es muy simple (añadir cara y ropa con más detalle); transiciones entre escenas (hoy solo aparece/desaparece).
+
+## 2026-11-26 · 012-camina-despues-de-comer · v3 (corrección pedida por el usuario)
+- Problemas reportados: inconsistencias de lenguaje y final cortado.
+- Encontrado (transcripción con Whisper medium + análisis de los últimos segundos): "comprébalo", "mírete", "plecómetro/bucómetro", "Dontito"; frase del estudio enredada y sin "30 minutos"; tarjeta "adultos" vs voz "personas"; leyenda "caminando" antes de tiempo; valores del medidor sin "ejemplo"; final = 3 s de imagen quieta + música desvaneciéndose.
+- Arreglado en el video: frases reescritas con palabras fáciles ("haz la prueba", "medidor de azúcar"), toma de "Don Tito" claro, voz = pantalla, leyendas sincronizadas, "valores de ejemplo", escena de próxima prueba + tarjeta final + remate musical. QA 12/12 (antes 9/9 con el QA viejo, que no veía estos fallos).
+- Arreglado en el sistema: TTS rechaza palabras mal dichas y recorta/desvanece cada línea; QA con pronunciación (medium), final completo y cierre audible; score con remate; fin calculado desde la última palabra; reglas en PLAYBOOK.
