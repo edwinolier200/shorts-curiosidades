@@ -119,13 +119,15 @@ M.film({
     if (k6 > 0) {
       glass(ctx, 70, 470, W - 140, 1040, k6);
       ctx.save(); ctx.globalAlpha = k6; ctx.textAlign = 'center'; ctx.font = font(34, 800, 'UI'); ctx.fillStyle = 'rgba(255,255,255,0.7)'; ctx.fillText('ESTUDIO · Diabetologia, 2016', W / 2, 550);
-      ctx.fillText('adultos con diabetes tipo 2', W / 2, 596); ctx.restore();
+      ctx.fillText('personas con diabetes tipo 2', W / 2, 596); ctx.restore();
       const dinner = t >= S[6];
       const kb = clamp((t - T.diez + 0.2) * 1.5);
       ctx.save(); ctx.globalAlpha = k6;
       K.bars(ctx, 140, 720, 800, [[dinner ? '1 caminata al día · cena' : '1 caminata al día (30 min)', 1, '#7C8AA8', ''],
         [dinner ? '10 min tras la cena' : '10 min tras cada comida', dinner ? 0.78 : 0.88, '#3BE37A', '']], kb);
       ctx.restore();
+      if (!dinner && t > T.sola - 0.1) { const kh = show(t, T.sola - 0.1, S[6]); ctx.save(); ctx.globalAlpha = k6 * kh; ctx.strokeStyle = GOLD; ctx.lineWidth = 8; ctx.shadowColor = GOLD; ctx.shadowBlur = 24;
+        rrect(ctx, 120, 650, 840, 140, 30); ctx.stroke(); ctx.shadowBlur = 0; ctx.fillStyle = GOLD; rrect(ctx, 760, 618, 190, 62, 20); ctx.fill(); ctx.fillStyle = '#14121C'; ctx.font = font(40, 900, 'Heavy'); ctx.textAlign = 'center'; ctx.fillText('30 MIN', 855, 663); ctx.restore(); }
       const big = dinner ? '−22 %' : '−12 %', kk = dinner ? show(t, T.veintidos - 0.1, S[7], SPRING.bouncy) : show(t, T.doce - 0.1, S[6], SPRING.bouncy);
       pop(ctx, kk, 540, 1260, () => { ctx.font = font(190, 900, 'Heavy'); ctx.textAlign = 'center'; const g = ctx.createLinearGradient(0, -170, 0, 0); g.addColorStop(0, '#B7FFC8'); g.addColorStop(1, '#2EC866');
         ctx.fillStyle = g; ctx.shadowColor = 'rgba(0,0,0,0.5)'; ctx.shadowBlur = 20; ctx.fillText(big, 0, 0); ctx.shadowBlur = 0; ctx.font = font(40, 800, 'UI'); ctx.fillStyle = '#fff'; ctx.fillText('azúcar después de comer', 0, 70); });
@@ -136,6 +138,7 @@ M.film({
     const k8 = show(t, S[7], S[8]);
     if (k8 > 0) {
       pop(ctx, show(t, S[7], S[8]), 540, 640, () => K.clock(ctx, 0, 0, 150, { sweep: clamp((t - T.horas + 0.2) / 1.2) * (2 / 12) }));
+      card(ctx, '2 HORAS', 540, 860, 70, show(t, T.horas, S[8], SPRING.bouncy), GOLD);
       pop(ctx, show(t, T.sentado2 - 0.1, S[8]), 290, 1080, () => { K.meter(ctx, 0, 0, 380, { value: '¿?', unit: 'mg/dL', state: 'warn', strip: false }); });
       pop(ctx, show(t, T.caminando - 0.1, S[8]), 790, 1080, () => { K.meter(ctx, 0, 0, 380, { value: '¿?', unit: 'mg/dL', state: 'ok', strip: false }); });
       ctx.save(); ctx.globalAlpha = k8; ctx.textAlign = 'center'; ctx.font = font(40, 900, 'Heavy');
