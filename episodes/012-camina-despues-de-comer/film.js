@@ -185,6 +185,6 @@ M.film({
         ctx.font = font(48, 900, 'Heavy'); ctx.fillStyle = '#fff'; ctx.fillText('PRUEBA EN CASA CON DON TITO', 0, -250); });
       ctx.save(); ctx.globalAlpha = kEnd * 0.9; ctx.font = font(32, 800, 'UI'); ctx.textAlign = 'center'; ctx.fillStyle = '#fff'; ctx.fillText('Esto no reemplaza la consulta con tu médico.', W / 2, 1420); ctx.restore(); }
     if (t < T.end - 1.4) karaoke(ctx, t);
-    UI.watermark(ctx, undefined, { y: 470 });
+    if (t < T.end - 1.4) UI.watermark(ctx, undefined, { y: 470 });
   },
 });

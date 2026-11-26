@@ -18,7 +18,7 @@ T=dict(almorzar=at(1,'almorzar'), sientas=at(1,'sientas'), azucar=at(1,'azúcar'
  caminar=at(5,'caminar'), musculos=at(5,'músculos'), gasolina=at(5,'gasolina'),
  estudio=at(6,'estudio'), diez=at(6,'diez'), doce=at(6,'doce'), sola=at(6,'sola'),
  cena=at(7,'cena'), veintidos=at(7,'veintidós'),
- glucometro=at(8,'glucómetro'), horas=at(8,'horas'), sentado2=at(8,'sentado'), caminando=at(8,'caminando'),
+ glucometro=at(8,'medidor'), horas=at(8,'horas'), sentado2=at(8,'sentado'), caminando=at(8,'caminando'),
  diez2=at(9,'diez'), gimnasio=at(9,'gimnasio'), cuadra=at(9,'cuadra'),
  corazon=at(10,'corazón'), medico=at(10,'médico'),
  tio=at(11,'tío'), almuerzo=at(11,'almuerzo'),
