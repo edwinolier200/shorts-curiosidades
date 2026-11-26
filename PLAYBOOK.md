@@ -231,3 +231,14 @@ Inspirado en el tipo de Short de salud práctica que más se comparte (ver apren
 - Subtítulos arriba tipo karaoke (frase tenue, palabra actual blanca y gruesa, palabra clave resaltada en caja).
 - Seguridad: cada número de salud con 2 fuentes médicas (OMS, ADA, AHA, MedlinePlus, estudios revisados), siempre rangos oficiales, nunca diagnósticos ni tratamientos; en la descripción y al final: "Esto no reemplaza la consulta con tu médico".
 - Temas candidatos (verificar antes): caminar 10 min después de comer baja el pico de azúcar; la prueba de pararse en un pie 10 s después de los 50; tómate el pulso en reposo (60-100 lpm); la prueba de sentarse y levantarse del piso; el color de tu orina y la hidratación; cuánta sal escondida tiene el pan.
+
+## Reglas de LENGUAJE y FINAL (desde 2026-11-26, por fallos del video 012)
+**Lenguaje (la voz IA pronuncia mal ciertas palabras):**
+- Evita imperativos con pronombre pegado y diptongos difíciles: "compruébalo", "mídete", "pruébatelo", "cuéntamelo" → usa "haz la prueba", "mide tu azúcar", "pruébalo tú", "cuéntame". Prefiere frases cortas de 8-16 palabras.
+- Las cifras de un estudio se dicen con su comparación completa y en el mismo orden que la tarjeta en pantalla ("…un doce por ciento más que una sola caminata de treinta minutos al día"). Lo que dice la voz y lo que dice la pantalla deben coincidir palabra por palabra en cifras, unidades y grupo estudiado.
+- Las etiquetas en pantalla no pueden adelantarse a la voz (no escribir "caminando" antes de hablar de caminar). Valores inventados para ilustrar → "valores de ejemplo".
+- tools/tts_chatterbox.py ahora rechaza cualquier toma donde una palabra de 4+ letras no se oiga tal cual; si imprime "WARNING mal pronunciadas", REESCRIBE esa frase con palabras más fáciles (no la dejes así).
+**Final (nunca termina "cortado"):**
+- La última frase anuncia el próximo capítulo de la serie (enlace) y es seguida de una escena de cierre y una tarjeta final (@EdinTops + nombre de la serie + aviso si aplica) de ~1,4 s con un remate musical (score con "sting"; ya no se desvanece en silencio).
+- El final del video se calcula desde la ÚLTIMA PALABRA hablada (+1,7 s), nunca desde la duración del archivo de voz (que puede traer silencio).
+- tools/qa.py revisa: pronunciación palabra por palabra (modelo medium), voz que termina 0,8-2,5 s antes del final y último segundo audible. Un ❌ en cualquiera de esos tres bloquea la entrega.

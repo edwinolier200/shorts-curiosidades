@@ -33,7 +33,14 @@ for s in np.arange(mid,X-0.05,0.5):
     pan=.3 if int(s*2)%2 else -.3; L[i:i+n]+=c*(1-pan); R[i:i+n]+=c*(1+pan)
 RS=max(mid,X-4.0); m=(t>RS)&(t<X); ph=np.cumsum(2*np.pi*np.where(m,220*2**((t-RS)/(X-RS)*1.5),0)/SR)
 L+=np.sin(ph)*m*.05*((t-RS)/(X-RS)); R+=np.sin(ph*1.003)*m*.05*((t-RS)/(X-RS))
-y=np.stack([L,R],1); y/=np.max(np.abs(y))*1.12; y*=np.clip((DUR-t)/0.8,0,1)[:,None]
+# ending: the bed ducks out and a short resolving sting (bright major chord + one soft thump) closes the video,
+# so it never just fades into nothing. The sting starts 1.5 s before the end (on the outro card).
+ST=max(0.0,DUR-1.5); m=t>=ST; L*=np.where(m,np.clip(1-(t-ST)/0.35,0,1),1); R*=np.where(m,np.clip(1-(t-ST)/0.35,0,1),1)
+tt=np.clip(t-ST,0,None)
+for f,a in [(261.63,.30),(329.63,.24),(392.0,.22),(523.25,.16),(659.25,.10)]:
+    v=a*np.sin(2*np.pi*f*tt)*np.exp(-tt*1.6)*(1-np.exp(-tt*60))*m; L+=v; R+=v*0.96
+i0=int(ST*SR); s=thump(60,.3)*0.9; L[i0:i0+len(s)]+=s[:N-i0]; R[i0:i0+len(s)]+=s[:N-i0]
+y=np.stack([L,R],1); y/=np.max(np.abs(y))*1.12; y*=np.clip((DUR-t)/0.2,0,1)[:,None]
 w=wave.open('audio/music.wav','w'); w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes((y*32767).astype(np.int16).tobytes()); w.close()
 P=0.5; json.dump({"bpm":120,"period":P,"offset":0.0,"beats":[round(i*P,3) for i in range(int(DUR/P)+1)],"downbeats":[round(i*P*4,3) for i in range(int(DUR/(P*4))+1)],"heartbeats":beats},open('beats.json','w'))
 print('music ok', round(DUR,2), 's; twist at', X)

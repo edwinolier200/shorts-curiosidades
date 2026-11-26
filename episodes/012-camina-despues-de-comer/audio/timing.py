@@ -21,6 +21,8 @@ T=dict(almorzar=at(1,'almorzar'), sientas=at(1,'sientas'), azucar=at(1,'azúcar'
  glucometro=at(8,'glucómetro'), horas=at(8,'horas'), sentado2=at(8,'sentado'), caminando=at(8,'caminando'),
  diez2=at(9,'diez'), gimnasio=at(9,'gimnasio'), cuadra=at(9,'cuadra'),
  corazon=at(10,'corazón'), medico=at(10,'médico'),
- tio=at(11,'tío'), almuerzo=at(11,'almuerzo'), end=round(d['duration']+1.2,2))
+ tio=at(11,'tío'), almuerzo=at(11,'almuerzo'),
+ proxima=at(12,'próxima'), pie=at(12,'pie'), sigueme=at(12,'sígueme'),
+ end=round(d['segments'][-1]['end']+1.7,2))   # end from the last spoken word (+ outro), never from the file length
 json.dump({"S":S,"T":T,"twist_scene":5},open('timing.json','w'),indent=1)
 print(S); print(T)

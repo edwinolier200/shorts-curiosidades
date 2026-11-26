@@ -119,8 +119,9 @@ export function chair(ctx, x, y, size) {
   ctx.beginPath(); ctx.roundRect(-100, -250, 200, 60, 14); ctx.fill(); ctx.stroke(); ctx.restore();
 }
 // a flat walking person (generic, faceless) — phase drives the stride
-export function walker(ctx, x, y, size, phase = 0, { shirt = '#3BA7F5', pants = '#5C78C8', glow = 0 } = {}) {
+export function walker(ctx, x, y, size, phase = 0, { shirt = '#3BA7F5', pants = '#5C78C8', glow = 0, pose = 'walk', wobble = 0 } = {}) {
   const s = size / 600; ctx.save(); ctx.translate(x, y); ctx.scale(s, s); ctx.lineCap = 'round';
+  if (pose === 'onefoot') return onefoot(ctx, s, { shirt, pants, wobble });
   const sw = Math.sin(phase * Math.PI * 2), bob = Math.abs(Math.cos(phase * Math.PI * 2)) * 10;
   ctx.translate(0, -bob);
   const leg = (a, col) => { ctx.save(); ctx.translate(0, 40); ctx.rotate(a); ctx.strokeStyle = col; ctx.lineWidth = 56; ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, 120); ctx.stroke();
@@ -157,4 +158,20 @@ export function block(ctx, x, y, size, p = 0) {
   ctx.strokeStyle = '#FFC94A'; ctx.lineWidth = 12; ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(-215, -215);
   for (let q = 0; q <= d; q += 10) { let qx, qy; if (q < 430) { qx = -215 + q; qy = -215; } else if (q < 860) { qx = 215; qy = -215 + q - 430; } else if (q < 1290) { qx = 215 - (q - 860); qy = 215; } else { qx = -215; qy = 215 - (q - 1290); } ctx.lineTo(qx, qy); }
   ctx.stroke(); ctx.fillStyle = '#fff'; ctx.shadowColor = '#FFC94A'; ctx.shadowBlur = 30; ctx.beginPath(); ctx.arc(px, py, 22, 0, 6.283); ctx.fill(); ctx.restore();
+}
+
+// standing on one foot (balance test): arms out, one knee up; wobble -1..1 tilts the body a little
+function onefoot(ctx, s, { shirt, pants, wobble }) {
+  ctx.rotate(wobble * 0.06); ctx.lineCap = 'round';
+  ctx.fillStyle = 'rgba(0,0,0,0.25)'; ctx.beginPath(); ctx.ellipse(0, 290, 120, 22, 0, 0, 6.283); ctx.fill();
+  ctx.strokeStyle = pants; ctx.lineWidth = 56; ctx.beginPath(); ctx.moveTo(0, 40); ctx.lineTo(0, 280); ctx.stroke();               // standing leg
+  ctx.fillStyle = '#F5F5F5'; ctx.beginPath(); ctx.ellipse(16, 288, 44, 22, 0, 0, 6.283); ctx.fill();
+  ctx.strokeStyle = '#46609F'; ctx.beginPath(); ctx.moveTo(0, 40); ctx.lineTo(90, 140); ctx.lineTo(30, 220); ctx.stroke();       // raised leg (knee forward)
+  ctx.fillStyle = '#F5F5F5'; ctx.beginPath(); ctx.ellipse(40, 228, 40, 20, 0.3, 0, 6.283); ctx.fill();
+  ctx.strokeStyle = '#2F8FD8'; ctx.lineWidth = 40; ctx.beginPath(); ctx.moveTo(-50, -150); ctx.lineTo(-230, -120 + wobble * 30); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(50, -150); ctx.lineTo(230, -120 - wobble * 30); ctx.stroke();
+  ctx.fillStyle = shirt; ctx.beginPath(); ctx.roundRect(-70, -190, 140, 250, 60); ctx.fill();
+  ctx.fillStyle = '#E9A77E'; ctx.beginPath(); ctx.arc(0, -260, 62, 0, 6.283); ctx.fill();
+  ctx.fillStyle = '#3A2A20'; ctx.beginPath(); ctx.arc(0, -275, 62, Math.PI * 1.05, Math.PI * 1.95); ctx.fill();
+  ctx.restore();
 }

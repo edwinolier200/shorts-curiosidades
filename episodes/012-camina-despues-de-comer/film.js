@@ -2,6 +2,8 @@
 // Format (PLAYBOOK → Formato PRUEBA EN CASA): personal question → Don Tito's rule → what happens → the evidence → the test you
 // can do at home → how simple it is → safety note → share. Dark-blue textured background, one big drawn object per sentence,
 // karaoke captions at the top. Don Tito's mouth follows the voice (mouth.json from tools/mouth.py).
+// v2 (2026-11-26): clearer study sentence, easier words (no 'compruébalo/mídete'), legend that matches the voice,
+// 'valores de ejemplo', and a real ending: next-test teaser + closing card + musical sting (no more silent fade).
 import * as M from './lib/motion.js';
 import * as K from './lib/props2d.js';
 import * as O from './lib/organs2d.js';
@@ -24,6 +26,7 @@ const hitList = () => [
   [B(S[8]), 'block', 'whoosh', { len: 0.4 }], [B(T.diez2), '10 min', 'pop', { pitch: 'E6' }],
   [B(S[9]), 'careful', 'sub', { gain: 0.6 }],
   [B(S[10]), 'share', 'whoosh', { len: 0.4 }], [B(T.tio), 'share', 'pop', { pitch: 'G5' }],
+  [B(S[11]), 'next test', 'whoosh', { len: 0.4 }], [B(T.proxima), 'next card', 'pop', { pitch: 'E5' }], [B(T.pie), 'one foot', 'tick'],
 ];
 const GOLD = '#FFC94A';
 const mouthAt = (t) => { const i = Math.floor(t * MOUTH.fps); return MOUTH.v[i] || 0; };
@@ -96,7 +99,8 @@ M.film({
       pop(ctx, show(t, S[3], S[4]), 790, 760, () => K.chair(ctx, 0, 60, 300));
       pop(ctx, show(t, T.normal - 0.1, S[3]), 790, 700, () => K.check(ctx, 0, 0, 90));
       pop(ctx, k3, 540, 1240, () => K.chart(ctx, -450, -190, 900, 380, { good: prog(t, S[2] + 0.2, S[3]), bad: prog(t, S[3] + 0.1, T.tarda + 0.8) }));
-      if (t > S[2] + 0.5) { ctx.save(); ctx.globalAlpha = k3; ctx.font = font(34, 800, 'UI'); ctx.textAlign = 'left'; ctx.fillStyle = '#3BE37A'; ctx.fillText('● caminando', 110, 1500); if (t > S[3]) { ctx.fillStyle = '#FF5A66'; ctx.fillText('● sentado', 420, 1500); } ctx.restore(); }
+      if (t > S[2] + 0.5) { ctx.save(); ctx.globalAlpha = k3; ctx.font = font(34, 800, 'UI'); ctx.textAlign = 'left'; ctx.fillStyle = '#3BE37A'; ctx.fillText(t > S[3] ? '● si te mueves' : '● después de comer', 110, 1500); if (t > S[3]) { ctx.fillStyle = '#FF5A66'; ctx.fillText('● si te quedas sentado', 470, 1500); }
+        ctx.font = font(28, 800, 'UI'); ctx.fillStyle = 'rgba(255,255,255,0.6)'; ctx.textAlign = 'center'; ctx.fillText('valores de ejemplo', 300, 1010); ctx.restore(); }
     }
 
     // 5 · al caminar, los músculos usan el azúcar como gasolina
@@ -158,17 +162,29 @@ M.film({
     }
 
     // 11 · compártelo con el tío que se duerme después del almuerzo
-    const k11 = show(t, S[10]);
+    const k11 = show(t, S[10], S[11]);
     if (k11 > 0) {
       pop(ctx, k11, 540, 1540, () => K.tito(ctx, 0, 0, 950, { mouth: mo, blink: bl, mood: 'smile', look: [0, -0.3] }));
       card(ctx, 'MÁNDASELO A TU TÍO', 540, 680, 74, show(t, T.tio - 0.1), GOLD);
       if (t > T.almuerzo) { ctx.save(); ctx.globalAlpha = clamp((t - T.almuerzo) * 3); [[0, 0, 1], [40, -50, 0.75], [75, -95, 0.55]].forEach(([dx, dy, s]) => {
         ctx.font = font(80 * s, 900, 'Heavy'); ctx.fillStyle = '#9CCBFF'; ctx.fillText('Z', 820 + dx, 1040 + dy - (t - T.almuerzo) * 20); }); ctx.restore(); }
-      if (t > T.end - 2.2) { ctx.save(); ctx.globalAlpha = clamp((t - T.end + 2.2) * 3) * 0.85; ctx.font = font(30, 800, 'UI'); ctx.textAlign = 'center'; ctx.fillStyle = '#fff';
-        ctx.fillText('Esto no reemplaza la consulta con tu médico.', W / 2, 820); ctx.restore(); }
     }
 
-    karaoke(ctx, t);
+    // 12 · outro: next test teaser (one foot + 10 s counter) → closing card with the channel and the medical note
+    const k12 = show(t, S[11], T.end - 1.3);
+    if (k12 > 0) {
+      const tc = clamp((t - T.pie + 0.2) / 2.2);
+      pop(ctx, k12, 540, 1180, () => K.walker(ctx, 0, 0, 820, 0, { pose: 'onefoot', wobble: Math.sin(t * 3) }));
+      card(ctx, 'PRÓXIMA PRUEBA', 540, 600, 80, show(t, T.proxima - 0.15, T.end - 1.3), GOLD);
+      pop(ctx, show(t, T.pie - 0.2, T.end - 1.3), 860, 860, () => { K.clock(ctx, 0, 0, 110, { sweep: tc * (10 / 60) }); ctx.font = font(54, 900, 'Heavy'); ctx.textAlign = 'center'; ctx.fillStyle = '#fff'; ctx.fillText(`${Math.round(tc * 10)} s`, 0, 175); });
+      pop(ctx, show(t, S[11], T.end - 1.3), 210, 1560, () => K.tito(ctx, 0, 0, 520, { mouth: mo, blink: bl, mood: 'smile', look: [0.6, -0.3] }));
+    }
+    const kEnd = show(t, T.end - 1.4);
+    if (kEnd > 0) { ctx.save(); ctx.globalAlpha = kEnd; ctx.fillStyle = 'rgba(8,14,32,0.9)'; ctx.fillRect(0, 0, W, H); ctx.restore();
+      pop(ctx, kEnd, 540, 900, () => { K.tito(ctx, 0, 120, 560, { mouth: 0, blink: bl, mood: 'smile' }); ctx.font = font(96, 900, 'Heavy'); ctx.textAlign = 'center'; ctx.fillStyle = GOLD; ctx.fillText('@EdinTops', 0, -330);
+        ctx.font = font(48, 900, 'Heavy'); ctx.fillStyle = '#fff'; ctx.fillText('PRUEBA EN CASA CON DON TITO', 0, -250); });
+      ctx.save(); ctx.globalAlpha = kEnd * 0.9; ctx.font = font(32, 800, 'UI'); ctx.textAlign = 'center'; ctx.fillStyle = '#fff'; ctx.fillText('Esto no reemplaza la consulta con tu médico.', W / 2, 1420); ctx.restore(); }
+    if (t < T.end - 1.4) karaoke(ctx, t);
     UI.watermark(ctx, undefined, { y: 470 });
   },
 });

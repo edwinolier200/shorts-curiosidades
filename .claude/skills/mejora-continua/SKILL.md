@@ -29,6 +29,11 @@ python3 tools/qa.py episodes/<slug>
 ```
 Si falla algo arreglable (volumen, tramo quieto > 3 s, sobreexposición), arréglalo y vuelve a renderizar ese tramo o el video. Mira `episodes/<slug>/qa/sheet.png` con tus propios ojos y critícalo como lo haría un director: ¿cada imagen explica la frase? ¿se entiende sin sonido?
 
+### Revisión obligatoria de lenguaje y final (antes de entregar)
+- Escucha (transcribe) el video final y compáralo con el guion: ninguna palabra mal dicha, ninguna frase enredada, cifras de voz = cifras de pantalla.
+- Mira los últimos 3 s: ¿hay cierre (enlace al próximo capítulo + tarjeta final + remate musical)? Si se siente cortado, no se entrega.
+- Lo que falle va a aprendizaje/APRENDIZAJES.md como regla nueva.
+
 ## 4. Registra lo aprendido
 Añade a `aprendizaje/BITACORA.md`:
 ```
