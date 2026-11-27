@@ -242,3 +242,18 @@ Inspirado en el tipo de Short de salud práctica que más se comparte (ver apren
 - La última frase anuncia el próximo capítulo de la serie (enlace) y es seguida de una escena de cierre y una tarjeta final (@EdinTops + nombre de la serie + aviso si aplica) de ~1,4 s con un remate musical (score con "sting"; ya no se desvanece en silencio).
 - El final del video se calcula desde la ÚLTIMA PALABRA hablada (+1,7 s), nunca desde la duración del archivo de voz (que puede traer silencio).
 - tools/qa.py revisa: pronunciación palabra por palabra (modelo medium), voz que termina 0,8-2,5 s antes del final y último segundo audible. Un ❌ en cualquiera de esos tres bloquea la entrega.
+
+## Fórmulas de gancho Don Tito (para TODAS las series, desde 2026-11-27)
+El usuario: "deberíamos usar más ese tipo de ganchos". Lo que funcionó en "Camina 10 minutos después de comer": el video arranca hablándole AL ESPECTADOR de algo que hace todos los días, y le promete ver el efecto en su propio cuerpo o vida.
+Los primeros 2 segundos usan una (o dos) de estas fórmulas:
+1. **Hábito + pregunta directa:** "¿Qué haces después de almorzar? ¿Te sientas?" / "¿Qué harías mañana sin tu tinto?"
+2. **"Mira lo que le pasa a tu…":** "…mira lo que le pasa a tu azúcar." / "…a tu corazón." / "…a tu bolsillo."
+3. **Te reto / pruébalo ya:** "¿Aguantas 10 segundos en un pie?" / "¿Puedes levantarte del piso sin manos?"
+4. **Algo que tienes o ves:** "¿Tienes en tu casa un libro de García Márquez?" / "¿Has caminado sobre el cielo?"
+5. **Lo mides con tu cuerpo:** "¿Te cansarías corriendo 10 metros?" / "¿Cuántos edificios tendrías que apilar…?"
+6. **"Mientras ves esto…":** "Mientras ves esto, tu cerebro gasta…" (el dato pasa EN el espectador, ahora).
+Y en todo el video:
+- Una **regla memorable** de una línea (como "barriga llena, pies en movimiento"); en las series sin Don Tito la dice el narrador.
+- La **llamada a compartir** apunta a una persona concreta y cotidiana ("mándaselo a tu tío que…", "a tu amigo que dice que…", "a tu mamá que…").
+- El **cierre** anuncia lo próximo como un reto o pregunta ("En la próxima: ¿aguantas…?").
+Prohibido: arrancar con fechas, nombres propios o "¿Sabías que…?" sin más; promesas que el video no cumple; preguntas que asusten sobre salud ("¿Te vas a morir…?").
