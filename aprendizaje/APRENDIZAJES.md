@@ -14,3 +14,4 @@
 - Salud: las cifras de un estudio siempre con su contexto (quién, comparado con qué). Nunca en la miniatura una cifra sin ese contexto. (2026-11-25)
 - 2026-11-26 (crítica del usuario al 012): "inconsistencias en el lenguaje" y "al final se cortó". Causas: la voz IA dijo "comprébalo" y "mírete"; frase del estudio enredada y sin "30 minutos"; leyenda "caminando" antes de tiempo; final = 3 s de imagen quieta + música desvaneciéndose. Arreglos de sistema: TTS rechaza palabras mal dichas, QA de pronunciación y de final, música con remate, escena y tarjeta de cierre, fin calculado desde la última palabra.
 - 2026-11-27: al usuario le encantó la serie de Don Tito y pidió más ganchos de ese tipo → "Fórmulas de gancho Don Tito" en el PLAYBOOK para todas las series; ganchos del calendario reescritos hasta el 31-dic.
+- 2026-11-27: Don Tito presentará también los lunes del cuerpo (pedido del usuario). Él es la cara del canal: mismo diseño siempre.

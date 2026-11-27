@@ -257,3 +257,12 @@ Y en todo el video:
 - La **llamada a compartir** apunta a una persona concreta y cotidiana ("mándaselo a tu tío que…", "a tu amigo que dice que…", "a tu mamá que…").
 - El **cierre** anuncia lo próximo como un reto o pregunta ("En la próxima: ¿aguantas…?").
 Prohibido: arrancar con fechas, nombres propios o "¿Sabías que…?" sin más; promesas que el video no cumple; preguntas que asusten sobre salud ("¿Te vas a morir…?").
+
+## Lunes del cuerpo PRESENTADOS por Don Tito (desde 2026-11-30)
+El usuario pidió que Don Tito presente los lunes. Se mantiene el estilo infografía de la serie (fondo azul noche con estrellas y glóbulos, órganos dibujados con organs2d.js, subtítulos grandes centrados) y se suma Don Tito (props2d.js, K.tito, boca con tools/mouth.py):
+- **Apertura (0-3 s):** Don Tito en primer plano o en la esquina lanza el gancho (Fórmulas de gancho Don Tito) y aparece un rótulo pequeño "LUNES DEL CUERPO".
+- **Durante el video:** el órgano dibujado es el protagonista en el centro; Don Tito queda en la esquina inferior izquierda (≈ 560 px), mirando al órgano, y reacciona (mood 'wow' en el dato más sorprendente, 'serious' en las advertencias). No debe tapar el órgano, los datos ni los subtítulos.
+- **Regla de Don Tito:** cada lunes deja una frase memorable de una línea (en una tarjeta dorada) que resume la curiosidad.
+- **Cierre:** Don Tito en primer plano anuncia el próximo lunes (ENLACE) como reto o pregunta + tarjeta final "@EdinTops · LUNES DEL CUERPO CON DON TITO" con remate musical.
+- La voz es la misma narración (Don Tito habla en primera persona o el narrador lo cita: "Don Tito siempre dice…").
+- Ejemplo de composición: examples/lunes_con_don_tito_film.js · aprendizaje/estilo_lunes_con_don_tito.png. Referencia completa de video: episodes/012-camina-despues-de-comer (Don Tito) + episodes/E02-el-secreto-de-tu-corazon (infografía del cuerpo).
